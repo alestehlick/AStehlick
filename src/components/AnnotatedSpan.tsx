@@ -9,27 +9,18 @@ export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
   const label = inline.reading
     ? `${inline.text}, reading ${inline.reading}. Open note.`
     : `${inline.text}. Open note.`;
-  const content =
-    inline.language === "ja" && inline.reading ? (
-      <ruby>
-        {inline.text}
-        <rt>{inline.reading}</rt>
-      </ruby>
-    ) : (
-      inline.text
-    );
-
   return (
     <button
       className={`annotation${inline.emphasis ? ` is-${inline.emphasis}` : ""}`}
       type="button"
+      lang={inline.language === "ja" ? "ja" : undefined}
       aria-label={label}
       onClick={(event) => {
         event.stopPropagation();
         onOpenNote(inline.noteIds[0]);
       }}
     >
-      {content}
+      {inline.text}
     </button>
   );
 }

@@ -5,12 +5,22 @@ interface NotesPanelProps {
   notes: NoteRecord[];
   selectedNoteId: string | null;
   onClose: () => void;
+  narration: {
+    text: string;
+    available: boolean;
+    playing: boolean;
+  } | null;
+  narrationMessage: string | null;
+  onToggleNarration: () => void;
 }
 
 export function NotesPanel({
   notes,
   selectedNoteId,
   onClose,
+  narration,
+  narrationMessage,
+  onToggleNarration,
 }: NotesPanelProps) {
   const note = notes.find((entry) => entry.id === selectedNoteId) ?? null;
 
@@ -60,6 +70,34 @@ export function NotesPanel({
             </p>
           ) : null}
           <p className="note-gloss">{note.gloss}</p>
+          {narration ? (
+            <button
+              className={`note-audio-button${narration.playing ? " is-playing" : ""}`}
+              type="button"
+              onClick={onToggleNarration}
+              disabled={!narration.available}
+              aria-label={`${narration.playing ? "Stop" : "Play"} Japanese narration: ${narration.text}`}
+              title={
+                narration.available
+                  ? `${narration.playing ? "Stop" : "Play"} narration`
+                  : "Narration awaiting generation"
+              }
+            >
+              <span className="note-audio-symbol" aria-hidden="true">
+                {narration.playing ? "■" : "▶"}
+              </span>
+              <span>
+                {narration.available
+                  ? narration.playing
+                    ? "Stop narration"
+                    : "Listen"
+                  : "Audio pending"}
+              </span>
+            </button>
+          ) : null}
+          <p className="note-audio-status" aria-live="polite">
+            {narrationMessage}
+          </p>
           <p className="note-body">{note.body}</p>
         </div>
       ) : (

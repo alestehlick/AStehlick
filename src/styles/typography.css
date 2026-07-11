@@ -34,8 +34,18 @@ h3,
 }
 
 .reading-page {
-  font-size: 1.25rem;
+  font-size: calc(1.25rem * var(--reader-text-scale, 1));
   line-height: 2;
+}
+
+.reading-page:lang(ja) {
+  font-size: calc(
+    1.25rem * var(--reader-text-scale, 1) * var(--japanese-text-scale)
+  );
+}
+
+.reading-page:not(:lang(ja)) .annotation:lang(ja) {
+  font-size: calc(1em * var(--japanese-text-scale));
 }
 
 .reading-page h2 {
