@@ -59,10 +59,16 @@ jobs:
         run: npm.cmd run build
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Archive Pages artifact
+        shell: cmd
+        run: tar.exe --directory dist -cvf "%RUNNER_TEMP%\artifact.tar" .
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          path: dist
+          name: github-pages
+          path: ${{ runner.temp }}\artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   deploy:
     environment:
