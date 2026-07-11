@@ -9,16 +9,6 @@ export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
   const label = inline.reading
     ? `${inline.text}, reading ${inline.reading}. Open note.`
     : `${inline.text}. Open note.`;
-  const content =
-    inline.language === "ja" && inline.reading ? (
-      <ruby>
-        {inline.text}
-        <rt>{inline.reading}</rt>
-      </ruby>
-    ) : (
-      inline.text
-    );
-
   return (
     <button
       className={`annotation${inline.emphasis ? ` is-${inline.emphasis}` : ""}`}
@@ -30,7 +20,7 @@ export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
         onOpenNote(inline.noteIds[0]);
       }}
     >
-      {content}
+      {inline.text}
     </button>
   );
 }
