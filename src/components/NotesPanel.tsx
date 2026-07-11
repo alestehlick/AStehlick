@@ -1,4 +1,5 @@
 import type { NoteRecord } from "../content/types";
+import { isDictionaryKanji, shirakawaEntryUrl } from "../utilities/shirakawa";
 
 interface NotesPanelProps {
   notes: NoteRecord[];
@@ -34,7 +35,25 @@ export function NotesPanel({
       {note ? (
         <div className="note-content" key={note.id}>
           <p className={`note-status status-${note.status}`}>{note.status}</p>
-          <h2 lang={note.language === "ja" ? "ja" : undefined}>{note.term}</h2>
+          <h2 lang={note.language === "ja" ? "ja" : undefined}>
+            {Array.from(note.term).map((character, index) =>
+              isDictionaryKanji(character) ? (
+                <a
+                  className="dictionary-kanji"
+                  href={shirakawaEntryUrl(character)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${character} in Shirakawa Dictionary`}
+                  title={`Open ${character} in Shirakawa Dictionary`}
+                  key={`${character}-${index}`}
+                >
+                  {character}
+                </a>
+              ) : (
+                <span key={`${character}-${index}`}>{character}</span>
+              ),
+            )}
+          </h2>
           {note.reading ? (
             <p className="note-reading" lang="ja">
               {note.reading}

@@ -33,3 +33,62 @@
 .annotation.is-strong {
   font-weight: 700;
 }
+
+.audio-segment {
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.audio-segment:hover,
+.audio-segment.is-playing {
+  border-bottom-color: var(--color-lichen-dim);
+  color: var(--color-focus);
+}
+
+.audio-segment.is-pending {
+  cursor: default;
+}
+
+.audio-segment.is-pending:hover {
+  border-bottom-color: transparent;
+  color: inherit;
+}
+
+.audio-play-button {
+  display: inline-grid;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 0.2rem 0 0.08rem;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--color-lichen-dim);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-interface);
+  font-size: 0.55rem;
+  line-height: 1;
+  vertical-align: 0.08em;
+}
+
+.audio-play-button:hover,
+.audio-play-button:focus-visible,
+.audio-play-button.is-playing {
+  color: var(--color-focus);
+  background: rgba(185, 200, 108, 0.1);
+}
+
+.audio-play-button:disabled {
+  color: var(--color-wood);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.audio-status {
+  min-height: 1.25rem;
+  color: var(--color-rouge);
+  font-family: var(--font-interface);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}

@@ -23,9 +23,17 @@ export interface LineBreakInline {
 
 export type ContentInline = TextInline | AnnotatedInline | LineBreakInline;
 
+export interface AudioSegmentDefinition {
+  id: string;
+  text: string;
+  start: number;
+  end: number;
+}
+
 export interface ParagraphBlock {
   type: "paragraph";
   content: ContentInline[];
+  audioSegments?: AudioSegmentDefinition[];
 }
 
 export interface HeadingBlock {

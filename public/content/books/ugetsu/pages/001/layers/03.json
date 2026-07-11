@@ -7,7 +7,12 @@
     {
       "type": "heading",
       "level": 2,
-      "content": [{ "type": "text", "text": "荒れ屋敷の前で" }]
+      "content": [
+        {
+          "type": "text",
+          "text": "荒れ屋敷の前で"
+        }
+      ]
     },
     {
       "type": "paragraph",
@@ -19,7 +24,10 @@
           "language": "ja",
           "noteIds": ["note-moonlight"]
         },
-        { "type": "text", "text": ", a lone " },
+        {
+          "type": "text",
+          "text": ", a lone "
+        },
         {
           "type": "annotated",
           "text": "旅人",
@@ -27,7 +35,10 @@
           "language": "ja",
           "noteIds": ["note-traveler"]
         },
-        { "type": "text", "text": " arrived before an " },
+        {
+          "type": "text",
+          "text": " arrived before an "
+        },
         {
           "type": "annotated",
           "text": "荒れ屋敷",
@@ -35,7 +46,10 @@
           "language": "ja",
           "noteIds": ["note-residence"]
         },
-        { "type": "text", "text": ". " },
+        {
+          "type": "text",
+          "text": ". "
+        },
         {
           "type": "annotated",
           "text": "葦は破れた門に触れ",
@@ -47,13 +61,44 @@
           "type": "text",
           "text": ", and the pale path seemed still to remember vanished footsteps."
         }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-01",
+          "text": "月の光が雲の間からほどけるころ",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "id": "segment-02",
+          "text": "旅人",
+          "start": 2,
+          "end": 2
+        },
+        {
+          "id": "segment-03",
+          "text": "荒れ屋敷",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "id": "segment-04",
+          "text": "葦は破れた門に触れ",
+          "start": 6,
+          "end": 6
+        }
       ]
     },
-    { "type": "divider" },
+    {
+      "type": "divider"
+    },
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "Deep within, " },
+        {
+          "type": "text",
+          "text": "Deep within, "
+        },
         {
           "type": "annotated",
           "text": "細い灯火が消え残っていた",
@@ -61,7 +106,10 @@
           "language": "ja",
           "noteIds": ["note-lamp"]
         },
-        { "type": "text", "text": ". The traveler " },
+        {
+          "type": "text",
+          "text": ". The traveler "
+        },
         {
           "type": "annotated",
           "text": "敷居の前でためらった",
@@ -72,6 +120,20 @@
         {
           "type": "text",
           "text": ". No voice came, but a presence seemed to withdraw behind the curtain."
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-05",
+          "text": "細い灯火が消え残っていた",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "segment-06",
+          "text": "敷居の前でためらった",
+          "start": 3,
+          "end": 3
         }
       ]
     }

@@ -128,6 +128,22 @@
   color: var(--color-paper-muted);
 }
 
+.narration-credit {
+  margin: calc(var(--space-3) * -0.65) 0 var(--space-3);
+  color: var(--color-paper-muted);
+  font-size: 0.7rem;
+}
+
+.narration-credit a {
+  color: var(--color-lichen-dim);
+  text-decoration: none;
+}
+
+.narration-credit a:hover,
+.narration-credit a:focus-visible {
+  color: var(--color-focus);
+}
+
 .reading-page {
   min-height: 27rem;
   padding: clamp(1.5rem, 5vw, 4rem);
@@ -227,6 +243,18 @@
 
 .note-content h2 {
   font-size: 1.75rem;
+}
+
+.dictionary-kanji {
+  border-bottom: 1px dotted var(--color-lichen-dim);
+  color: inherit;
+  text-decoration: none;
+}
+
+.dictionary-kanji:hover,
+.dictionary-kanji:focus-visible {
+  border-bottom-style: solid;
+  color: var(--color-focus);
 }
 
 .note-reading {

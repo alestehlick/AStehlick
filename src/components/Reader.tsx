@@ -185,8 +185,25 @@ export function Reader({
       <div className="reader-workspace">
         <div className="reading-column">
           <p className="layer-description">{layerMeta.description}</p>
+          {bundle.layer.blocks.some(
+            (block) =>
+              block.type === "paragraph" && block.audioSegments?.length,
+          ) ? (
+            <p className="narration-credit">
+              Narration: AivisSpeech ·{" "}
+              <a
+                href="https://hub.aivis-project.com/aivm-models/47e53151-a378-46f3-abee-ce13aa07feb1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                阿井田 茂 / Calm
+              </a>
+            </p>
+          ) : null}
           <ReadingPage
             layer={bundle.layer}
+            bookId={bookId}
+            pageId={pageId}
             pageTitle={bundle.page.title}
             onOpenNote={setSelectedNoteId}
           />

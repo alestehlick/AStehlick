@@ -28,6 +28,6 @@
   --space-4: 1.5rem;
   --space-5: 2.25rem;
   --space-6: 3.5rem;
-  --background-image: none;
-  --background-image-opacity: 0;
+  --background-image: url("/assets/backgrounds/heian-night.webp");
+  --background-image-opacity: 0.92;
 }

@@ -24,7 +24,10 @@ export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
       className={`annotation${inline.emphasis ? ` is-${inline.emphasis}` : ""}`}
       type="button"
       aria-label={label}
-      onClick={() => onOpenNote(inline.noteIds[0])}
+      onClick={(event) => {
+        event.stopPropagation();
+        onOpenNote(inline.noteIds[0]);
+      }}
     >
       {content}
     </button>

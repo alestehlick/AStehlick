@@ -7,7 +7,12 @@
     {
       "type": "heading",
       "level": 2,
-      "content": [{ "type": "text", "text": "かすかな灯火" }]
+      "content": [
+        {
+          "type": "text",
+          "text": "かすかな灯火"
+        }
+      ]
     },
     {
       "type": "paragraph",
@@ -19,7 +24,10 @@
           "language": "ja",
           "noteIds": ["note-moonlight"]
         },
-        { "type": "text", "text": "が雲の間からほどけるころ、一人の" },
+        {
+          "type": "text",
+          "text": "が雲の間からほどけるころ、一人の"
+        },
         {
           "type": "annotated",
           "text": "旅人",
@@ -27,7 +35,10 @@
           "language": "ja",
           "noteIds": ["note-traveler"]
         },
-        { "type": "text", "text": "は" },
+        {
+          "type": "text",
+          "text": "は"
+        },
         {
           "type": "annotated",
           "text": "荒れ屋敷",
@@ -35,7 +46,10 @@
           "language": "ja",
           "noteIds": ["note-residence"]
         },
-        { "type": "text", "text": "の前にたどり着いた。" },
+        {
+          "type": "text",
+          "text": "の前にたどり着いた。"
+        },
         {
           "type": "annotated",
           "text": "葦",
@@ -47,13 +61,32 @@
           "type": "text",
           "text": "は破れた門に触れ、白く沈んだ小道は、もはや通う者のない足音をまだ覚えているかのようであった。"
         }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-01",
+          "text": "月の光が雲の間からほどけるころ、一人の旅人は荒れ屋敷の前にたどり着いた。",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "id": "segment-02",
+          "text": "葦は破れた門に触れ、白く沈んだ小道は、もはや通う者のない足音をまだ覚えているかのようであった。",
+          "start": 6,
+          "end": 7
+        }
       ]
     },
-    { "type": "divider" },
+    {
+      "type": "divider"
+    },
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "奥には、細い" },
+        {
+          "type": "text",
+          "text": "奥には、細い"
+        },
         {
           "type": "annotated",
           "text": "灯火",
@@ -61,7 +94,14 @@
           "language": "ja",
           "noteIds": ["note-lamp"]
         },
-        { "type": "text", "text": "が消え残っていた。旅人は敷居の前で" },
+        {
+          "type": "text",
+          "text": "が消え残っていた。"
+        },
+        {
+          "type": "text",
+          "text": "旅人は敷居の前で"
+        },
         {
           "type": "annotated",
           "text": "ためらった",
@@ -69,7 +109,14 @@
           "language": "ja",
           "noteIds": ["note-hesitation"]
         },
-        { "type": "text", "text": "。声は聞こえなかったが、" },
+        {
+          "type": "text",
+          "text": "。"
+        },
+        {
+          "type": "text",
+          "text": "声は聞こえなかったが、"
+        },
         {
           "type": "annotated",
           "text": "几帳",
@@ -88,7 +135,30 @@
           "language": "ja",
           "noteIds": ["note-presence"]
         },
-        { "type": "text", "text": "がした。" }
+        {
+          "type": "text",
+          "text": "がした。"
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-03",
+          "text": "奥には、細い灯火が消え残っていた。",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "id": "segment-04",
+          "text": "旅人は敷居の前でためらった。",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "segment-05",
+          "text": "声は聞こえなかったが、几帳の陰で、誰かがたった今、袖を闇へ引いたような気配がした。",
+          "start": 6,
+          "end": 10
+        }
       ]
     }
   ]

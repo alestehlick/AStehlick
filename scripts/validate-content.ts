@@ -103,6 +103,56 @@ function annotatedNoteIds(layer: JsonObject): string[] {
   return ids;
 }
 
+function audioSegmentErrors(layer: JsonObject, layerPath: string): string[] {
+  const errors: string[] = [];
+  const ids: string[] = [];
+
+  for (const block of requireArray(layer.blocks, "blocks")) {
+    if (!Array.isArray(block.audioSegments)) continue;
+    const contentLength = Array.isArray(block.content)
+      ? block.content.length
+      : 0;
+    let previousEnd = -1;
+
+    for (const segment of block.audioSegments as JsonObject[]) {
+      const id = requireString(segment.id, "audioSegment.id");
+      const text = requireString(segment.text, "audioSegment.text");
+      const start = Number(segment.start);
+      const end = Number(segment.end);
+      ids.push(id);
+
+      if (!Number.isInteger(start) || !Number.isInteger(end) || start > end) {
+        errors.push(`${layerPath}: audio segment ${id} has an invalid range.`);
+      } else if (start <= previousEnd || end >= contentLength) {
+        errors.push(
+          `${layerPath}: audio segment ${id} overlaps or exceeds its paragraph.`,
+        );
+      }
+      previousEnd = end;
+
+      if (
+        !/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(text)
+      ) {
+        errors.push(
+          `${layerPath}: audio segment ${id} does not contain Japanese text.`,
+        );
+      }
+      if ((text.match(/[。！？!?]/g) ?? []).length > 1) {
+        errors.push(
+          `${layerPath}: audio segment ${id} is longer than one sentence.`,
+        );
+      }
+    }
+  }
+
+  errors.push(
+    ...findDuplicates(ids).map(
+      (id) => `${layerPath}: duplicate audio segment ${id}.`,
+    ),
+  );
+  return errors;
+}
+
 export function validateContent(
   contentRoot = resolve(process.cwd(), "public", "content"),
 ): ValidationResult {
@@ -245,6 +295,7 @@ export function validateContent(
             if (!knownNotes.has(noteId))
               errors.push(`${layerPath}: missing referenced note ${noteId}.`);
           }
+          errors.push(...audioSegmentErrors(layer, layerPath));
         }
       }
     }

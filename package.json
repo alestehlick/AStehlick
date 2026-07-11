@@ -11,6 +11,7 @@
     "format:check": "prettier --check .",
     "test": "vitest run --configLoader runner",
     "validate:content": "tsx scripts/validate-content.ts",
+    "generate:audio": "tsx scripts/generate-audio.ts",
     "check:links": "tsx scripts/check-links.ts",
     "build:manifest": "tsx scripts/build-manifest.ts"
   },

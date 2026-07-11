@@ -7,12 +7,20 @@
     {
       "type": "heading",
       "level": 2,
-      "content": [{ "type": "text", "text": "At the 荒れ屋敷" }]
+      "content": [
+        {
+          "type": "text",
+          "text": "At the 荒れ屋敷"
+        }
+      ]
     },
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "Toward the hour when " },
+        {
+          "type": "text",
+          "text": "Toward the hour when "
+        },
         {
           "type": "annotated",
           "text": "月の光",
@@ -20,7 +28,10 @@
           "language": "ja",
           "noteIds": ["note-moonlight"]
         },
-        { "type": "text", "text": " loosened from the clouds, a " },
+        {
+          "type": "text",
+          "text": " loosened from the clouds, a "
+        },
         {
           "type": "annotated",
           "text": "旅人",
@@ -28,7 +39,10 @@
           "language": "ja",
           "noteIds": ["note-traveler"]
         },
-        { "type": "text", "text": " came upon an " },
+        {
+          "type": "text",
+          "text": " came upon an "
+        },
         {
           "type": "annotated",
           "text": "荒れ屋敷",
@@ -36,7 +50,10 @@
           "language": "ja",
           "noteIds": ["note-residence"]
         },
-        { "type": "text", "text": ". " },
+        {
+          "type": "text",
+          "text": ". "
+        },
         {
           "type": "annotated",
           "text": "葦",
@@ -48,13 +65,44 @@
           "type": "text",
           "text": " brushed the broken gate, and the pale path seemed to remember feet that no longer crossed it."
         }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-01",
+          "text": "月の光",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "segment-02",
+          "text": "旅人",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "id": "segment-03",
+          "text": "荒れ屋敷",
+          "start": 5,
+          "end": 5
+        },
+        {
+          "id": "segment-04",
+          "text": "葦",
+          "start": 7,
+          "end": 7
+        }
       ]
     },
-    { "type": "divider" },
+    {
+      "type": "divider"
+    },
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "Within, a " },
+        {
+          "type": "text",
+          "text": "Within, a "
+        },
         {
           "type": "annotated",
           "text": "灯火",
@@ -73,7 +121,24 @@
           "language": "ja",
           "noteIds": ["note-presence"]
         },
-        { "type": "text", "text": " behind the screens." }
+        {
+          "type": "text",
+          "text": " behind the screens."
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-05",
+          "text": "灯火",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "segment-06",
+          "text": "気配",
+          "start": 3,
+          "end": 3
+        }
       ]
     }
   ]

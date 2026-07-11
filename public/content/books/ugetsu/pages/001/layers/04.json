@@ -7,7 +7,12 @@
     {
       "type": "heading",
       "level": 2,
-      "content": [{ "type": "text", "text": "かすかな灯火" }]
+      "content": [
+        {
+          "type": "text",
+          "text": "かすかな灯火"
+        }
+      ]
     },
     {
       "type": "paragraph",
@@ -19,7 +24,10 @@
           "language": "ja",
           "noteIds": ["note-moonlight"]
         },
-        { "type": "text", "text": "、" },
+        {
+          "type": "text",
+          "text": "、"
+        },
         {
           "type": "annotated",
           "text": "一人の旅人は荒れ屋敷の前にたどり着いた",
@@ -27,7 +35,10 @@
           "language": "ja",
           "noteIds": ["note-traveler", "note-residence"]
         },
-        { "type": "text", "text": "。" },
+        {
+          "type": "text",
+          "text": "。"
+        },
         {
           "type": "annotated",
           "text": "葦は破れた門に触れ",
@@ -39,9 +50,31 @@
           "type": "text",
           "text": "、the pale path seemed to remember feet that came no longer."
         }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-01",
+          "text": "月の光が雲の間からほどけるころ",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "id": "segment-02",
+          "text": "一人の旅人は荒れ屋敷の前にたどり着いた。",
+          "start": 2,
+          "end": 2
+        },
+        {
+          "id": "segment-03",
+          "text": "葦は破れた門に触れ",
+          "start": 4,
+          "end": 4
+        }
       ]
     },
-    { "type": "divider" },
+    {
+      "type": "divider"
+    },
     {
       "type": "paragraph",
       "content": [
@@ -52,7 +85,10 @@
           "language": "ja",
           "noteIds": ["note-lamp"]
         },
-        { "type": "text", "text": "。" },
+        {
+          "type": "text",
+          "text": "。"
+        },
         {
           "type": "annotated",
           "text": "旅人は敷居の前でためらった",
@@ -63,6 +99,20 @@
         {
           "type": "text",
           "text": "。No voice was heard, yet behind the standing curtain someone seemed to draw a sleeve into darkness."
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "segment-04",
+          "text": "奥には、細い灯火が消え残っていた。",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "id": "segment-05",
+          "text": "旅人は敷居の前でためらった。",
+          "start": 2,
+          "end": 2
         }
       ]
     }

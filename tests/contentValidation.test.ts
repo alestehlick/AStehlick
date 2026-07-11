@@ -56,4 +56,36 @@ describe("content validation", () => {
       result.errors.some((error) => error.includes("note-does-not-exist")),
     ).toBe(true);
   });
+
+  it("rejects audio segments longer than one sentence", () => {
+    const temporaryRoot = mkdtempSync(resolve(tmpdir(), "moonlight-reader-"));
+    temporaryDirectories.push(temporaryRoot);
+    const contentRoot = resolve(temporaryRoot, "content");
+    cpSync(resolve(process.cwd(), "public", "content"), contentRoot, {
+      recursive: true,
+    });
+
+    const layerPath = resolve(
+      contentRoot,
+      "books",
+      "ugetsu",
+      "pages",
+      "001",
+      "layers",
+      "06.json",
+    );
+    const layer = JSON.parse(readFileSync(layerPath, "utf8")) as {
+      blocks: Array<{ audioSegments?: Array<{ text: string }> }>;
+    };
+    const segment = layer.blocks
+      .flatMap((block) => block.audioSegments ?? [])
+      .at(0)!;
+    segment.text = "一文です。二文です。";
+    writeFileSync(layerPath, `${JSON.stringify(layer, null, 2)}\n`, "utf8");
+
+    const result = validateContent(contentRoot);
+    expect(
+      result.errors.some((error) => error.includes("longer than one sentence")),
+    ).toBe(true);
+  });
 });
