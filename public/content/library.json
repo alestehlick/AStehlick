@@ -6,9 +6,9 @@
       "id": "ugetsu",
       "title": "Ugetsu Monogatari",
       "titleJa": "雨月物語",
-      "author": "Ueda Akinari",
-      "authorJa": "上田秋成",
-      "description": "A progressive reading of Ueda Akinari’s original text, beginning with “The House amid the Reeds.”",
+      "author": "Ueda Akinari · modern Japanese by Hiroshi Ugatsu",
+      "authorJa": "上田秋成／鵜月洋訳",
+      "description": "A progressive reading of Hiroshi Ugatsu’s modern-Japanese translation of “The House amid the Reeds.”",
       "path": "books/ugetsu/book.json"
     }
   ]

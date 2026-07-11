@@ -13,56 +13,36 @@
         },
         {
           "type": "annotated",
-          "text": "真間の郷",
+          "text": "下総の国",
+          "reading": "しもうさのくに",
+          "language": "ja",
+          "noteIds": ["note-shimosa"]
+        },
+        {
+          "type": "text",
+          "text": ", in "
+        },
+        {
+          "type": "annotated",
+          "text": "葛飾郡",
+          "reading": "かつしかのこおり",
+          "language": "ja",
+          "noteIds": ["note-katsushika"]
+        },
+        {
+          "type": "text",
+          "text": ", in "
+        },
+        {
+          "type": "annotated",
+          "text": "真間の里",
           "reading": "ままのさと",
           "language": "ja",
           "noteIds": ["note-mama"]
         },
         {
           "type": "text",
-          "text": ", within "
-        },
-        {
-          "type": "annotated",
-          "text": "葛飾郡",
-          "reading": "かつしかのこほり",
-          "language": "ja",
-          "noteIds": ["note-katsushika"]
-        },
-        {
-          "type": "text",
-          "text": " of "
-        },
-        {
-          "type": "annotated",
-          "text": "下総の国",
-          "reading": "しもふさのくに",
-          "language": "ja",
-          "noteIds": ["note-shimosa"]
-        },
-        {
-          "type": "text",
           "text": ", there lived a man named Katsushirō."
-        }
-      ],
-      "audioSegments": [
-        {
-          "id": "mama",
-          "text": "ままのさと",
-          "start": 1,
-          "end": 1
-        },
-        {
-          "id": "katsushika",
-          "text": "かつしかのこおり",
-          "start": 3,
-          "end": 3
-        },
-        {
-          "id": "shimosa",
-          "text": "しもうさのくに",
-          "start": 5,
-          "end": 5
         }
       ]
     },
@@ -71,7 +51,7 @@
       "content": [
         {
           "type": "text",
-          "text": "His family had long dwelt there since his grandfather’s time, owning many fields and living in prosperity. But when he came of age, his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
+          "text": "His family had lived in the village since his grandfather’s generation. They owned many fields and lived prosperously. But Katsushirō was carefree and unconcerned by nature. He regarded farming as troublesome, and in the end he fell into poverty."
         }
       ]
     }

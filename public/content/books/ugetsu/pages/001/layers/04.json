@@ -10,20 +10,20 @@
         {
           "type": "annotated",
           "text": "下総の国",
-          "reading": "しもふさのくに",
+          "reading": "しもうさのくに",
           "language": "ja",
           "noteIds": ["note-shimosa"]
         },
         {
           "type": "annotated",
           "text": "葛飾郡",
-          "reading": "かつしかのこほり",
+          "reading": "かつしかのこおり",
           "language": "ja",
           "noteIds": ["note-katsushika"]
         },
         {
           "type": "annotated",
-          "text": "真間の郷",
+          "text": "真間の里",
           "reading": "ままのさと",
           "language": "ja",
           "noteIds": ["note-mama"]
@@ -35,31 +35,43 @@
         {
           "type": "annotated",
           "text": "勝四郎",
-          "reading": "かつしらう",
+          "reading": "かつしろう",
           "language": "ja",
           "noteIds": ["note-katsushiro"]
         },
         {
           "type": "text",
-          "text": "といふ"
+          "text": "という"
         },
         {
           "type": "annotated",
           "text": "男",
-          "reading": "をとこ",
+          "reading": "おとこ",
           "language": "ja",
           "noteIds": ["note-man"]
         },
         {
+          "type": "text",
+          "text": "が"
+        },
+        {
           "type": "annotated",
-          "text": "ありけり",
-          "reading": "ありけり",
+          "text": "あった",
+          "reading": "あった",
           "language": "ja",
-          "noteIds": ["note-arikeri"]
+          "noteIds": ["note-atta"]
         },
         {
           "type": "text",
           "text": "。"
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "opening-sentence",
+          "text": "しもうさのくに、かつしかのこおり、ままのさとに、かつしろうというおとこがあった。",
+          "start": 0,
+          "end": 9
         }
       ]
     },
@@ -68,42 +80,42 @@
       "content": [
         {
           "type": "annotated",
-          "text": "祖父",
-          "reading": "おほぢ",
+          "text": "祖父の代",
+          "reading": "そふのだい",
           "language": "ja",
-          "noteIds": ["note-grandfather"]
+          "noteIds": ["note-sofunodai"]
         },
         {
           "type": "text",
-          "text": "より"
+          "text": "から"
         },
         {
           "type": "annotated",
-          "text": "旧しく",
+          "text": "久しく",
           "reading": "ひさしく",
           "language": "ja",
           "noteIds": ["note-hisashiku"]
         },
         {
           "type": "text",
-          "text": "ここに"
+          "text": "この里に"
         },
         {
           "type": "annotated",
-          "text": "住み",
+          "text": "すみ",
           "reading": "すみ",
           "language": "ja",
           "noteIds": ["note-sumi"]
         },
         {
           "type": "text",
-          "text": "—the household owned many fields and lived in prosperity. But when Katsushirō came of age, his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
+          "text": ", his family owned many fields and lived prosperously. But Katsushirō was carefree and unconcerned by nature. He regarded farming as troublesome, and in the end he fell into poverty."
         }
       ],
       "audioSegments": [
         {
-          "id": "inheritance",
-          "text": "おおじより、ひさしくここにすみ",
+          "id": "family-continuity",
+          "text": "そふのだいから、ひさしくこのさとにすみ",
           "start": 0,
           "end": 4
         }

@@ -3,33 +3,33 @@
   "id": "001",
   "bookId": "ugetsu",
   "title": "The House amid the Reeds · I",
-  "titleJa": "浅茅が宿　其の一",
+  "titleJa": "浅茅が宿　現代語訳・其の一",
   "sequence": 1,
   "layers": [
     {
       "number": 1,
       "label": "Orientation",
-      "description": "The whole passage in English, before the Japanese begins to enter."
+      "description": "The whole passage in English, before Japanese begins to enter."
     },
     {
       "number": 2,
       "label": "The place",
-      "description": "Three names set the tale in the old landscape of Mamma."
+      "description": "Three names establish the old landscape of Mamma."
     },
     {
       "number": 3,
       "label": "The man",
-      "description": "Katsushirō enters through Akinari’s old narrative formula."
+      "description": "Katsushirō appears, and the opening sentence becomes Japanese."
     },
     {
       "number": 4,
       "label": "Inheritance",
-      "description": "The continuity of the household appears."
+      "description": "The continuity of the household enters through three expressions."
     },
     {
       "number": 5,
       "label": "The fields",
-      "description": "Possession and material abundance enter the sentence."
+      "description": "The family’s material possessions begin to take Japanese form."
     },
     {
       "number": 6,
@@ -38,18 +38,18 @@
     },
     {
       "number": 7,
-      "label": "Disposition",
-      "description": "Katsushirō’s inward nature begins to turn the story."
+      "label": "Temperament",
+      "description": "Three words reveal Katsushirō’s careless inward disposition."
     },
     {
       "number": 8,
-      "label": "Aversion",
-      "description": "His dislike of farming becomes the governing cause."
+      "label": "Farming",
+      "description": "The occupation and the burden he sees in it enter the page."
     },
     {
       "number": 9,
-      "label": "Original",
-      "description": "The opening passage now stands in Akinari’s Japanese."
+      "label": "The fall",
+      "description": "The complete modern-Japanese passage stands by itself."
     }
   ],
   "layersPath": "layers",

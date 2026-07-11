@@ -3,9 +3,9 @@
   "id": "ugetsu",
   "title": "Ugetsu Monogatari",
   "titleJa": "雨月物語",
-  "author": "Ueda Akinari",
-  "authorJa": "上田秋成",
+  "author": "Ueda Akinari · modern Japanese by Hiroshi Ugatsu",
+  "authorJa": "上田秋成／鵜月洋訳",
   "language": "ja",
-  "description": "A page-by-page ascent into Ueda Akinari’s original Japanese, with no more than a few new words entering at each layer.",
+  "description": "A page-by-page ascent through the modern-Japanese translation of Ugetsu Monogatari, with no more than three new study items entering at each layer.",
   "manifest": "manifest.json"
 }

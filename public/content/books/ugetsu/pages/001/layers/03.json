@@ -10,20 +10,20 @@
         {
           "type": "annotated",
           "text": "下総の国",
-          "reading": "しもふさのくに",
+          "reading": "しもうさのくに",
           "language": "ja",
           "noteIds": ["note-shimosa"]
         },
         {
           "type": "annotated",
           "text": "葛飾郡",
-          "reading": "かつしかのこほり",
+          "reading": "かつしかのこおり",
           "language": "ja",
           "noteIds": ["note-katsushika"]
         },
         {
           "type": "annotated",
-          "text": "真間の郷",
+          "text": "真間の里",
           "reading": "ままのさと",
           "language": "ja",
           "noteIds": ["note-mama"]
@@ -35,27 +35,31 @@
         {
           "type": "annotated",
           "text": "勝四郎",
-          "reading": "かつしらう",
+          "reading": "かつしろう",
           "language": "ja",
           "noteIds": ["note-katsushiro"]
         },
         {
           "type": "text",
-          "text": "といふ"
+          "text": "という"
         },
         {
           "type": "annotated",
           "text": "男",
-          "reading": "をとこ",
+          "reading": "おとこ",
           "language": "ja",
           "noteIds": ["note-man"]
         },
         {
+          "type": "text",
+          "text": "が"
+        },
+        {
           "type": "annotated",
-          "text": "ありけり",
-          "reading": "ありけり",
+          "text": "あった",
+          "reading": "あった",
           "language": "ja",
-          "noteIds": ["note-arikeri"]
+          "noteIds": ["note-atta"]
         },
         {
           "type": "text",
@@ -65,9 +69,9 @@
       "audioSegments": [
         {
           "id": "opening-sentence",
-          "text": "しもうさのくに、かつしかのこおり、ままのさとに、かつしろうというおとこ、ありけり。",
+          "text": "しもうさのくに、かつしかのこおり、ままのさとに、かつしろうというおとこがあった。",
           "start": 0,
-          "end": 8
+          "end": 9
         }
       ]
     },
@@ -76,7 +80,7 @@
       "content": [
         {
           "type": "text",
-          "text": "His family had long dwelt there since his grandfather’s time, owning many fields and living in prosperity. But when he came of age, his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
+          "text": "His family had lived in the village since his grandfather’s generation. They owned many fields and lived prosperously. But Katsushirō was carefree and unconcerned by nature. He regarded farming as troublesome, and in the end he fell into poverty."
         }
       ]
     }
