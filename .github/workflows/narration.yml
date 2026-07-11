@@ -32,11 +32,11 @@ jobs:
           node-version: 22
           cache: npm
       - name: Install dependencies
-        run: npm ci
+        run: npm.cmd ci
       - name: Validate authored content
-        run: npm run validate:content
+        run: npm.cmd run validate:content
       - name: Prepare local AivisSpeech
-        shell: pwsh
+        shell: powershell
         run: ./scripts/windows/prepare-aivis.ps1
       - name: Generate changed narration
         env:
@@ -44,9 +44,9 @@ jobs:
           AIVIS_SPEAKER_NAME: 阿井田 茂
           AIVIS_STYLE_NAME: Calm
           FFMPEG_PATH: C:\ffmpeg\bin\ffmpeg.exe
-        run: npm run generate:audio
+        run: npm.cmd run generate:audio
       - name: Commit refreshed narration
-        shell: pwsh
+        shell: powershell
         run: |
           git add public/assets/audio
           if (git diff --cached --quiet) {
