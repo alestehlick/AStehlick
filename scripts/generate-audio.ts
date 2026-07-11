@@ -17,7 +17,7 @@ interface AudioTask {
   text: string;
   bookId: string;
   pageId: string;
-  layer: number;
+  layer: number | "word";
   relativePath: string;
 }
 
@@ -104,6 +104,19 @@ function collectTasks(): AudioTask[] {
       const page = readJson(pagePath);
       const pageId = text(page.id);
       const layersDirectory = resolve(dirname(pagePath), text(page.layersPath));
+      const notes = readJson(resolve(dirname(pagePath), text(page.notesPath)));
+      for (const note of array(notes.notes)) {
+        const id = text(note.id);
+        if (!id || text(note.language) !== "ja") continue;
+        tasks.push({
+          id,
+          text: text(note.reading) || text(note.term),
+          bookId,
+          pageId,
+          layer: "word",
+          relativePath: `${bookId}/${pageId}/words/${id}.mp3`,
+        });
+      }
       for (const layerEntry of array(page.layers)) {
         const layer = Number(layerEntry.number);
         const layerFile = readJson(

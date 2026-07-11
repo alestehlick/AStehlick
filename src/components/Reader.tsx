@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   createContentLoader,
   ContentLoadError,
@@ -12,6 +12,7 @@ import {
 import { type ProgressData, createProgressStore } from "../state/progressStore";
 import { adjacentLayer, adjacentPage } from "../state/readerState";
 import { isNativeControl } from "../utilities/keyboard";
+import { wordNarrationKey, wordNarrationUrl } from "../utilities/narration";
 import { LayerNavigator } from "./LayerNavigator";
 import { NotesPanel } from "./NotesPanel";
 import { PageCommentary } from "./PageCommentary";
@@ -60,12 +61,37 @@ export function Reader({
 }: ReaderProps) {
   const [bundle, setBundle] = useState<ReaderBundle | null>(null);
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [availableAudio, setAvailableAudio] = useState<Set<string>>(new Set());
+  const [activeAudioKey, setActiveAudioKey] = useState<string | null>(null);
+  const [audioMessage, setAudioMessage] = useState<string | null>(null);
   const [commentaryOpen, setCommentaryOpen] = useState(
     () => preferencesStore.load().commentaryOpen,
   );
   const [readingScale, setReadingScale] = useState<ReadingScale>(
     () => preferencesStore.load().readingScale ?? deviceDefaultScale(),
   );
+
+  useEffect(() => {
+    let active = true;
+    const base = import.meta.env.BASE_URL.endsWith("/")
+      ? import.meta.env.BASE_URL
+      : `${import.meta.env.BASE_URL}/`;
+    fetch(`${base}assets/audio/manifest.json`)
+      .then((response) => (response.ok ? response.json() : { entries: {} }))
+      .then((manifest: { entries?: Record<string, unknown> }) => {
+        if (active) {
+          setAvailableAudio(new Set(Object.keys(manifest.entries ?? {})));
+        }
+      })
+      .catch(() => {
+        if (active) setAvailableAudio(new Set());
+      });
+    return () => {
+      active = false;
+      audioRef.current?.pause();
+    };
+  }, []);
 
   const scaleIndex = readingScales.findIndex(
     (scale) => scale.id === readingScale,
@@ -171,6 +197,72 @@ export function Reader({
     );
   }, [bundle, pageId]);
 
+  const selectedNote = useMemo(
+    () =>
+      bundle?.notes.notes.find((note) => note.id === selectedNoteId) ?? null,
+    [bundle, selectedNoteId],
+  );
+  const selectedAudioKey = selectedNote
+    ? wordNarrationKey(bookId, pageId, selectedNote.id)
+    : null;
+
+  useEffect(() => {
+    audioRef.current?.pause();
+    audioRef.current = null;
+    setActiveAudioKey(null);
+    setAudioMessage(null);
+  }, [bookId, layerNumber, pageId, selectedNoteId]);
+
+  const playAudio = (key: string, url: string) => {
+    if (!availableAudio.has(key)) {
+      setAudioMessage("Narration is awaiting generation.");
+      return;
+    }
+    if (activeAudioKey === key && audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      audioRef.current = null;
+      setActiveAudioKey(null);
+      return;
+    }
+
+    audioRef.current?.pause();
+    const audio = new Audio(url);
+    audioRef.current = audio;
+    setActiveAudioKey(key);
+    setAudioMessage(null);
+    audio.addEventListener(
+      "ended",
+      () => {
+        audioRef.current = null;
+        setActiveAudioKey(null);
+      },
+      { once: true },
+    );
+    audio.addEventListener(
+      "error",
+      () => {
+        audioRef.current = null;
+        setActiveAudioKey(null);
+        setAudioMessage("Narration is awaiting generation.");
+      },
+      { once: true },
+    );
+    void audio.play().catch(() => {
+      audioRef.current = null;
+      setActiveAudioKey(null);
+      setAudioMessage("Narration could not be played.");
+    });
+  };
+
+  const toggleWordNarration = () => {
+    if (!selectedNote || !selectedAudioKey) return;
+    playAudio(
+      selectedAudioKey,
+      wordNarrationUrl(bookId, pageId, selectedNote.id),
+    );
+  };
+
   if (!bundle) {
     return (
       <main className="reader-loading" aria-live="polite">
@@ -240,6 +332,9 @@ export function Reader({
             bookId={bookId}
             pageId={pageId}
             pageTitle={bundle.page.title}
+            availableAudio={availableAudio}
+            activeAudioKey={activeAudioKey}
+            onPlayAudio={playAudio}
             onOpenNote={setSelectedNoteId}
           />
           <PageCommentary
@@ -255,6 +350,17 @@ export function Reader({
           notes={bundle.notes.notes}
           selectedNoteId={selectedNoteId}
           onClose={() => setSelectedNoteId(null)}
+          narration={
+            selectedNote && selectedAudioKey
+              ? {
+                  text: selectedNote.reading ?? selectedNote.term,
+                  available: availableAudio.has(selectedAudioKey),
+                  playing: activeAudioKey === selectedAudioKey,
+                }
+              : null
+          }
+          narrationMessage={audioMessage}
+          onToggleNarration={toggleWordNarration}
         />
       </div>
 
