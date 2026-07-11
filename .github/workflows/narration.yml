@@ -1,0 +1,60 @@
+name: Generate Moonlight Reader Narration
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "public/content/**"
+      - "scripts/generate-audio.ts"
+      - "scripts/windows/prepare-aivis.ps1"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/narration.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: moonlight-reader-narration
+  cancel-in-progress: false
+
+jobs:
+  narrate:
+    runs-on: [self-hosted, Windows, X64, aivis]
+    timeout-minutes: 90
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate authored content
+        run: npm run validate:content
+      - name: Prepare local AivisSpeech
+        shell: pwsh
+        run: ./scripts/windows/prepare-aivis.ps1
+      - name: Generate changed narration
+        env:
+          AIVIS_ENGINE_URL: http://127.0.0.1:10101
+          AIVIS_SPEAKER_NAME: 阿井田 茂
+          AIVIS_STYLE_NAME: Calm
+          FFMPEG_PATH: C:\ffmpeg\bin\ffmpeg.exe
+        run: npm run generate:audio
+      - name: Commit refreshed narration
+        shell: pwsh
+        run: |
+          git add public/assets/audio
+          if (git diff --cached --quiet) {
+            Write-Host "Narration is already current."
+            exit 0
+          }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Generate Moonlight Reader narration"
+          git pull --rebase origin $env:GITHUB_REF_NAME
+          git push origin "HEAD:$env:GITHUB_REF_NAME"

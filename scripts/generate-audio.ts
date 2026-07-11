@@ -1,8 +1,10 @@
+import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import {
   existsSync,
   mkdirSync,
   readFileSync,
+  renameSync,
   rmSync,
   writeFileSync,
 } from "node:fs";
@@ -19,11 +21,27 @@ interface AudioTask {
   relativePath: string;
 }
 
-interface AudioManifestEntry extends AudioTask {
-  hash: string;
-  modelUuid: string;
+interface AivisStyle {
+  id: number;
+  name: string;
+  type?: string;
+}
+
+interface AivisSpeaker {
+  name: string;
+  speaker_uuid: string;
+  styles: AivisStyle[];
+}
+
+interface SelectedVoice {
+  speakerName: string;
   speakerUuid: string;
+  styleName: string;
   styleId: number;
+}
+
+interface AudioManifestEntry extends AudioTask, SelectedVoice {
+  hash: string;
 }
 
 interface AudioManifest {
@@ -37,27 +55,25 @@ const projectRoot = process.cwd();
 const contentRoot = resolve(projectRoot, "public", "content");
 const audioRoot = resolve(projectRoot, "public", "assets", "audio");
 const manifestPath = resolve(audioRoot, "manifest.json");
-const apiKey = process.env.AIVIS_API_KEY?.trim() ?? "";
-const endpoint =
-  process.env.AIVIS_API_ENDPOINT ??
-  "https://api.aivis-project.com/v1/tts/synthesize";
-const modelUuid =
-  process.env.AIVIS_MODEL_UUID ?? "47e53151-a378-46f3-abee-ce13aa07feb1";
-const speakerUuid =
-  process.env.AIVIS_SPEAKER_UUID ?? "561e4e59-3bc9-4726-9028-44a3c12a6f1d";
-const styleId = Number(process.env.AIVIS_STYLE_ID ?? "1");
-const requestInterval = Number(process.env.AIVIS_REQUEST_INTERVAL_MS ?? "6500");
+const engineUrl = (
+  process.env.AIVIS_ENGINE_URL ?? "http://127.0.0.1:10101"
+).replace(/\/$/, "");
+const preferredSpeaker = process.env.AIVIS_SPEAKER_NAME ?? "阿井田 茂";
+const preferredStyle = process.env.AIVIS_STYLE_NAME ?? "Calm";
+const styleOverride = process.env.AIVIS_STYLE_ID
+  ? Number(process.env.AIVIS_STYLE_ID)
+  : null;
+const ffmpeg = process.env.FFMPEG_PATH ?? "ffmpeg";
 
 const voiceSettings = {
-  speaking_rate: 0.88,
-  emotional_intensity: 0.7,
-  tempo_dynamics: 0.75,
-  volume: 1.0,
-  leading_silence_seconds: 0.04,
-  trailing_silence_seconds: 0.22,
-  line_break_silence_seconds: 0.35,
-  use_volume_normalizer: true,
-  output_format: "mp3",
+  speedScale: 0.88,
+  intonationScale: 0.72,
+  tempoDynamicsScale: 0.78,
+  volumeScale: 1.0,
+  prePhonemeLength: 0.04,
+  postPhonemeLength: 0.22,
+  outputSamplingRate: 44100,
+  outputStereo: false,
 };
 
 function readJson(path: string): JsonObject {
@@ -75,28 +91,22 @@ function text(value: unknown): string {
 function collectTasks(): AudioTask[] {
   const tasks: AudioTask[] = [];
   const library = readJson(resolve(contentRoot, "library.json"));
-
   for (const libraryBook of array(library.books)) {
     const bookPath = resolve(contentRoot, text(libraryBook.path));
     const book = readJson(bookPath);
     const bookDirectory = dirname(bookPath);
     const bookId = text(book.id);
     const manifest = readJson(resolve(bookDirectory, text(book.manifest)));
-
     for (const pageEntry of array(manifest.pages)) {
       const pagePath = resolve(bookDirectory, text(pageEntry.path));
       const page = readJson(pagePath);
       const pageId = text(page.id);
       const layersDirectory = resolve(dirname(pagePath), text(page.layersPath));
-
       for (const layerEntry of array(manifest.layers)) {
         const layer = Number(layerEntry.number);
-        const layerPath = resolve(
-          layersDirectory,
-          `${String(layer).padStart(2, "0")}.json`,
+        const layerFile = readJson(
+          resolve(layersDirectory, `${String(layer).padStart(2, "0")}.json`),
         );
-        const layerFile = readJson(layerPath);
-
         for (const block of array(layerFile.blocks)) {
           for (const segment of array(block.audioSegments)) {
             const id = text(segment.id);
@@ -113,7 +123,6 @@ function collectTasks(): AudioTask[] {
       }
     }
   }
-
   return tasks;
 }
 
@@ -121,7 +130,7 @@ function loadManifest(): AudioManifest {
   if (!existsSync(manifestPath)) {
     return {
       formatVersion: 1,
-      generatedBy: "Aivis Cloud API",
+      generatedBy: "AivisSpeech local engine",
       voice: "阿井田 茂 / Calm",
       entries: {},
     };
@@ -129,95 +138,167 @@ function loadManifest(): AudioManifest {
   return JSON.parse(readFileSync(manifestPath, "utf8")) as AudioManifest;
 }
 
+function normalize(value: string): string {
+  return value.normalize("NFKC").replace(/\s+/g, "").toLocaleLowerCase();
+}
+
+async function request(path: string, init?: RequestInit): Promise<Response> {
+  const response = await fetch(`${engineUrl}${path}`, {
+    signal: AbortSignal.timeout(120_000),
+    ...init,
+  });
+  if (!response.ok) {
+    throw new Error(
+      `AivisSpeech ${path} failed (${response.status}): ${await response.text()}`,
+    );
+  }
+  return response;
+}
+
+async function selectVoice(): Promise<SelectedVoice> {
+  let speakers: AivisSpeaker[];
+  try {
+    speakers = (await (await request("/speakers")).json()) as AivisSpeaker[];
+  } catch (error) {
+    throw new Error(
+      `The local AivisSpeech engine is unavailable at ${engineUrl}. ${String(error)}`,
+    );
+  }
+  const preferred = normalize(preferredSpeaker);
+  const speaker = speakers.find((candidate) => {
+    const name = normalize(candidate.name);
+    return (
+      name === preferred || name.includes(preferred) || preferred.includes(name)
+    );
+  });
+  if (!speaker) {
+    throw new Error(
+      `Voice "${preferredSpeaker}" is not installed. Available voices: ${speakers.map((item) => item.name).join(", ") || "none"}.`,
+    );
+  }
+  const spokenStyles = speaker.styles.filter(
+    (style) => !style.type || style.type === "talk",
+  );
+  const style =
+    (styleOverride === null
+      ? spokenStyles.find(
+          (candidate) =>
+            normalize(candidate.name) === normalize(preferredStyle),
+        )
+      : spokenStyles.find((candidate) => candidate.id === styleOverride)) ??
+    spokenStyles.find((candidate) =>
+      /calm|落ち着|穏やか/i.test(candidate.name),
+    );
+  if (!style) {
+    throw new Error(
+      `Style "${preferredStyle}" was not found for ${speaker.name}. Available styles: ${spokenStyles.map((item) => `${item.name} (${item.id})`).join(", ")}.`,
+    );
+  }
+  return {
+    speakerName: speaker.name,
+    speakerUuid: speaker.speaker_uuid,
+    styleName: style.name,
+    styleId: style.id,
+  };
+}
+
 function taskKey(task: AudioTask): string {
   return `${task.bookId}:${task.pageId}:${task.layer}:${task.id}`;
 }
 
-function taskHash(task: AudioTask): string {
+function taskHash(task: AudioTask, voice: SelectedVoice): string {
   return createHash("sha256")
     .update(
-      JSON.stringify({ task, modelUuid, speakerUuid, styleId, voiceSettings }),
+      JSON.stringify({ task, voice, voiceSettings, format: "mp3-128k-v1" }),
     )
     .digest("hex");
 }
 
-function wait(milliseconds: number): Promise<void> {
-  return new Promise((resolveWait) => setTimeout(resolveWait, milliseconds));
+async function synthesize(
+  task: AudioTask,
+  voice: SelectedVoice,
+): Promise<Uint8Array> {
+  const parameters = new URLSearchParams({
+    text: task.text,
+    speaker: String(voice.styleId),
+  });
+  const query = (await (
+    await request(`/audio_query?${parameters}`, { method: "POST" })
+  ).json()) as JsonObject;
+  Object.assign(query, voiceSettings);
+  const response = await request(`/synthesis?speaker=${voice.styleId}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify(query),
+  });
+  return new Uint8Array(await response.arrayBuffer());
 }
 
-async function synthesize(task: AudioTask): Promise<Uint8Array> {
-  for (let attempt = 1; attempt <= 3; attempt += 1) {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model_uuid: modelUuid,
-        speaker_uuid: speakerUuid,
-        style_id: styleId,
-        text: task.text,
-        use_ssml: false,
-        ...voiceSettings,
-      }),
-    });
-
-    if (response.ok) return new Uint8Array(await response.arrayBuffer());
-    const details = await response.text();
-    if (response.status !== 429 || attempt === 3) {
-      throw new Error(
-        `Aivis synthesis failed for ${task.id} (${response.status}): ${details}`,
-      );
-    }
-    const retryAfter = Number(response.headers.get("retry-after") ?? "10");
-    await wait(Math.max(1, retryAfter) * 1000);
+function encodeMp3(wav: Uint8Array, destination: string): void {
+  const temporary = `${destination}.tmp.mp3`;
+  const result = spawnSync(
+    ffmpeg,
+    [
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-y",
+      "-i",
+      "pipe:0",
+      "-map_metadata",
+      "-1",
+      "-codec:a",
+      "libmp3lame",
+      "-b:a",
+      "128k",
+      temporary,
+    ],
+    { input: wav, encoding: "utf8", maxBuffer: 10 * 1024 * 1024 },
+  );
+  if (result.status !== 0) {
+    rmSync(temporary, { force: true });
+    throw new Error(
+      `FFmpeg failed. Verify FFMPEG_PATH. ${result.stderr || result.error || ""}`,
+    );
   }
-  throw new Error(`Aivis synthesis failed for ${task.id}.`);
+  renameSync(temporary, destination);
 }
 
 async function main(): Promise<void> {
   const tasks = collectTasks();
-  if (!apiKey) {
-    console.log(
-      `AIVIS_API_KEY is not configured; ${tasks.length} audio segment(s) await generation.`,
-    );
-    return;
-  }
-
+  const voice = await selectVoice();
+  console.log(
+    `Using local AivisSpeech voice: ${voice.speakerName} / ${voice.styleName} (style ${voice.styleId}).`,
+  );
+  if (process.argv.includes("--check")) return;
   mkdirSync(audioRoot, { recursive: true });
   const previous = loadManifest();
   const next: AudioManifest = {
     formatVersion: 1,
-    generatedBy: "Aivis Cloud API",
-    voice: "阿井田 茂 / Calm",
+    generatedBy: "AivisSpeech local engine",
+    voice: `${voice.speakerName} / ${voice.styleName}`,
     entries: {},
   };
   let generated = 0;
-
   for (const task of tasks) {
     const key = taskKey(task);
-    const hash = taskHash(task);
+    const hash = taskHash(task, voice);
     const destination = resolve(audioRoot, task.relativePath);
     const old = previous.entries[key];
     if (old?.hash === hash && existsSync(destination)) {
       next.entries[key] = old;
       continue;
     }
-
     mkdirSync(dirname(destination), { recursive: true });
-    writeFileSync(destination, await synthesize(task));
-    next.entries[key] = { ...task, hash, modelUuid, speakerUuid, styleId };
+    encodeMp3(await synthesize(task, voice), destination);
+    next.entries[key] = { ...task, hash, ...voice };
     generated += 1;
-    if (requestInterval > 0) await wait(requestInterval);
+    console.log(`Generated ${generated}: ${task.relativePath}`);
   }
-
   for (const [key, entry] of Object.entries(previous.entries)) {
     if (next.entries[key]) continue;
-    const obsolete = resolve(audioRoot, entry.relativePath);
-    if (existsSync(obsolete)) rmSync(obsolete);
+    rmSync(resolve(audioRoot, entry.relativePath), { force: true });
   }
-
   writeFileSync(manifestPath, `${JSON.stringify(next, null, 2)}\n`, "utf8");
   console.log(
     `Audio generation complete: ${generated} generated, ${tasks.length - generated} unchanged.`,
