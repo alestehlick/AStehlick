@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "pageId": "001",
-  "layer": 6,
+  "layer": 7,
   "language": "mixed",
   "blocks": [
     {
@@ -154,16 +154,47 @@
           "noteIds": ["note-hitonarite"]
         },
         {
+          "type": "annotated",
+          "text": "物にかかはらぬ",
+          "reading": "ものにかかはらぬ",
+          "language": "ja",
+          "noteIds": ["note-kakawaranu"]
+        },
+        {
+          "type": "annotated",
+          "text": "性",
+          "reading": "さが",
+          "language": "ja",
+          "noteIds": ["note-saga"]
+        },
+        {
           "type": "text",
-          "text": "、his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
+          "text": "より、"
+        },
+        {
+          "type": "annotated",
+          "text": "農作",
+          "reading": "なりはひ",
+          "language": "ja",
+          "noteIds": ["note-nariwai"]
+        },
+        {
+          "type": "text",
+          "text": " he came to regard as hateful, and so, at last, the household fell into poverty."
         }
       ],
       "audioSegments": [
         {
-          "id": "prosperity",
-          "text": "いえゆたかにくらしけるが、ひととなりて",
-          "start": 10,
-          "end": 14
+          "id": "disposition",
+          "text": "ものにかかわらぬさがより",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "id": "farming",
+          "text": "なりわい",
+          "start": 18,
+          "end": 18
         }
       ]
     }

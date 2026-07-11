@@ -3,75 +3,219 @@
   "pageId": "001",
   "notes": [
     {
-      "id": "note-moonlight",
-      "status": "treasured",
-      "term": "月の光",
-      "reading": "つきのひかり",
-      "gloss": "moonlight",
-      "body": "The light is made active: it loosens from the clouds and reveals without fully explaining.",
-      "language": "ja"
-    },
-    {
-      "id": "note-traveler",
-      "status": "active",
-      "term": "旅人",
-      "reading": "たびびと",
-      "gloss": "traveler",
-      "body": "An unnamed traveler keeps the passage suspended between folktale and private memory.",
-      "language": "ja"
-    },
-    {
-      "id": "note-residence",
-      "status": "active",
-      "term": "荒れ屋敷",
-      "reading": "あれやしき",
-      "gloss": "ruined residence",
-      "body": "More than an abandoned house: a once-inhabited place visibly overtaken by neglect.",
-      "language": "ja"
-    },
-    {
-      "id": "note-reeds",
+      "id": "note-shimosa",
       "status": "local",
-      "term": "葦",
-      "reading": "あし",
-      "gloss": "reeds",
-      "body": "Reeds bring the wet, marginal landscape close to the human threshold.",
+      "term": "下総の国",
+      "reading": "しもふさのくに",
+      "gloss": "the province of Shimōsa",
+      "body": "An old province covering much of present-day Chiba and part of Ibaraki. 下 means ‘lower’; 総 belongs to the inherited provincial name Fusa. Together 下総 is the fixed place-name Shimōsa, not a freely composed phrase meaning ‘lower total.’ 国 adds ‘province’ or ‘country.’",
       "language": "ja"
     },
     {
-      "id": "note-lamp",
-      "status": "treasured",
-      "term": "灯火",
-      "reading": "ともしび",
-      "gloss": "lamplight",
-      "body": "A small domestic light makes the empty residence feel inhabited before anyone appears.",
-      "language": "ja"
-    },
-    {
-      "id": "note-hesitation",
-      "status": "reading",
-      "term": "ためらった",
-      "reading": "ためらった",
-      "gloss": "hesitated",
-      "body": "The pause at the threshold is both physical and moral: entering means accepting the invitation of the scene.",
-      "language": "ja"
-    },
-    {
-      "id": "note-kicho",
+      "id": "note-katsushika",
       "status": "local",
-      "term": "几帳",
-      "reading": "きちょう",
-      "gloss": "standing curtain",
-      "body": "A curtained screen used in aristocratic interiors; here it divides visibility from presence.",
+      "term": "葛飾郡",
+      "reading": "かつしかのこほり",
+      "gloss": "Katsushika District",
+      "body": "葛飾 is an inherited place-name: 葛 means ‘kudzu vine’ and 飾 means ‘to adorn,’ but the place-name does not mean ‘kudzu adornment.’ 郡 means an administrative district; thus the whole expression is ‘Katsushika District.’",
       "language": "ja"
     },
     {
-      "id": "note-presence",
+      "id": "note-mama",
+      "status": "treasured",
+      "term": "真間の郷",
+      "reading": "ままのさと",
+      "gloss": "the village of Mamma",
+      "body": "真間 is the old place-name Mamma, in present-day Ichikawa, and already a poetic place in the Man’yōshū. The characters 真 ‘true’ and 間 ‘interval’ do not transparently generate the name. 郷 means a rural settlement or district, so 真間の郷 is ‘the settlement of Mamma.’",
+      "language": "ja"
+    },
+    {
+      "id": "note-katsushiro",
+      "status": "local",
+      "term": "勝四郎",
+      "reading": "かつしらう",
+      "gloss": "Katsushirō",
+      "body": "A masculine personal name. 勝 contributes the idea of victory or excellence; 四郎 is a traditional name element, literally ‘fourth son.’ Together they form a name rather than a description of the man in the sentence.",
+      "language": "ja"
+    },
+    {
+      "id": "note-man",
+      "status": "active",
+      "term": "男",
+      "reading": "をとこ",
+      "gloss": "man",
+      "body": "Here 男 is read をとこ. The formula 勝四郎といふ男 places an as-yet simple figure before us: ‘a man called Katsushirō.’",
+      "language": "ja"
+    },
+    {
+      "id": "note-arikeri",
+      "status": "active",
+      "term": "ありけり",
+      "reading": "ありけり",
+      "gloss": "there lived; there was",
+      "body": "あり is ‘to exist’ or ‘to be.’ The classical auxiliary けり looks back upon what is narrated. In the opening formula 男ありけり, the two together give ‘there lived a man,’ with the quiet distance of an old tale.",
+      "language": "ja"
+    },
+    {
+      "id": "note-grandfather",
       "status": "reading",
-      "term": "気配",
-      "reading": "けはい",
-      "gloss": "trace of a presence",
-      "body": "The passage ends on perception without proof, the characteristic pressure of something nearly seen.",
+      "term": "祖父",
+      "reading": "おほぢ",
+      "gloss": "grandfather",
+      "body": "祖 means ‘forebear’ and 父 means ‘father’; together 祖父 is the father one generation behind one’s parent, ‘grandfather.’ The text gives the old native reading おほぢ rather than modern そふ.",
+      "language": "ja"
+    },
+    {
+      "id": "note-hisashiku",
+      "status": "active",
+      "term": "旧しく",
+      "reading": "ひさしく",
+      "gloss": "for a long time; from of old",
+      "body": "旧 carries the sense of what is old or long established. Read ひさしく here, it modifies 住み: the family had dwelt in this place for a long time.",
+      "language": "ja"
+    },
+    {
+      "id": "note-sumi",
+      "status": "active",
+      "term": "住み",
+      "reading": "すみ",
+      "gloss": "dwelling; having lived",
+      "body": "The continuative form of 住む, ‘to dwell.’ It leaves the movement unfinished and joins the family’s long residence to the possessions and prosperity that follow.",
+      "language": "ja"
+    },
+    {
+      "id": "note-tabata",
+      "status": "active",
+      "term": "田畠",
+      "reading": "たばた",
+      "gloss": "fields; farmland",
+      "body": "田 is a wet or rice field; 畠 is a dry or upland field. Together 田畠 gathers the two principal kinds of cultivated land into one expression: the household’s farmland as a whole.",
+      "language": "ja"
+    },
+    {
+      "id": "note-amata",
+      "status": "reading",
+      "term": "あまた",
+      "reading": "あまた",
+      "gloss": "many; numerous",
+      "body": "A native literary word for ‘many.’ It carries more breadth and less numerical precision than a counted quantity.",
+      "language": "ja"
+    },
+    {
+      "id": "note-nushizukite",
+      "status": "local",
+      "term": "主づきて",
+      "reading": "ぬしづきて",
+      "gloss": "owning; having in one’s possession",
+      "body": "主 means ‘master’ or ‘owner.’ With づく it forms a verb meaning to have something attached to an owner or under ownership. Here 田畠あまた主づきて means that many fields belonged to the household.",
+      "language": "ja"
+    },
+    {
+      "id": "note-ieyutaka",
+      "status": "active",
+      "term": "家豊か",
+      "reading": "いへゆたか",
+      "gloss": "the household prosperous",
+      "body": "家 is the household and estate, not merely the building; 豊か means abundant or ample. Together in the phrase 家豊か, the family’s whole material condition is prosperous.",
+      "language": "ja"
+    },
+    {
+      "id": "note-kurashikeru",
+      "status": "reading",
+      "term": "暮しける",
+      "reading": "くらしける",
+      "gloss": "had lived; was living",
+      "body": "暮し is the continuative form of 暮す, ‘to live’ or ‘pass one’s days.’ ける is the attributive form of the retrospective auxiliary けり because が follows: the narration looks back upon the household’s former prosperity.",
+      "language": "ja"
+    },
+    {
+      "id": "note-hitonarite",
+      "status": "treasured",
+      "term": "生長りて",
+      "reading": "ひととなりて",
+      "gloss": "having grown to adulthood",
+      "body": "The writing joins 生 ‘life, birth, growth’ and 長 ‘to lengthen or grow.’ Their combined idea is maturation, but Akinari gives the old native reading ひととなりて: literally, ‘having become a person,’ hence ‘having grown up.’",
+      "language": "ja"
+    },
+    {
+      "id": "note-kakawaranu",
+      "status": "reading",
+      "term": "物にかかはらぬ",
+      "reading": "ものにかかはらぬ",
+      "gloss": "heedless of practical affairs",
+      "body": "かかはる is to concern oneself with or attend to something. The classical negative ぬ makes 物にかかはらぬ ‘not concerning himself with things’: an inborn unconcern with practical matters.",
+      "language": "ja"
+    },
+    {
+      "id": "note-saga",
+      "status": "active",
+      "term": "性",
+      "reading": "さが",
+      "gloss": "inborn nature; disposition",
+      "body": "Read さが, 性 means the nature with which a person seems to have been born. It is more inward and fateful here than a momentary habit.",
+      "language": "ja"
+    },
+    {
+      "id": "note-nariwai",
+      "status": "treasured",
+      "term": "農作",
+      "reading": "なりはひ",
+      "gloss": "farming; livelihood",
+      "body": "農 means agriculture; 作 means making, working, or cultivation. Together 農作 is agricultural work. Akinari assigns it the native reading なりはひ, ‘livelihood’ or ‘occupation,’ rather than the modern Sino-Japanese reading のうさく.",
+      "language": "ja"
+    },
+    {
+      "id": "note-utateki",
+      "status": "reading",
+      "term": "うたてき物",
+      "reading": "うたてきもの",
+      "gloss": "a hateful or distasteful thing",
+      "body": "うたてし is an old adjective for what is disagreeable, lamentable, or repellent. Its attributive form うたてき governs 物: he regarded farming as something hateful.",
+      "language": "ja"
+    },
+    {
+      "id": "note-itoikeru",
+      "status": "reading",
+      "term": "厭ひける",
+      "reading": "いとひける",
+      "gloss": "he disliked; he shunned",
+      "body": "厭ふ means to dislike, weary of, or shun. With retrospective けり in its attributive form ける, 厭ひける presents the aversion as the settled fact from which the consequence follows.",
+      "language": "ja"
+    },
+    {
+      "id": "note-mamani",
+      "status": "active",
+      "term": "ままに",
+      "reading": "ままに",
+      "gloss": "as that state continued; under its sway",
+      "body": "まま is the condition in which something is left or allowed to proceed. Here the dislike of farming is not corrected; the household’s fate follows ‘in accordance with’ that aversion.",
+      "language": "ja"
+    },
+    {
+      "id": "note-hata",
+      "status": "reading",
+      "term": "はた",
+      "reading": "はた",
+      "gloss": "and so, at last",
+      "body": "A connective adverb whose force depends on context. Here it turns disposition into outcome: ‘and so,’ ‘in the end,’ the once-prosperous house becomes poor.",
+      "language": "ja"
+    },
+    {
+      "id": "note-iemazushiku",
+      "status": "active",
+      "term": "家貧しく",
+      "reading": "いへまづしく",
+      "gloss": "the household poor",
+      "body": "家 again means the household and estate; 貧しく is ‘poor’ or ‘impoverished.’ The phrase therefore names the decline of the family’s whole condition, not the mere appearance of its house.",
+      "language": "ja"
+    },
+    {
+      "id": "note-narinikeri",
+      "status": "active",
+      "term": "なりにけり",
+      "reading": "なりにけり",
+      "gloss": "had ended by becoming",
+      "body": "なり is ‘to become.’ に is the continuative form of the perfective auxiliary ぬ, and けり looks back upon the completed result. Their sequence gives more than a plain ‘became’: the household had come, finally and completely, into poverty.",
       "language": "ja"
     }
   ]

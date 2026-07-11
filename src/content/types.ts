@@ -92,7 +92,6 @@ export interface PageManifestEntry {
 export interface BookManifest {
   formatVersion: 1;
   bookId: string;
-  layers: LayerDefinition[];
   pages: PageManifestEntry[];
 }
 
@@ -103,6 +102,7 @@ export interface PageFile {
   title: string;
   titleJa: string;
   sequence: number;
+  layers: LayerDefinition[];
   layersPath: string;
   notesPath: string;
   commentaryPath: string;

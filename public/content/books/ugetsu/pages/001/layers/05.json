@@ -5,159 +5,132 @@
   "language": "mixed",
   "blocks": [
     {
-      "type": "heading",
-      "level": 2,
-      "content": [
-        {
-          "type": "text",
-          "text": "かすかな灯火"
-        }
-      ]
-    },
-    {
       "type": "paragraph",
       "content": [
         {
           "type": "annotated",
-          "text": "月の光",
-          "reading": "つきのひかり",
+          "text": "下総の国",
+          "reading": "しもふさのくに",
           "language": "ja",
-          "noteIds": ["note-moonlight"]
-        },
-        {
-          "type": "text",
-          "text": "が雲の間からほどけるころ、一人の"
+          "noteIds": ["note-shimosa"]
         },
         {
           "type": "annotated",
-          "text": "旅人",
-          "reading": "たびびと",
+          "text": "葛飾郡",
+          "reading": "かつしかのこほり",
           "language": "ja",
-          "noteIds": ["note-traveler"]
-        },
-        {
-          "type": "text",
-          "text": "は"
+          "noteIds": ["note-katsushika"]
         },
         {
           "type": "annotated",
-          "text": "荒れ屋敷",
-          "reading": "あれやしき",
+          "text": "真間の郷",
+          "reading": "ままのさと",
           "language": "ja",
-          "noteIds": ["note-residence"]
+          "noteIds": ["note-mama"]
         },
         {
           "type": "text",
-          "text": "の前にたどり着いた。"
+          "text": "に、"
         },
         {
           "type": "annotated",
-          "text": "葦",
-          "reading": "あし",
+          "text": "勝四郎",
+          "reading": "かつしらう",
           "language": "ja",
-          "noteIds": ["note-reeds"]
+          "noteIds": ["note-katsushiro"]
         },
         {
           "type": "text",
-          "text": "は破れた門に触れ、白く沈んだ小道は、もはや通う者のない足音をまだ覚えているかのようであった。"
-        }
-      ],
-      "audioSegments": [
-        {
-          "id": "segment-01",
-          "text": "月の光が雲の間からほどけるころ、一人の旅人は荒れ屋敷の前にたどり着いた。",
-          "start": 0,
-          "end": 5
-        },
-        {
-          "id": "segment-02",
-          "text": "葦は破れた門に触れ、白く沈んだ小道は、もはや通う者のない足音をまだ覚えているかのようであった。",
-          "start": 6,
-          "end": 7
-        }
-      ]
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "奥には、細い"
+          "text": "といふ"
         },
         {
           "type": "annotated",
-          "text": "灯火",
-          "reading": "ともしび",
+          "text": "男",
+          "reading": "をとこ",
           "language": "ja",
-          "noteIds": ["note-lamp"]
-        },
-        {
-          "type": "text",
-          "text": "が消え残っていた。"
-        },
-        {
-          "type": "text",
-          "text": "旅人は敷居の前で"
+          "noteIds": ["note-man"]
         },
         {
           "type": "annotated",
-          "text": "ためらった",
-          "reading": "ためらった",
+          "text": "ありけり",
+          "reading": "ありけり",
           "language": "ja",
-          "noteIds": ["note-hesitation"]
+          "noteIds": ["note-arikeri"]
         },
         {
           "type": "text",
           "text": "。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "祖父",
+          "reading": "おほぢ",
+          "language": "ja",
+          "noteIds": ["note-grandfather"]
         },
         {
           "type": "text",
-          "text": "声は聞こえなかったが、"
+          "text": "より"
         },
         {
           "type": "annotated",
-          "text": "几帳",
-          "reading": "きちょう",
+          "text": "旧しく",
+          "reading": "ひさしく",
           "language": "ja",
-          "noteIds": ["note-kicho"]
+          "noteIds": ["note-hisashiku"]
         },
         {
           "type": "text",
-          "text": "の陰で、誰かがたった今、袖を darknessへ引いたような"
+          "text": "ここに"
         },
         {
           "type": "annotated",
-          "text": "気配",
-          "reading": "けはい",
+          "text": "住み",
+          "reading": "すみ",
           "language": "ja",
-          "noteIds": ["note-presence"]
+          "noteIds": ["note-sumi"]
         },
         {
           "type": "text",
-          "text": "がした。"
+          "text": "、"
+        },
+        {
+          "type": "annotated",
+          "text": "田畠",
+          "reading": "たばた",
+          "language": "ja",
+          "noteIds": ["note-tabata"]
+        },
+        {
+          "type": "annotated",
+          "text": "あまた",
+          "reading": "あまた",
+          "language": "ja",
+          "noteIds": ["note-amata"]
+        },
+        {
+          "type": "annotated",
+          "text": "主づきて",
+          "reading": "ぬしづきて",
+          "language": "ja",
+          "noteIds": ["note-nushizukite"]
+        },
+        {
+          "type": "text",
+          "text": "、the household lived in prosperity. But when Katsushirō came of age, his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
         }
       ],
       "audioSegments": [
         {
-          "id": "segment-03",
-          "text": "奥には、細い灯火が消え残っていた。",
-          "start": 0,
-          "end": 2
-        },
-        {
-          "id": "segment-04",
-          "text": "旅人は敷居の前でためらった。",
-          "start": 3,
-          "end": 5
-        },
-        {
-          "id": "segment-05",
-          "text": "声は聞こえなかったが、几帳の陰で、誰かがたった今、袖を闇へ引いたような気配がした。",
+          "id": "fields",
+          "text": "たばた、あまた、ぬしづきて",
           "start": 6,
-          "end": 10
+          "end": 8
         }
       ]
     }

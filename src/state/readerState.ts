@@ -1,13 +1,11 @@
-import type { BookManifest } from "../content/types";
+import type { BookManifest, PageFile } from "../content/types";
 
 export function adjacentLayer(
-  manifest: BookManifest,
+  page: PageFile,
   currentLayer: number,
   direction: -1 | 1,
 ): number | null {
-  const layers = manifest.layers
-    .map((entry) => entry.number)
-    .sort((a, b) => a - b);
+  const layers = page.layers.map((entry) => entry.number).sort((a, b) => a - b);
   const index = layers.indexOf(currentLayer);
   return layers[index + direction] ?? null;
 }

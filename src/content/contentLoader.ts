@@ -79,12 +79,11 @@ export function createContentLoader(options: ContentLoaderOptions = {}) {
     const manifest = await loadJson<BookManifest>(manifestPath);
     const pageEntry = manifest.pages.find((entry) => entry.id === pageId);
     if (!pageEntry) throw new ContentLoadError(`Unknown page: ${pageId}.`);
-    if (!manifest.layers.some((entry) => entry.number === layerNumber)) {
-      throw new ContentLoadError(`Unknown layer: ${layerNumber}.`);
-    }
-
     const pagePath = joinContentPath(bookDirectory, pageEntry.path);
     const page = await loadJson<PageFile>(pagePath);
+    if (!page.layers.some((entry) => entry.number === layerNumber)) {
+      throw new ContentLoadError(`Unknown layer: ${layerNumber}.`);
+    }
     const pageDirectory = parentContentPath(pagePath);
     const layerPath = joinContentPath(
       pageDirectory,

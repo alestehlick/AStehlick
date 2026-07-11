@@ -37,9 +37,12 @@ const pages = readdirSync(pagesDirectory, { withFileTypes: true })
   })
   .sort((a, b) => a.sequence - b.sequence);
 
+const manifestWithoutLegacyLayers = { ...manifest };
+delete manifestWithoutLegacyLayers.layers;
+
 writeFileSync(
   manifestPath,
-  `${JSON.stringify({ ...manifest, pages }, null, 2)}\n`,
+  `${JSON.stringify({ ...manifestWithoutLegacyLayers, pages }, null, 2)}\n`,
   "utf8",
 );
 console.log(`Updated ${manifestPath} with ${pages.length} page(s).`);

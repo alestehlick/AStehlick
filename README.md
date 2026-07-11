@@ -36,7 +36,7 @@ Runtime loading begins with `public/content/library.json`. Every book, page, lay
 To add another page to `ugetsu`:
 
 1. Create `public/content/books/ugetsu/pages/NNN/page.json`.
-2. Add the six authored layer files under that page's `layers/` directory.
+2. Define that page’s own layer sequence in `page.json`, then add the authored layer files under its `layers/` directory. Each layer may introduce **at most three new Japanese vocabulary or grammar items**; content validation enforces this limit.
 3. Add `notes.json` and `commentary.md` beside the page file.
 4. Add the page to `public/content/books/ugetsu/manifest.json`, or run `npm run build:manifest -- ugetsu`.
 5. Run `npm run validate:content` and `npm test`.

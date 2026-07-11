@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "pageId": "001",
-  "layer": 6,
-  "language": "mixed",
+  "layer": 9,
+  "language": "ja",
   "blocks": [
     {
       "type": "paragraph",
@@ -60,6 +60,14 @@
         {
           "type": "text",
           "text": "。"
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "opening-sentence",
+          "text": "しもうさのくに、かつしかのこおり、ままのさとに、かつしろうというおとこ、ありけり。",
+          "start": 0,
+          "end": 8
         }
       ]
     },
@@ -154,16 +162,95 @@
           "noteIds": ["note-hitonarite"]
         },
         {
+          "type": "annotated",
+          "text": "物にかかはらぬ",
+          "reading": "ものにかかはらぬ",
+          "language": "ja",
+          "noteIds": ["note-kakawaranu"]
+        },
+        {
+          "type": "annotated",
+          "text": "性",
+          "reading": "さが",
+          "language": "ja",
+          "noteIds": ["note-saga"]
+        },
+        {
           "type": "text",
-          "text": "、his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
+          "text": "より、"
+        },
+        {
+          "type": "annotated",
+          "text": "農作",
+          "reading": "なりはひ",
+          "language": "ja",
+          "noteIds": ["note-nariwai"]
+        },
+        {
+          "type": "text",
+          "text": "を"
+        },
+        {
+          "type": "annotated",
+          "text": "うたてき物",
+          "reading": "うたてきもの",
+          "language": "ja",
+          "noteIds": ["note-utateki"]
+        },
+        {
+          "type": "text",
+          "text": "に"
+        },
+        {
+          "type": "annotated",
+          "text": "厭ひける",
+          "reading": "いとひける",
+          "language": "ja",
+          "noteIds": ["note-itoikeru"]
+        },
+        {
+          "type": "annotated",
+          "text": "ままに",
+          "reading": "ままに",
+          "language": "ja",
+          "noteIds": ["note-mamani"]
+        },
+        {
+          "type": "text",
+          "text": "、"
+        },
+        {
+          "type": "annotated",
+          "text": "はた",
+          "reading": "はた",
+          "language": "ja",
+          "noteIds": ["note-hata"]
+        },
+        {
+          "type": "annotated",
+          "text": "家貧しく",
+          "reading": "いへまづしく",
+          "language": "ja",
+          "noteIds": ["note-iemazushiku"]
+        },
+        {
+          "type": "annotated",
+          "text": "なりにけり",
+          "reading": "なりにけり",
+          "language": "ja",
+          "noteIds": ["note-narinikeri"]
+        },
+        {
+          "type": "text",
+          "text": "。"
         }
       ],
       "audioSegments": [
         {
-          "id": "prosperity",
-          "text": "いえゆたかにくらしけるが、ひととなりて",
-          "start": 10,
-          "end": 14
+          "id": "decline-sentence",
+          "text": "おおじよりひさしくここにすみ、たばたあまたぬしづきて、いえゆたかにくらしけるが、ひととなりて、ものにかかわらぬさがより、なりわいをうたてきものにいといけるままに、はた、いえまずしくなりにけり。",
+          "start": 0,
+          "end": 28
         }
       ]
     }

@@ -215,14 +215,6 @@ export function validateContent(
       if (manifest.bookId !== bookId)
         errors.push(`${manifestPath}: bookId does not match book.`);
 
-      const layers = requireArray(manifest.layers, "manifest.layers");
-      const layerNumbers = layers.map((layer) => String(layer.number));
-      errors.push(
-        ...findDuplicates(layerNumbers).map(
-          (id) => `${manifestPath}: duplicate layer ${id}.`,
-        ),
-      );
-
       const pages = requireArray(manifest.pages, "manifest.pages");
       const pageIds = pages.map((page) => requireString(page.id, "page.id"));
       errors.push(
@@ -243,6 +235,25 @@ export function validateContent(
           errors.push(`${pagePath}: id does not match manifest entry.`);
         if (page.bookId !== bookId)
           errors.push(`${pagePath}: bookId does not match book.`);
+
+        const layers = requireArray(page.layers, "page.layers");
+        const numericLayerNumbers = layers.map((layer) => Number(layer.number));
+        const layerNumbers = numericLayerNumbers.map(String);
+        errors.push(
+          ...findDuplicates(layerNumbers).map(
+            (id) => `${pagePath}: duplicate layer ${id}.`,
+          ),
+        );
+        const sortedLayerNumbers = [...numericLayerNumbers].sort(
+          (a, b) => a - b,
+        );
+        sortedLayerNumbers.forEach((number, index) => {
+          if (number !== index + 1) {
+            errors.push(
+              `${pagePath}: layers must be sequential from 1; found ${sortedLayerNumbers.join(", ")}.`,
+            );
+          }
+        });
 
         const pageDirectory = dirname(pagePath);
         const notesPath = resolveInside(
@@ -279,7 +290,10 @@ export function validateContent(
           pageDirectory,
           requireString(page.layersPath, "page.layersPath"),
         );
-        for (const layerEntry of layers) {
+        const seenNoteIds = new Set<string>();
+        for (const layerEntry of [...layers].sort(
+          (a, b) => Number(a.number) - Number(b.number),
+        )) {
           const layerNumber = Number(layerEntry.number);
           const layerPath = resolve(
             layersDirectory,
@@ -291,9 +305,19 @@ export function validateContent(
             errors.push(`${layerPath}: pageId does not match page.`);
           if (layer.layer !== layerNumber)
             errors.push(`${layerPath}: layer number does not match filename.`);
-          for (const noteId of annotatedNoteIds(layer)) {
+          const referencedNoteIds = [...new Set(annotatedNoteIds(layer))];
+          const newlyIntroduced = referencedNoteIds.filter(
+            (noteId) => !seenNoteIds.has(noteId),
+          );
+          if (newlyIntroduced.length > 3) {
+            errors.push(
+              `${layerPath}: introduces ${newlyIntroduced.length} new Japanese items; a layer may introduce at most 3 (${newlyIntroduced.join(", ")}).`,
+            );
+          }
+          for (const noteId of referencedNoteIds) {
             if (!knownNotes.has(noteId))
               errors.push(`${layerPath}: missing referenced note ${noteId}.`);
+            seenNoteIds.add(noteId);
           }
           errors.push(...audioSegmentErrors(layer, layerPath));
         }
