@@ -7,6 +7,7 @@ on:
       - "public/content/**"
       - "scripts/generate-audio.ts"
       - "scripts/windows/prepare-aivis.ps1"
+      - "scripts/windows/commit-audio.ps1"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/narration.yml"
@@ -32,29 +33,22 @@ jobs:
           node-version: 22
           cache: npm
       - name: Install dependencies
+        shell: cmd
         run: npm.cmd ci
       - name: Validate authored content
+        shell: cmd
         run: npm.cmd run validate:content
       - name: Prepare local AivisSpeech
-        shell: powershell
-        run: ./scripts/windows/prepare-aivis.ps1
+        shell: cmd
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\windows\prepare-aivis.ps1
       - name: Generate changed narration
         env:
           AIVIS_ENGINE_URL: http://127.0.0.1:10101
           AIVIS_SPEAKER_NAME: 阿井田 茂
           AIVIS_STYLE_NAME: Calm
           FFMPEG_PATH: C:\ffmpeg\bin\ffmpeg.exe
+        shell: cmd
         run: npm.cmd run generate:audio
       - name: Commit refreshed narration
-        shell: powershell
-        run: |
-          git add public/assets/audio
-          if (git diff --cached --quiet) {
-            Write-Host "Narration is already current."
-            exit 0
-          }
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Generate Moonlight Reader narration"
-          git pull --rebase origin $env:GITHUB_REF_NAME
-          git push origin "HEAD:$env:GITHUB_REF_NAME"
+        shell: cmd
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\windows\commit-audio.ps1
