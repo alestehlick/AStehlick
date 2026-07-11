@@ -59,6 +59,8 @@ const engineUrl = (
   process.env.AIVIS_ENGINE_URL ?? "http://127.0.0.1:10101"
 ).replace(/\/$/, "");
 const preferredSpeaker = process.env.AIVIS_SPEAKER_NAME ?? "阿井田 茂";
+const preferredSpeakerUuid =
+  process.env.AIVIS_SPEAKER_UUID ?? "561e4e59-3bc9-4726-9028-44a3c12a6f1d";
 const preferredStyle = process.env.AIVIS_STYLE_NAME ?? "Calm";
 const styleOverride = process.env.AIVIS_STYLE_ID
   ? Number(process.env.AIVIS_STYLE_ID)
@@ -165,15 +167,23 @@ async function selectVoice(): Promise<SelectedVoice> {
     );
   }
   const preferred = normalize(preferredSpeaker);
-  const speaker = speakers.find((candidate) => {
-    const name = normalize(candidate.name);
-    return (
-      name === preferred || name.includes(preferred) || preferred.includes(name)
-    );
-  });
+  const speaker =
+    speakers.find(
+      (candidate) =>
+        candidate.speaker_uuid.toLocaleLowerCase() ===
+        preferredSpeakerUuid.toLocaleLowerCase(),
+    ) ??
+    speakers.find((candidate) => {
+      const name = normalize(candidate.name);
+      return (
+        name === preferred ||
+        name.includes(preferred) ||
+        preferred.includes(name)
+      );
+    });
   if (!speaker) {
     throw new Error(
-      `Voice "${preferredSpeaker}" is not installed. Available voices: ${speakers.map((item) => item.name).join(", ") || "none"}.`,
+      `Voice ${preferredSpeakerUuid} ("${preferredSpeaker}") is not installed. Available voices: ${speakers.map((item) => `${item.name} [${item.speaker_uuid}]`).join(", ") || "none"}.`,
     );
   }
   const spokenStyles = speaker.styles.filter(

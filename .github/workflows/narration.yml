@@ -45,6 +45,7 @@ jobs:
         env:
           AIVIS_ENGINE_URL: http://127.0.0.1:10101
           AIVIS_SPEAKER_NAME: 阿井田 茂
+          AIVIS_SPEAKER_UUID: 561e4e59-3bc9-4726-9028-44a3c12a6f1d
           AIVIS_STYLE_NAME: Calm
           FFMPEG_PATH: C:\ffmpeg\bin\ffmpeg.exe
         shell: cmd

@@ -79,7 +79,7 @@ For a local generation run, start AivisSpeech and run:
 npm run generate:audio
 ```
 
-The engine, speaker, style, style ID, and FFmpeg executable can be overridden with `AIVIS_ENGINE_URL`, `AIVIS_SPEAKER_NAME`, `AIVIS_STYLE_NAME`, `AIVIS_STYLE_ID`, and `FFMPEG_PATH`. Run `npm run check:audio` to verify engine and voice discovery without generating files.
+The engine, speaker UUID/name, style, style ID, and FFmpeg executable can be overridden with `AIVIS_ENGINE_URL`, `AIVIS_SPEAKER_UUID`, `AIVIS_SPEAKER_NAME`, `AIVIS_STYLE_NAME`, `AIVIS_STYLE_ID`, and `FFMPEG_PATH`. Run `npm run check:audio` to verify engine and voice discovery without generating files. The Windows runner starts AivisSpeech with GPU acceleration; the packaged Windows engine uses its supported Windows GPU backend (normally DirectML).
 
 ## GitHub Pages
 
