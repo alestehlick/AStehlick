@@ -104,7 +104,7 @@ function collectTasks(): AudioTask[] {
       const page = readJson(pagePath);
       const pageId = text(page.id);
       const layersDirectory = resolve(dirname(pagePath), text(page.layersPath));
-      for (const layerEntry of array(manifest.layers)) {
+      for (const layerEntry of array(page.layers)) {
         const layer = Number(layerEntry.number);
         const layerFile = readJson(
           resolve(layersDirectory, `${String(layer).padStart(2, "0")}.json`),

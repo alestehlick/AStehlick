@@ -5,12 +5,61 @@
   "language": "mixed",
   "blocks": [
     {
-      "type": "heading",
-      "level": 2,
+      "type": "paragraph",
       "content": [
         {
+          "type": "annotated",
+          "text": "下総の国",
+          "reading": "しもふさのくに",
+          "language": "ja",
+          "noteIds": ["note-shimosa"]
+        },
+        {
+          "type": "annotated",
+          "text": "葛飾郡",
+          "reading": "かつしかのこほり",
+          "language": "ja",
+          "noteIds": ["note-katsushika"]
+        },
+        {
+          "type": "annotated",
+          "text": "真間の郷",
+          "reading": "ままのさと",
+          "language": "ja",
+          "noteIds": ["note-mama"]
+        },
+        {
           "type": "text",
-          "text": "かすかな灯火"
+          "text": "に、"
+        },
+        {
+          "type": "annotated",
+          "text": "勝四郎",
+          "reading": "かつしらう",
+          "language": "ja",
+          "noteIds": ["note-katsushiro"]
+        },
+        {
+          "type": "text",
+          "text": "といふ"
+        },
+        {
+          "type": "annotated",
+          "text": "男",
+          "reading": "をとこ",
+          "language": "ja",
+          "noteIds": ["note-man"]
+        },
+        {
+          "type": "annotated",
+          "text": "ありけり",
+          "reading": "ありけり",
+          "language": "ja",
+          "noteIds": ["note-arikeri"]
+        },
+        {
+          "type": "text",
+          "text": "。"
         }
       ]
     },
@@ -19,100 +68,44 @@
       "content": [
         {
           "type": "annotated",
-          "text": "月の光が雲の間からほどけるころ",
-          "reading": "つきのひかりが くものあいだから ほどけるころ",
+          "text": "祖父",
+          "reading": "おほぢ",
           "language": "ja",
-          "noteIds": ["note-moonlight"]
+          "noteIds": ["note-grandfather"]
         },
         {
           "type": "text",
-          "text": "、"
+          "text": "より"
         },
         {
           "type": "annotated",
-          "text": "一人の旅人は荒れ屋敷の前にたどり着いた",
-          "reading": "ひとりのたびびとは あれやしきのまえに たどりついた",
+          "text": "旧しく",
+          "reading": "ひさしく",
           "language": "ja",
-          "noteIds": ["note-traveler", "note-residence"]
+          "noteIds": ["note-hisashiku"]
         },
         {
           "type": "text",
-          "text": "。"
+          "text": "ここに"
         },
         {
           "type": "annotated",
-          "text": "葦は破れた門に触れ",
-          "reading": "あしは やぶれたもんに ふれ",
+          "text": "住み",
+          "reading": "すみ",
           "language": "ja",
-          "noteIds": ["note-reeds"]
+          "noteIds": ["note-sumi"]
         },
         {
           "type": "text",
-          "text": "、the pale path seemed to remember feet that came no longer."
+          "text": "—the household owned many fields and lived in prosperity. But when Katsushirō came of age, his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
         }
       ],
       "audioSegments": [
         {
-          "id": "segment-01",
-          "text": "月の光が雲の間からほどけるころ",
+          "id": "inheritance",
+          "text": "おおじより、ひさしくここにすみ",
           "start": 0,
-          "end": 0
-        },
-        {
-          "id": "segment-02",
-          "text": "一人の旅人は荒れ屋敷の前にたどり着いた。",
-          "start": 2,
-          "end": 2
-        },
-        {
-          "id": "segment-03",
-          "text": "葦は破れた門に触れ",
-          "start": 4,
           "end": 4
-        }
-      ]
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "annotated",
-          "text": "奥には、細い灯火が消え残っていた",
-          "reading": "おくには ほそいともしびが きえのこっていた",
-          "language": "ja",
-          "noteIds": ["note-lamp"]
-        },
-        {
-          "type": "text",
-          "text": "。"
-        },
-        {
-          "type": "annotated",
-          "text": "旅人は敷居の前でためらった",
-          "reading": "たびびとは しきいのまえで ためらった",
-          "language": "ja",
-          "noteIds": ["note-hesitation"]
-        },
-        {
-          "type": "text",
-          "text": "。No voice was heard, yet behind the standing curtain someone seemed to draw a sleeve into darkness."
-        }
-      ],
-      "audioSegments": [
-        {
-          "id": "segment-04",
-          "text": "奥には、細い灯火が消え残っていた。",
-          "start": 0,
-          "end": 0
-        },
-        {
-          "id": "segment-05",
-          "text": "旅人は敷居の前でためらった。",
-          "start": 2,
-          "end": 2
         }
       ]
     }

@@ -40,7 +40,7 @@ describe("content validation", () => {
       "pages",
       "001",
       "layers",
-      "01.json",
+      "02.json",
     );
     const layer = JSON.parse(readFileSync(layerPath, "utf8")) as {
       blocks: Array<{ content?: Array<{ noteIds?: string[] }> }>;
@@ -86,6 +86,48 @@ describe("content validation", () => {
     const result = validateContent(contentRoot);
     expect(
       result.errors.some((error) => error.includes("longer than one sentence")),
+    ).toBe(true);
+  });
+  it("rejects a layer that introduces more than three new items", () => {
+    const temporaryRoot = mkdtempSync(resolve(tmpdir(), "moonlight-reader-"));
+    temporaryDirectories.push(temporaryRoot);
+    const contentRoot = resolve(temporaryRoot, "content");
+    cpSync(resolve(process.cwd(), "public", "content"), contentRoot, {
+      recursive: true,
+    });
+
+    const layerPath = resolve(
+      contentRoot,
+      "books",
+      "ugetsu",
+      "pages",
+      "001",
+      "layers",
+      "02.json",
+    );
+    const layer = JSON.parse(readFileSync(layerPath, "utf8")) as {
+      blocks: Array<{
+        type: string;
+        content?: Array<Record<string, unknown>>;
+      }>;
+    };
+    const paragraph = layer.blocks.find(
+      (block) => block.type === "paragraph" && block.content,
+    )!;
+    paragraph.content!.push({
+      type: "annotated",
+      text: "勝四郎",
+      reading: "かつしらう",
+      language: "ja",
+      noteIds: ["note-katsushiro"],
+    });
+    writeFileSync(layerPath, `${JSON.stringify(layer, null, 2)}\n`, "utf8");
+
+    const result = validateContent(contentRoot);
+    expect(
+      result.errors.some((error) =>
+        error.includes("a layer may introduce at most 3"),
+      ),
     ).toBe(true);
   });
 });

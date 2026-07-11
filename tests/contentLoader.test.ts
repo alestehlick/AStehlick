@@ -16,12 +16,12 @@ describe("content loader", () => {
       baseUrl: "/",
       fetchText: fetchFromPublic,
     });
-    const bundle = await loader.loadReaderBundle("ugetsu", "001", 6);
+    const bundle = await loader.loadReaderBundle("ugetsu", "001", 9);
 
     expect(bundle.book.titleJa).toBe("雨月物語");
-    expect(bundle.layer.layer).toBe(6);
+    expect(bundle.layer.layer).toBe(9);
     expect(bundle.notes.notes.length).toBeGreaterThan(0);
-    expect(bundle.commentary).toContain("At the threshold");
+    expect(bundle.commentary).toContain("The first imbalance");
   });
 
   it("reports an absent layer clearly", async () => {

@@ -2,9 +2,56 @@
   "formatVersion": 1,
   "id": "001",
   "bookId": "ugetsu",
-  "title": "The Faint Lamp",
-  "titleJa": "かすかな灯火",
+  "title": "The House amid the Reeds · I",
+  "titleJa": "浅茅が宿　其の一",
   "sequence": 1,
+  "layers": [
+    {
+      "number": 1,
+      "label": "Orientation",
+      "description": "The whole passage in English, before the Japanese begins to enter."
+    },
+    {
+      "number": 2,
+      "label": "The place",
+      "description": "Three names set the tale in the old landscape of Mamma."
+    },
+    {
+      "number": 3,
+      "label": "The man",
+      "description": "Katsushirō enters through Akinari’s old narrative formula."
+    },
+    {
+      "number": 4,
+      "label": "Inheritance",
+      "description": "The continuity of the household appears."
+    },
+    {
+      "number": 5,
+      "label": "The fields",
+      "description": "Possession and material abundance enter the sentence."
+    },
+    {
+      "number": 6,
+      "label": "Prosperity",
+      "description": "The inherited household reaches its former fullness."
+    },
+    {
+      "number": 7,
+      "label": "Disposition",
+      "description": "Katsushirō’s inward nature begins to turn the story."
+    },
+    {
+      "number": 8,
+      "label": "Aversion",
+      "description": "His dislike of farming becomes the governing cause."
+    },
+    {
+      "number": 9,
+      "label": "Original",
+      "description": "The opening passage now stands in Akinari’s Japanese."
+    }
+  ],
   "layersPath": "layers",
   "notesPath": "notes.json",
   "commentaryPath": "commentary.md"

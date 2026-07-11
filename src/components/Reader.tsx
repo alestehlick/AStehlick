@@ -61,7 +61,7 @@ export function Reader({
             bookId,
             pageId,
             layerNumber,
-            loaded.manifest.layers.length,
+            loaded.page.layers.length,
           ),
         );
       })
@@ -84,17 +84,14 @@ export function Reader({
   );
 
   const goToPage = useCallback(
-    (nextPageId: string) =>
-      navigateTo(readerHash(bookId, nextPageId, layerNumber)),
-    [bookId, layerNumber],
+    (nextPageId: string) => navigateTo(readerHash(bookId, nextPageId, 1)),
+    [bookId],
   );
 
   const previousLayer = bundle
-    ? adjacentLayer(bundle.manifest, layerNumber, -1)
+    ? adjacentLayer(bundle.page, layerNumber, -1)
     : null;
-  const nextLayer = bundle
-    ? adjacentLayer(bundle.manifest, layerNumber, 1)
-    : null;
+  const nextLayer = bundle ? adjacentLayer(bundle.page, layerNumber, 1) : null;
   const previousPage = bundle
     ? adjacentPage(bundle.manifest, pageId, -1)
     : null;
@@ -153,7 +150,7 @@ export function Reader({
     );
   }
 
-  const layerMeta = bundle.manifest.layers.find(
+  const layerMeta = bundle.page.layers.find(
     (entry) => entry.number === layerNumber,
   )!;
 
@@ -177,7 +174,7 @@ export function Reader({
       </header>
 
       <ProgressIndicator
-        layers={bundle.manifest.layers}
+        layers={bundle.page.layers}
         currentLayer={layerNumber}
         onSelectLayer={goToLayer}
       />

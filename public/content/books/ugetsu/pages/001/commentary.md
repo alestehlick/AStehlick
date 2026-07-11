@@ -1,7 +1,7 @@
-## At the threshold
+## The first imbalance
 
-The scene moves from a broad field of moonlight toward a nearly invisible human gesture. Each step narrows the traveler’s world while increasing its uncertainty.
+Akinari does not begin this tale with a ghost. He begins with an inherited order: an old settlement, a named household, abundant fields, and a life already given its proper measure. The disturbance is first almost invisible. Katsushirō is simply **物にかかはらぬ**—a man whose nature does not fasten itself to practical things.
 
-The ruined residence is not simply empty. Reeds, remembered footsteps, and the lamp let absence behave like a form of habitation. The final sleeve is never confirmed; the traveler’s hesitation gives it life.
+That slight inward looseness is enough. The sentence moves from long residence, to possession, to prosperity; then, after **生長りて**, it turns. What had been inherited cannot continue by inheritance alone. The final **なりにけり** seals the decline as something already accomplished before the supernatural story has properly begun.
 
-This demonstration passage is original to Moonlight Reader. It evokes the quiet supernatural tension of _Ugetsu Monogatari_ without reproducing a source passage.
+The title, _The House amid the Reeds_, therefore already waits inside this prosperous beginning. The ruined dwelling has not yet appeared, but its possibility has entered with the failure to preserve form.

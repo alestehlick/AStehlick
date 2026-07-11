@@ -5,139 +5,73 @@
   "language": "mixed",
   "blocks": [
     {
-      "type": "heading",
-      "level": 2,
-      "content": [
-        {
-          "type": "text",
-          "text": "At the 荒れ屋敷"
-        }
-      ]
-    },
-    {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Toward the hour when "
+          "text": "In "
         },
         {
           "type": "annotated",
-          "text": "月の光",
-          "reading": "つきのひかり",
+          "text": "真間の郷",
+          "reading": "ままのさと",
           "language": "ja",
-          "noteIds": ["note-moonlight"]
+          "noteIds": ["note-mama"]
         },
         {
           "type": "text",
-          "text": " loosened from the clouds, a "
+          "text": ", within "
         },
         {
           "type": "annotated",
-          "text": "旅人",
-          "reading": "たびびと",
+          "text": "葛飾郡",
+          "reading": "かつしかのこほり",
           "language": "ja",
-          "noteIds": ["note-traveler"]
+          "noteIds": ["note-katsushika"]
         },
         {
           "type": "text",
-          "text": " came upon an "
+          "text": " of "
         },
         {
           "type": "annotated",
-          "text": "荒れ屋敷",
-          "reading": "あれやしき",
+          "text": "下総の国",
+          "reading": "しもふさのくに",
           "language": "ja",
-          "noteIds": ["note-residence"]
+          "noteIds": ["note-shimosa"]
         },
         {
           "type": "text",
-          "text": ". "
-        },
-        {
-          "type": "annotated",
-          "text": "葦",
-          "reading": "あし",
-          "language": "ja",
-          "noteIds": ["note-reeds"]
-        },
-        {
-          "type": "text",
-          "text": " brushed the broken gate, and the pale path seemed to remember feet that no longer crossed it."
+          "text": ", there lived a man named Katsushirō."
         }
       ],
       "audioSegments": [
         {
-          "id": "segment-01",
-          "text": "月の光",
+          "id": "mama",
+          "text": "ままのさと",
           "start": 1,
           "end": 1
         },
         {
-          "id": "segment-02",
-          "text": "旅人",
+          "id": "katsushika",
+          "text": "かつしかのこおり",
           "start": 3,
           "end": 3
         },
         {
-          "id": "segment-03",
-          "text": "荒れ屋敷",
+          "id": "shimosa",
+          "text": "しもうさのくに",
           "start": 5,
           "end": 5
-        },
-        {
-          "id": "segment-04",
-          "text": "葦",
-          "start": 7,
-          "end": 7
         }
       ]
-    },
-    {
-      "type": "divider"
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Within, a "
-        },
-        {
-          "type": "annotated",
-          "text": "灯火",
-          "reading": "ともしび",
-          "language": "ja",
-          "noteIds": ["note-lamp"]
-        },
-        {
-          "type": "text",
-          "text": " burned with a threadlike flame. The traveler paused at the threshold, hearing no voice, yet feeling an unseen "
-        },
-        {
-          "type": "annotated",
-          "text": "気配",
-          "reading": "けはい",
-          "language": "ja",
-          "noteIds": ["note-presence"]
-        },
-        {
-          "type": "text",
-          "text": " behind the screens."
-        }
-      ],
-      "audioSegments": [
-        {
-          "id": "segment-05",
-          "text": "灯火",
-          "start": 1,
-          "end": 1
-        },
-        {
-          "id": "segment-06",
-          "text": "気配",
-          "start": 3,
-          "end": 3
+          "text": "His family had long dwelt there since his grandfather’s time, owning many fields and living in prosperity. But when he came of age, his nature proved indifferent to practical affairs. He came to regard farming as hateful, and so, at last, the household fell into poverty."
         }
       ]
     }

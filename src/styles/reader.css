@@ -87,13 +87,15 @@
 }
 
 .layer-sequence {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(1.5rem, 1fr));
+  display: flex;
   gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .layer-sequence button {
-  width: 100%;
+  flex: 1 0 1.35rem;
+  min-width: 1.35rem;
   height: 0.85rem;
   padding: 0;
   border: 0;
