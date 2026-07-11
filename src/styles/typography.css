@@ -38,6 +38,16 @@ h3,
   line-height: 2;
 }
 
+.reading-page:lang(ja) {
+  font-size: calc(
+    1.25rem * var(--reader-text-scale, 1) * var(--japanese-text-scale)
+  );
+}
+
+.reading-page:not(:lang(ja)) .annotation:lang(ja) {
+  font-size: calc(1em * var(--japanese-text-scale));
+}
+
 .reading-page h2 {
   font-size: 1rem;
   line-height: 1.5;

@@ -23,6 +23,7 @@ export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
     <button
       className={`annotation${inline.emphasis ? ` is-${inline.emphasis}` : ""}`}
       type="button"
+      lang={inline.language === "ja" ? "ja" : undefined}
       aria-label={label}
       onClick={(event) => {
         event.stopPropagation();

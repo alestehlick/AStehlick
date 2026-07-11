@@ -85,6 +85,12 @@
   text-transform: uppercase;
 }
 
+.reader-header h1 > span:lang(ja),
+.reader-author span:lang(ja),
+.reader-page-title span:lang(ja) {
+  font-size: calc(1em * var(--japanese-text-scale));
+}
+
 .reader-page-title {
   display: flex;
   flex-direction: column;
@@ -288,6 +294,10 @@
   font-size: 1.75rem;
 }
 
+.note-content h2:lang(ja) {
+  font-size: calc(1.75rem * var(--japanese-text-scale));
+}
+
 .dictionary-kanji {
   border-bottom: 1px dotted var(--color-lichen-dim);
   color: inherit;
@@ -304,6 +314,10 @@
   margin-top: var(--space-1);
   color: var(--color-paper-muted);
   font-family: var(--font-reading);
+}
+
+.note-reading:lang(ja) {
+  font-size: calc(1em * var(--japanese-text-scale));
 }
 
 .note-gloss {
