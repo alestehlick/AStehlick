@@ -1,0 +1,80 @@
+{
+  "formatVersion": 1,
+  "pageId": "001",
+  "layer": 2,
+  "language": "mixed",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [{ "type": "text", "text": "At the 荒れ屋敷" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Toward the hour when " },
+        {
+          "type": "annotated",
+          "text": "月の光",
+          "reading": "つきのひかり",
+          "language": "ja",
+          "noteIds": ["note-moonlight"]
+        },
+        { "type": "text", "text": " loosened from the clouds, a " },
+        {
+          "type": "annotated",
+          "text": "旅人",
+          "reading": "たびびと",
+          "language": "ja",
+          "noteIds": ["note-traveler"]
+        },
+        { "type": "text", "text": " came upon an " },
+        {
+          "type": "annotated",
+          "text": "荒れ屋敷",
+          "reading": "あれやしき",
+          "language": "ja",
+          "noteIds": ["note-residence"]
+        },
+        { "type": "text", "text": ". " },
+        {
+          "type": "annotated",
+          "text": "葦",
+          "reading": "あし",
+          "language": "ja",
+          "noteIds": ["note-reeds"]
+        },
+        {
+          "type": "text",
+          "text": " brushed the broken gate, and the pale path seemed to remember feet that no longer crossed it."
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Within, a " },
+        {
+          "type": "annotated",
+          "text": "灯火",
+          "reading": "ともしび",
+          "language": "ja",
+          "noteIds": ["note-lamp"]
+        },
+        {
+          "type": "text",
+          "text": " burned with a threadlike flame. The traveler paused at the threshold, hearing no voice, yet feeling an unseen "
+        },
+        {
+          "type": "annotated",
+          "text": "気配",
+          "reading": "けはい",
+          "language": "ja",
+          "noteIds": ["note-presence"]
+        },
+        { "type": "text", "text": " behind the screens." }
+      ]
+    }
+  ]
+}

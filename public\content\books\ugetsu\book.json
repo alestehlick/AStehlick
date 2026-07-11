@@ -1,0 +1,11 @@
+{
+  "formatVersion": 1,
+  "id": "ugetsu",
+  "title": "Ugetsu Monogatari",
+  "titleJa": "雨月物語",
+  "author": "Ueda Akinari",
+  "authorJa": "上田秋成",
+  "language": "ja",
+  "description": "A progressive path from English orientation to an authored Japanese literary passage.",
+  "manifest": "manifest.json"
+}

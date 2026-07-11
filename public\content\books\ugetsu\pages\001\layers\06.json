@@ -1,0 +1,95 @@
+{
+  "formatVersion": 1,
+  "pageId": "001",
+  "layer": 6,
+  "language": "ja",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [{ "type": "text", "text": "かすかな灯火" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "月の光",
+          "reading": "つきのひかり",
+          "language": "ja",
+          "noteIds": ["note-moonlight"]
+        },
+        { "type": "text", "text": "が雲の間からほどけるころ、一人の" },
+        {
+          "type": "annotated",
+          "text": "旅人",
+          "reading": "たびびと",
+          "language": "ja",
+          "noteIds": ["note-traveler"]
+        },
+        { "type": "text", "text": "は" },
+        {
+          "type": "annotated",
+          "text": "荒れ屋敷",
+          "reading": "あれやしき",
+          "language": "ja",
+          "noteIds": ["note-residence"]
+        },
+        { "type": "text", "text": "の前にたどり着いた。" },
+        {
+          "type": "annotated",
+          "text": "葦",
+          "reading": "あし",
+          "language": "ja",
+          "noteIds": ["note-reeds"]
+        },
+        {
+          "type": "text",
+          "text": "は破れた門に触れ、白く沈んだ小道は、もはや通う者のない足音をまだ覚えているかのようであった。"
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "奥には、細い" },
+        {
+          "type": "annotated",
+          "text": "灯火",
+          "reading": "ともしび",
+          "language": "ja",
+          "noteIds": ["note-lamp"]
+        },
+        { "type": "text", "text": "が消え残っていた。旅人は敷居の前で" },
+        {
+          "type": "annotated",
+          "text": "ためらった",
+          "reading": "ためらった",
+          "language": "ja",
+          "noteIds": ["note-hesitation"]
+        },
+        { "type": "text", "text": "。声は聞こえなかったが、" },
+        {
+          "type": "annotated",
+          "text": "几帳",
+          "reading": "きちょう",
+          "language": "ja",
+          "noteIds": ["note-kicho"]
+        },
+        {
+          "type": "text",
+          "text": "の陰で、誰かがたった今、袖を闇へ引いたような"
+        },
+        {
+          "type": "annotated",
+          "text": "気配",
+          "reading": "けはい",
+          "language": "ja",
+          "noteIds": ["note-presence"]
+        },
+        { "type": "text", "text": "がした。" }
+      ]
+    }
+  ]
+}

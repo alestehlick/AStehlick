@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "notes.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["formatVersion", "pageId", "notes"],
+  "properties": {
+    "formatVersion": { "const": 1 },
+    "pageId": { "type": "string", "pattern": "^[0-9]{3}$" },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "term", "gloss", "body", "language"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "status": { "enum": ["active", "reading", "local", "treasured"] },
+          "term": { "type": "string", "minLength": 1 },
+          "reading": { "type": "string", "minLength": 1 },
+          "gloss": { "type": "string", "minLength": 1 },
+          "body": { "type": "string", "minLength": 1 },
+          "language": { "enum": ["ja", "en", "mixed"] }
+        }
+      }
+    }
+  }
+}

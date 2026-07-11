@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "pageId": "001",
+  "layer": 4,
+  "language": "mixed",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [{ "type": "text", "text": "かすかな灯火" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "月の光が雲の間からほどけるころ",
+          "reading": "つきのひかりが くものあいだから ほどけるころ",
+          "language": "ja",
+          "noteIds": ["note-moonlight"]
+        },
+        { "type": "text", "text": "、" },
+        {
+          "type": "annotated",
+          "text": "一人の旅人は荒れ屋敷の前にたどり着いた",
+          "reading": "ひとりのたびびとは あれやしきのまえに たどりついた",
+          "language": "ja",
+          "noteIds": ["note-traveler", "note-residence"]
+        },
+        { "type": "text", "text": "。" },
+        {
+          "type": "annotated",
+          "text": "葦は破れた門に触れ",
+          "reading": "あしは やぶれたもんに ふれ",
+          "language": "ja",
+          "noteIds": ["note-reeds"]
+        },
+        {
+          "type": "text",
+          "text": "、the pale path seemed to remember feet that came no longer."
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "奥には、細い灯火が消え残っていた",
+          "reading": "おくには ほそいともしびが きえのこっていた",
+          "language": "ja",
+          "noteIds": ["note-lamp"]
+        },
+        { "type": "text", "text": "。" },
+        {
+          "type": "annotated",
+          "text": "旅人は敷居の前でためらった",
+          "reading": "たびびとは しきいのまえで ためらった",
+          "language": "ja",
+          "noteIds": ["note-hesitation"]
+        },
+        {
+          "type": "text",
+          "text": "。No voice was heard, yet behind the standing curtain someone seemed to draw a sleeve into darkness."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "pageId": "001",
+  "notes": [
+    {
+      "id": "note-moonlight",
+      "status": "treasured",
+      "term": "月の光",
+      "reading": "つきのひかり",
+      "gloss": "moonlight",
+      "body": "The light is made active: it loosens from the clouds and reveals without fully explaining.",
+      "language": "ja"
+    },
+    {
+      "id": "note-traveler",
+      "status": "active",
+      "term": "旅人",
+      "reading": "たびびと",
+      "gloss": "traveler",
+      "body": "An unnamed traveler keeps the passage suspended between folktale and private memory.",
+      "language": "ja"
+    },
+    {
+      "id": "note-residence",
+      "status": "active",
+      "term": "荒れ屋敷",
+      "reading": "あれやしき",
+      "gloss": "ruined residence",
+      "body": "More than an abandoned house: a once-inhabited place visibly overtaken by neglect.",
+      "language": "ja"
+    },
+    {
+      "id": "note-reeds",
+      "status": "local",
+      "term": "葦",
+      "reading": "あし",
+      "gloss": "reeds",
+      "body": "Reeds bring the wet, marginal landscape close to the human threshold.",
+      "language": "ja"
+    },
+    {
+      "id": "note-lamp",
+      "status": "treasured",
+      "term": "灯火",
+      "reading": "ともしび",
+      "gloss": "lamplight",
+      "body": "A small domestic light makes the empty residence feel inhabited before anyone appears.",
+      "language": "ja"
+    },
+    {
+      "id": "note-hesitation",
+      "status": "reading",
+      "term": "ためらった",
+      "reading": "ためらった",
+      "gloss": "hesitated",
+      "body": "The pause at the threshold is both physical and moral: entering means accepting the invitation of the scene.",
+      "language": "ja"
+    },
+    {
+      "id": "note-kicho",
+      "status": "local",
+      "term": "几帳",
+      "reading": "きちょう",
+      "gloss": "standing curtain",
+      "body": "A curtained screen used in aristocratic interiors; here it divides visibility from presence.",
+      "language": "ja"
+    },
+    {
+      "id": "note-presence",
+      "status": "reading",
+      "term": "気配",
+      "reading": "けはい",
+      "gloss": "trace of a presence",
+      "body": "The passage ends on perception without proof, the characteristic pressure of something nearly seen.",
+      "language": "ja"
+    }
+  ]
+}

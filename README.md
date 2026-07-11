@@ -63,4 +63,3 @@ In the repository settings, open **Pages** and set **Source** to **GitHub Action
 ## Visual assets
 
 The initial release intentionally ships without a decorative background image. To add one later, place `heian-night.webp` in `public/assets/backgrounds/`, set `--background-image` to `url('/assets/backgrounds/heian-night.webp')`, and raise `--background-image-opacity` in `src/styles/tokens.css` from `0` after checking text contrast.
-

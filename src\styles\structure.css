@@ -1,0 +1,133 @@
+body {
+  background: var(--color-night-deep);
+}
+
+#root,
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  isolation: isolate;
+  background: var(--color-night);
+  overflow-x: hidden;
+}
+
+.background-texture {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: var(--background-image-opacity);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.app-shell::after {
+  content: "";
+  position: fixed;
+  inset: 1rem;
+  z-index: -1;
+  border: 1px solid rgba(185, 200, 108, 0.08);
+  pointer-events: none;
+}
+
+.library-view,
+.reader-view {
+  width: min(calc(100% - 3rem), var(--content-width));
+  margin: 0 auto;
+}
+
+.library-view {
+  min-height: 100vh;
+  padding: 12vh 0 var(--space-6);
+}
+
+.library-header {
+  max-width: 48rem;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-kicker {
+  margin-bottom: var(--space-3);
+  color: var(--color-lichen);
+}
+
+.library-intro {
+  max-width: 34rem;
+  margin-top: var(--space-4);
+  color: var(--color-paper-muted);
+  font-family: var(--font-reading);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.route-message {
+  margin-top: var(--space-4);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--color-rouge);
+  color: var(--color-paper-muted);
+  font-size: 0.875rem;
+}
+
+.library-list {
+  margin-top: var(--space-5);
+}
+
+.book-entry {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-line-quiet);
+}
+
+.book-index {
+  align-self: start;
+  color: var(--color-lichen-dim);
+  font-family: var(--font-reading);
+  font-size: 1.5rem;
+}
+
+.book-copy {
+  max-width: 38rem;
+}
+
+.book-title-ja {
+  color: var(--color-lichen);
+  font-size: 1.5rem;
+}
+
+.book-copy h2 {
+  margin-top: var(--space-1);
+  font-size: 1.75rem;
+}
+
+.book-author {
+  margin: var(--space-2) 0 var(--space-3);
+  color: var(--color-rouge);
+}
+
+.book-copy > p:last-child {
+  color: var(--color-paper-muted);
+  line-height: 1.65;
+}
+
+.reader-loading {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-3);
+  color: var(--color-paper-muted);
+}
+
+.reader-loading span {
+  color: var(--color-lichen);
+  font-family: var(--font-reading);
+  font-size: 3rem;
+}

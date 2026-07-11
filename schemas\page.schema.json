@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "page.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "id",
+    "bookId",
+    "title",
+    "titleJa",
+    "sequence",
+    "layersPath",
+    "notesPath",
+    "commentaryPath"
+  ],
+  "properties": {
+    "formatVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[0-9]{3}$" },
+    "bookId": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string", "minLength": 1 },
+    "titleJa": { "type": "string", "minLength": 1 },
+    "sequence": { "type": "integer", "minimum": 1 },
+    "layersPath": { "type": "string", "pattern": "^[^/]" },
+    "notesPath": { "type": "string", "pattern": "^[^/].*\\.json$" },
+    "commentaryPath": { "type": "string", "pattern": "^[^/].*\\.md$" }
+  }
+}

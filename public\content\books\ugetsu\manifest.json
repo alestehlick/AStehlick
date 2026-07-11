@@ -1,0 +1,44 @@
+{
+  "formatVersion": 1,
+  "bookId": "ugetsu",
+  "layers": [
+    {
+      "number": 1,
+      "label": "Orientation",
+      "description": "English sense and atmosphere"
+    },
+    {
+      "number": 2,
+      "label": "Anchors",
+      "description": "Key Japanese nouns enter the page"
+    },
+    {
+      "number": 3,
+      "label": "Phrases",
+      "description": "Japanese phrase units carry the scene"
+    },
+    {
+      "number": 4,
+      "label": "Clauses",
+      "description": "Japanese clauses lead with light support"
+    },
+    {
+      "number": 5,
+      "label": "Near text",
+      "description": "The passage is nearly all Japanese"
+    },
+    {
+      "number": 6,
+      "label": "Original",
+      "description": "Complete Japanese reading"
+    }
+  ],
+  "pages": [
+    {
+      "id": "001",
+      "title": "The Faint Lamp",
+      "sequence": 1,
+      "path": "pages/001/page.json"
+    }
+  ]
+}

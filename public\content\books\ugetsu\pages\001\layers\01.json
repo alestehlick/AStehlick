@@ -1,0 +1,67 @@
+{
+  "formatVersion": 1,
+  "pageId": "001",
+  "layer": 1,
+  "language": "en",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [{ "type": "text", "text": "At the ruined residence" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Toward the hour when " },
+        {
+          "type": "annotated",
+          "text": "moonlight",
+          "language": "en",
+          "noteIds": ["note-moonlight"]
+        },
+        { "type": "text", "text": " loosened from the clouds, a " },
+        {
+          "type": "annotated",
+          "text": "traveler",
+          "language": "en",
+          "noteIds": ["note-traveler"]
+        },
+        { "type": "text", "text": " came upon a " },
+        {
+          "type": "annotated",
+          "text": "residence gone hollow with neglect",
+          "language": "en",
+          "noteIds": ["note-residence"]
+        },
+        {
+          "type": "text",
+          "text": ". Reeds brushed the broken gate, and the pale path seemed to remember feet that no longer crossed it."
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Within, a " },
+        {
+          "type": "annotated",
+          "text": "lamp",
+          "language": "en",
+          "noteIds": ["note-lamp"]
+        },
+        { "type": "text", "text": " burned with a threadlike flame. He " },
+        {
+          "type": "annotated",
+          "text": "paused beneath the lintel",
+          "language": "en",
+          "noteIds": ["note-hesitation"]
+        },
+        {
+          "type": "text",
+          "text": ", hearing no voice, yet feeling that someone behind the screens had just withdrawn a sleeve into darkness."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.annotation {
+  display: inline;
+  padding: 0 0.08em;
+  border: 0;
+  border-bottom: 1px dotted var(--color-lichen-dim);
+  border-radius: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+.annotation::after {
+  content: "·";
+  margin-left: 0.08em;
+  color: var(--color-rouge);
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.annotation:hover,
+.annotation:focus-visible {
+  color: var(--color-focus);
+  border-bottom-style: solid;
+}
+
+.annotation.is-italic {
+  font-style: italic;
+}
+.annotation.is-strong {
+  font-weight: 700;
+}

@@ -1,0 +1,79 @@
+{
+  "formatVersion": 1,
+  "pageId": "001",
+  "layer": 3,
+  "language": "mixed",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": [{ "type": "text", "text": "荒れ屋敷の前で" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "月の光が雲の間からほどけるころ",
+          "reading": "つきのひかりが くものあいだから ほどけるころ",
+          "language": "ja",
+          "noteIds": ["note-moonlight"]
+        },
+        { "type": "text", "text": ", a lone " },
+        {
+          "type": "annotated",
+          "text": "旅人",
+          "reading": "たびびと",
+          "language": "ja",
+          "noteIds": ["note-traveler"]
+        },
+        { "type": "text", "text": " arrived before an " },
+        {
+          "type": "annotated",
+          "text": "荒れ屋敷",
+          "reading": "あれやしき",
+          "language": "ja",
+          "noteIds": ["note-residence"]
+        },
+        { "type": "text", "text": ". " },
+        {
+          "type": "annotated",
+          "text": "葦は破れた門に触れ",
+          "reading": "あしは やぶれたもんに ふれ",
+          "language": "ja",
+          "noteIds": ["note-reeds"]
+        },
+        {
+          "type": "text",
+          "text": ", and the pale path seemed still to remember vanished footsteps."
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Deep within, " },
+        {
+          "type": "annotated",
+          "text": "細い灯火が消え残っていた",
+          "reading": "ほそい ともしびが きえのこっていた",
+          "language": "ja",
+          "noteIds": ["note-lamp"]
+        },
+        { "type": "text", "text": ". The traveler " },
+        {
+          "type": "annotated",
+          "text": "敷居の前でためらった",
+          "reading": "しきいのまえで ためらった",
+          "language": "ja",
+          "noteIds": ["note-hesitation"]
+        },
+        {
+          "type": "text",
+          "text": ". No voice came, but a presence seemed to withdraw behind the curtain."
+        }
+      ]
+    }
+  ]
+}
