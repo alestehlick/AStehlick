@@ -5,7 +5,10 @@ import {
 } from "../content/contentLoader";
 import type { ReaderBundle } from "../content/types";
 import { readerHash, navigateTo } from "../routing/hashRouter";
-import { createPreferencesStore } from "../state/preferencesStore";
+import {
+  createPreferencesStore,
+  type ReadingScale,
+} from "../state/preferencesStore";
 import { type ProgressData, createProgressStore } from "../state/progressStore";
 import { adjacentLayer, adjacentPage } from "../state/readerState";
 import { isNativeControl } from "../utilities/keyboard";
@@ -30,6 +33,20 @@ interface ReaderProps {
 
 const loader = createContentLoader();
 const preferencesStore = createPreferencesStore();
+const readingScales: Array<{ id: ReadingScale; percent: number }> = [
+  { id: "standard", percent: 100 },
+  { id: "large", percent: 115 },
+  { id: "extra-large", percent: 130 },
+];
+
+function deviceDefaultScale(): ReadingScale {
+  if (typeof window === "undefined" || !window.matchMedia) return "standard";
+  return window.matchMedia(
+    "(min-width: 700px) and (max-width: 1180px) and (pointer: coarse)",
+  ).matches
+    ? "large"
+    : "standard";
+}
 
 export function Reader({
   bookId,
@@ -46,6 +63,19 @@ export function Reader({
   const [commentaryOpen, setCommentaryOpen] = useState(
     () => preferencesStore.load().commentaryOpen,
   );
+  const [readingScale, setReadingScale] = useState<ReadingScale>(
+    () => preferencesStore.load().readingScale ?? deviceDefaultScale(),
+  );
+
+  const scaleIndex = readingScales.findIndex(
+    (scale) => scale.id === readingScale,
+  );
+  const setScaleAt = (index: number) => {
+    const scale = readingScales[index];
+    if (!scale) return;
+    setReadingScale(scale.id);
+    preferencesStore.setReadingScale(scale.id);
+  };
 
   useEffect(() => {
     let active = true;
@@ -155,8 +185,16 @@ export function Reader({
   )!;
 
   return (
-    <main className="reader-view">
-      <ReaderToolbar onLibrary={onLibrary} onReset={onReset} />
+    <main className={`reader-view reading-scale-${readingScale}`}>
+      <ReaderToolbar
+        onLibrary={onLibrary}
+        onReset={onReset}
+        scalePercent={readingScales[scaleIndex].percent}
+        canDecreaseScale={scaleIndex > 0}
+        canIncreaseScale={scaleIndex < readingScales.length - 1}
+        onDecreaseScale={() => setScaleAt(scaleIndex - 1)}
+        onIncreaseScale={() => setScaleAt(scaleIndex + 1)}
+      />
       <header className="reader-header">
         <div>
           <p className="reader-author">
