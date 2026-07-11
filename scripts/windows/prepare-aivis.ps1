@@ -16,6 +16,7 @@ function Test-Engine {
 
 if (-not (Test-Engine)) {
     $roots = @(
+        'H:\Aivis\AivisSpeech',
         (Join-Path $env:LOCALAPPDATA 'Programs\AivisSpeech'),
         (Join-Path $env:ProgramFiles 'AivisSpeech')
     ) | Where-Object { $_ -and (Test-Path -LiteralPath $_) }
