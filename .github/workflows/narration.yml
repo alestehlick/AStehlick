@@ -1,27 +1,21 @@
-name: Generate Moonlight Reader Narration
+name: Build and Deploy Moonlight Reader
 
 on:
   push:
     branches: [main, master]
-    paths:
-      - "public/content/**"
-      - "scripts/generate-audio.ts"
-      - "scripts/windows/prepare-aivis.ps1"
-      - "scripts/windows/commit-audio.ps1"
-      - "package.json"
-      - "package-lock.json"
-      - ".github/workflows/narration.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: moonlight-reader-narration
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  narrate:
+  build:
     runs-on: [self-hosted, Windows, X64, aivis]
     timeout-minutes: 90
     steps:
@@ -32,12 +26,22 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Restore narration cache
+        uses: actions/cache@v4
+        with:
+          path: public/assets/audio
+          key: ${{ runner.os }}-aivis-${{ hashFiles('public/content/**', 'scripts/generate-audio.ts', 'scripts/windows/prepare-aivis.ps1') }}
+          restore-keys: |
+            ${{ runner.os }}-aivis-
       - name: Install dependencies
         shell: cmd
         run: npm.cmd ci
       - name: Validate authored content
         shell: cmd
         run: npm.cmd run validate:content
+      - name: Run tests
+        shell: cmd
+        run: npm.cmd test
       - name: Prepare local AivisSpeech
         shell: cmd
         run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\windows\prepare-aivis.ps1
@@ -50,6 +54,23 @@ jobs:
           FFMPEG_PATH: C:\ffmpeg\bin\ffmpeg.exe
         shell: cmd
         run: npm.cmd run generate:audio
-      - name: Commit refreshed narration
+      - name: Build site with narration
         shell: cmd
-        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\windows\commit-audio.ps1
+        run: npm.cmd run build
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

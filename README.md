@@ -62,7 +62,7 @@ Japanese phrases and sentences use explicit `audioSegments` ranges in each layer
 
 Narration is generated for free by the local AivisSpeech engine with the **阿井田 茂 / Calm** voice: a mature baritone chosen for the passage's restrained supernatural atmosphere. Generated MP3 files are stored under `public/assets/audio/{book}/{page}/layer-NN/`. The audio manifest hashes the text, local speaker, style, pacing settings, and output format so unchanged segments are not synthesized again.
 
-Automatic narration runs on a private Windows self-hosted GitHub runner labelled `aivis`. The runner starts the local engine when necessary, imports the existing model from `H:\Aivis\AivisModels\Aida_Shigeru_BaritoneMiddleMale.aivmx` if it is not installed, synthesizes changed segments, converts WAV output to 128 kbps MP3 with FFmpeg, and commits the refreshed audio. Audio-only commits trigger deployment but not another narration run.
+Automatic narration runs on a private Windows self-hosted GitHub runner labelled `aivis`. The runner starts the local engine when necessary, imports the existing model from `H:\Aivis\AivisModels\Aida_Shigeru_BaritoneMiddleMale.aivmx` if it is not installed, synthesizes changed segments, converts WAV output to 128 kbps MP3 with FFmpeg, caches the narration, and deploys the complete site directly to GitHub Pages. It does not require Git or a paid cloud service on the narration computer.
 
 One-time runner setup:
 
@@ -83,7 +83,7 @@ The engine, speaker UUID/name, style, style ID, and FFmpeg executable can be ove
 
 ## GitHub Pages
 
-The workflow at `.github/workflows/deploy.yml` validates, tests, builds, and deploys on pushes to `main` or `master`. The Vite base path is derived from `GITHUB_REPOSITORY`, so project Pages URLs such as `/AStehlick/` work without a hard-coded repository name. A root user-site repository ending in `.github.io` builds with `/` instead.
+The workflow at `.github/workflows/narration.yml` validates, tests, generates or restores narration, builds, and deploys on pushes to `main` or `master`. The Vite base path is derived from `GITHUB_REPOSITORY`, so project Pages URLs such as `/AStehlick/` work without a hard-coded repository name. A root user-site repository ending in `.github.io` builds with `/` instead.
 
 In the repository settings, open **Pages** and set **Source** to **GitHub Actions**. The next successful deployment will publish the `dist` artifact.
 
