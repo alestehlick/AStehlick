@@ -15,7 +15,6 @@ import { isNativeControl } from "../utilities/keyboard";
 import { wordNarrationKey, wordNarrationUrl } from "../utilities/narration";
 import { LayerNavigator } from "./LayerNavigator";
 import { NotesPanel } from "./NotesPanel";
-import { PageCommentary } from "./PageCommentary";
 import { PageNavigator } from "./PageNavigator";
 import { ProgressIndicator } from "./ProgressIndicator";
 import { ReaderToolbar } from "./ReaderToolbar";
@@ -65,9 +64,6 @@ export function Reader({
   const [availableAudio, setAvailableAudio] = useState<Set<string>>(new Set());
   const [activeAudioKey, setActiveAudioKey] = useState<string | null>(null);
   const [audioMessage, setAudioMessage] = useState<string | null>(null);
-  const [commentaryOpen, setCommentaryOpen] = useState(
-    () => preferencesStore.load().commentaryOpen,
-  );
   const [readingScale, setReadingScale] = useState<ReadingScale>(
     () => preferencesStore.load().readingScale ?? deviceDefaultScale(),
   );
@@ -336,14 +332,6 @@ export function Reader({
             activeAudioKey={activeAudioKey}
             onPlayAudio={playAudio}
             onOpenNote={setSelectedNoteId}
-          />
-          <PageCommentary
-            markdown={bundle.commentary}
-            open={commentaryOpen}
-            onOpenChange={(open) => {
-              setCommentaryOpen(open);
-              preferencesStore.setCommentaryOpen(open);
-            }}
           />
         </div>
         <NotesPanel

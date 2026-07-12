@@ -19,26 +19,25 @@ class MemoryStorage implements StorageLike {
 }
 
 describe("preferences store", () => {
-  it("persists reading scale without losing commentary state", () => {
+  it("persists the reading scale", () => {
     const store = createPreferencesStore(new MemoryStorage());
-    store.setCommentaryOpen(true);
     store.setReadingScale("extra-large");
 
-    expect(store.load()).toMatchObject({
-      commentaryOpen: true,
+    expect(store.load()).toEqual({
+      version: 1,
       readingScale: "extra-large",
     });
   });
 
-  it("migrates existing preferences without a reading scale", () => {
+  it("accepts older preference records that still contain commentary state", () => {
     const storage = new MemoryStorage();
     storage.setItem(
       "moonlight-reader.preferences.v1",
       JSON.stringify({ version: 1, commentaryOpen: true }),
     );
 
-    expect(createPreferencesStore(storage).load()).toMatchObject({
-      commentaryOpen: true,
+    expect(createPreferencesStore(storage).load()).toEqual({
+      version: 1,
       readingScale: null,
     });
   });

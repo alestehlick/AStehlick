@@ -105,7 +105,6 @@ export interface PageFile {
   layers: LayerDefinition[];
   layersPath: string;
   notesPath: string;
-  commentaryPath: string;
 }
 
 export interface LayerFile {
@@ -139,5 +138,4 @@ export interface ReaderBundle {
   page: PageFile;
   layer: LayerFile;
   notes: NotesFile;
-  commentary: string;
 }

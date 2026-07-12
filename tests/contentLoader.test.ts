@@ -21,7 +21,7 @@ describe("content loader", () => {
     expect(bundle.book.titleJa).toBe("雨月物語");
     expect(bundle.layer.layer).toBe(9);
     expect(bundle.notes.notes.length).toBeGreaterThan(0);
-    expect(bundle.commentary).toContain("The first imbalance");
+    expect(bundle.notes.notes.length).toBe(24);
   });
 
   it("reports an absent layer clearly", async () => {

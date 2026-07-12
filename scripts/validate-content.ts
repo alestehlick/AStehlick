@@ -272,20 +272,6 @@ export function validateContent(
         );
         const knownNotes = new Set(noteIds);
 
-        const commentaryPath = resolveInside(
-          pageDirectory,
-          requireString(page.commentaryPath, "page.commentaryPath"),
-        );
-        if (!existsSync(commentaryPath)) {
-          errors.push(`Missing file: ${commentaryPath}`);
-        } else {
-          filesChecked += 1;
-          const commentary = readFileSync(commentaryPath, "utf8");
-          if (/<\/?(?:script|iframe|object|embed)\b/i.test(commentary)) {
-            errors.push(`${commentaryPath}: unsafe HTML is not allowed.`);
-          }
-        }
-
         const layersDirectory = resolveInside(
           pageDirectory,
           requireString(page.layersPath, "page.layersPath"),

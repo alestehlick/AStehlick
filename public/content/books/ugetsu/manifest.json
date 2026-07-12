@@ -7,6 +7,12 @@
       "title": "The House amid the Reeds · I (Modern Japanese)",
       "sequence": 1,
       "path": "pages/001/page.json"
+    },
+    {
+      "id": "002",
+      "title": "The House amid the Reeds · II (Modern Japanese)",
+      "sequence": 2,
+      "path": "pages/002/page.json"
     }
   ]
 }

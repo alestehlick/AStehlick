@@ -98,7 +98,14 @@ export function NotesPanel({
           <p className="note-audio-status" aria-live="polite">
             {narrationMessage}
           </p>
-          <p className="note-body">{note.body}</p>
+          <div className="note-body">
+            {note.body
+              .trim()
+              .split(/\n\s*\n/)
+              .map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+          </div>
         </div>
       ) : (
         <p className="notes-empty">No note selected.</p>

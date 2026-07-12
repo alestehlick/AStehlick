@@ -91,13 +91,12 @@ export function createContentLoader(options: ContentLoaderOptions = {}) {
       `${String(layerNumber).padStart(2, "0")}.json`,
     );
 
-    const [layer, notes, commentary] = await Promise.all([
+    const [layer, notes] = await Promise.all([
       loadJson<LayerFile>(layerPath),
       loadJson<NotesFile>(joinContentPath(pageDirectory, page.notesPath)),
-      loadText(joinContentPath(pageDirectory, page.commentaryPath)),
     ]);
 
-    return { libraryEntry, book, manifest, page, layer, notes, commentary };
+    return { libraryEntry, book, manifest, page, layer, notes };
   };
 
   return { loadLibrary, loadReaderBundle };

@@ -12,8 +12,7 @@
     "sequence",
     "layers",
     "layersPath",
-    "notesPath",
-    "commentaryPath"
+    "notesPath"
   ],
   "properties": {
     "formatVersion": {
@@ -46,10 +45,6 @@
     "notesPath": {
       "type": "string",
       "pattern": "^[^/].*\\.json$"
-    },
-    "commentaryPath": {
-      "type": "string",
-      "pattern": "^[^/].*\\.md$"
     },
     "layers": {
       "type": "array",

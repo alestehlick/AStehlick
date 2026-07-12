@@ -11,13 +11,11 @@ export type ReadingScale = "standard" | "large" | "extra-large";
 
 interface Preferences {
   version: 1;
-  commentaryOpen: boolean;
   readingScale: ReadingScale | null;
 }
 
 const defaults: Preferences = {
   version: 1,
-  commentaryOpen: false,
   readingScale: null,
 };
 
@@ -31,27 +29,14 @@ export function createPreferencesStore(
   const load = (): Preferences => {
     const value = readStoredJson(storage, PREFERENCES_KEY);
     if (!value || typeof value !== "object") return defaults;
-    const candidate = value as Partial<Preferences>;
-    if (
-      candidate.version !== 1 ||
-      typeof candidate.commentaryOpen !== "boolean"
-    ) {
-      return defaults;
-    }
+    const candidate = value as { version?: unknown; readingScale?: unknown };
+    if (candidate.version !== 1) return defaults;
     return {
       version: 1,
-      commentaryOpen: candidate.commentaryOpen,
       readingScale: isReadingScale(candidate.readingScale)
         ? candidate.readingScale
         : null,
     };
-  };
-
-  const setCommentaryOpen = (commentaryOpen: boolean): void => {
-    writeStoredJson(storage, PREFERENCES_KEY, {
-      ...load(),
-      commentaryOpen,
-    });
   };
 
   const setReadingScale = (readingScale: ReadingScale): void => {
@@ -61,5 +46,5 @@ export function createPreferencesStore(
     });
   };
 
-  return { load, setCommentaryOpen, setReadingScale };
+  return { load, setReadingScale };
 }

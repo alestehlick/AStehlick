@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "pageId": "002",
+  "layer": 4,
+  "language": "mixed",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "そうこうしているうちに",
+          "reading": "そうこうしているうちに",
+          "language": "ja",
+          "noteIds": ["note-sokoshite"]
+        },
+        {
+          "type": "text",
+          "text": "、"
+        },
+        {
+          "type": "annotated",
+          "text": "親戚の多くからも",
+          "reading": "しんせきのおおくからも",
+          "language": "ja",
+          "noteIds": ["note-shinseki-ooku"]
+        },
+        {
+          "type": "annotated",
+          "text": "疎遠に扱われるようになった",
+          "reading": "そえんにあつかわれるようになった",
+          "language": "ja",
+          "noteIds": ["note-soen-atsukawareru"]
+        },
+        {
+          "type": "text",
+          "text": "が、"
+        },
+        {
+          "type": "annotated",
+          "text": "それを",
+          "reading": "それを",
+          "language": "ja",
+          "noteIds": ["note-sorewo"]
+        },
+        {
+          "type": "text",
+          "text": "勝四郎は"
+        },
+        {
+          "type": "annotated",
+          "text": "口惜しいことだと",
+          "reading": "くちおしいことだと",
+          "language": "ja",
+          "noteIds": ["note-kuchioshii"]
+        },
+        {
+          "type": "annotated",
+          "text": "しみじみと思い",
+          "reading": "しみじみとおもい",
+          "language": "ja",
+          "noteIds": ["note-shimijimi"]
+        },
+        {
+          "type": "text",
+          "text": "、"
+        },
+        {
+          "type": "annotated",
+          "text": "なんとかして",
+          "reading": "なんとかして",
+          "language": "ja",
+          "noteIds": ["note-nantokashite"]
+        },
+        {
+          "type": "annotated",
+          "text": "家運を",
+          "reading": "かうんを",
+          "language": "ja",
+          "noteIds": ["note-kaun"]
+        },
+        {
+          "type": "annotated",
+          "text": "挽回したいものと",
+          "reading": "ばんかいしたいものと",
+          "language": "ja",
+          "noteIds": ["note-bankai-mono"]
+        },
+        {
+          "type": "text",
+          "text": "、"
+        },
+        {
+          "type": "text",
+          "text": "he turned the matter over in every direction."
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "relatives-withdraw",
+          "text": "そうこうしているうちに、しんせきのおおくからも、そえんにあつかわれるようになったが",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "id": "wounded-pride",
+          "text": "それを、かつしろうは、くちおしいことだと、しみじみとおもい",
+          "start": 5,
+          "end": 9
+        },
+        {
+          "id": "restore-the-house",
+          "text": "なんとかして、かうんを、ばんかいしたいものと",
+          "start": 10,
+          "end": 13
+        }
+      ]
+    }
+  ]
+}

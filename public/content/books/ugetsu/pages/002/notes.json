@@ -1,0 +1,114 @@
+{
+  "formatVersion": 1,
+  "pageId": "002",
+  "notes": [
+    {
+      "id": "note-sokoshite",
+      "status": "active",
+      "term": "そうこうしているうちに",
+      "reading": "そうこうしているうちに",
+      "gloss": "while things were going on in this way",
+      "body": "Formation. そうこうしているうちに is そう + こう + する + ている + うち + に.\n\nそう and こう. Japanese organizes demonstratives around speaker and hearer perspective. こう means “in this way,” near the speaker’s present framing; そう means “in that way,” referring to what has just been described or what belongs to the hearer-side field. Paired as そうこう, they gather varied developments under “this and that; things proceeding in such ways.” The pair does not specify each event separately; it sweeps them together.\n\nしている. する turns the demonstrative manner into an unfolding activity or state. ている marks continuation: the circumstances are still running their course.\n\nうちに. うち literally means an interior. Temporally it becomes “the inside/span of a period.” に locates the next change within that span. Thus Xしているうちに means “while X is continuing,” often with the nuance that another condition gradually emerges before the first situation has ended.\n\nContext. The phrase binds page 002 to the previous decline. Poverty is not finished and then followed by a separate event. While the consequences continue accumulating, social abandonment develops from within them.",
+      "language": "ja"
+    },
+    {
+      "id": "note-shinseki-ooku",
+      "status": "active",
+      "term": "親戚の多くからも",
+      "reading": "しんせきのおおくからも",
+      "gloss": "even by many of his relatives",
+      "body": "Formation. 親戚の多くからも is 親戚 + の + 多く + から + も.\n\n親戚. 親 carries closeness, parenthood, and intimate relation. 戚 in classical Chinese can denote kin, especially relatives linked through family connection; it also developed senses of grief and anxiety in other compounds. In 親戚, the two characters converge on kinship: those bound closely by blood or marriage. 親 emphasizes nearness; 戚 supplies the established category of relatives.\n\n多く. 多い is “many.” Its form 多く is historically the -く form of the adjective. Here it is used substantivally: “many [of them].” Japanese can let an adjective’s connective/adverbial form stand for a group characterized by that quality.\n\nから. With a passive verb, から can mark the source or agent from which treatment comes. The estrangement comes from the relatives.\n\nも. も adds inclusion and escalation: “from many relatives too/even.” Poverty has already damaged the household materially; now even those expected to remain connected participate in the withdrawal.",
+      "language": "ja"
+    },
+    {
+      "id": "note-soen-atsukawareru",
+      "status": "treasured",
+      "term": "疎遠に扱われるようになった",
+      "reading": "そえんにあつかわれるようになった",
+      "gloss": "came to be treated distantly",
+      "body": "Formation. 疎遠に扱われるようになった is 疎遠 + に + 扱う + れる + よう + に + なる + た.\n\n疎遠. 疎 originally describes loose binding, sparse arrangement, or insufficient density. From things not tightly joined comes social thinness: being unclose or estranged. 遠 means far in space and, by extension, remote in relation. 疎遠 therefore combines loosened connection with distance. The relationship has not necessarily been formally severed; it has become thin and far.\n\n扱う. The native verb あつかう means to handle, deal with, treat, or manage. Its concrete center is directing one’s conduct toward something; from handling objects comes treating persons in a certain manner.\n\nPassive. 扱われる is “to be treated.” The relatives are grammatically backgrounded, while Katsushirō becomes the one upon whom distant treatment falls.\n\nようになる. よう means appearance, manner, or form. Xようになる literally means “to come into the manner/state of X,” and has grammaticalized into “come to; begin to.” The phrase emphasizes a change of pattern rather than one isolated insult.\n\nContext. He was not simply distant from his relatives. They increasingly handled him as someone distant. The sentence registers social exclusion as repeated conduct.",
+      "language": "ja"
+    },
+    {
+      "id": "note-sorewo",
+      "status": "active",
+      "term": "それを",
+      "reading": "それを",
+      "gloss": "at that; taking that",
+      "body": "Formation. それを is the demonstrative pronoun それ plus the particle を.\n\nそれ. それ points to something already present in the discourse but not identified with the speaker’s immediate “this.” Here it gathers the entire preceding fact: that many relatives had begun treating Katsushirō with distance.\n\nを. を ordinarily marks the direct object of a verb. With verbs of feeling and judgment, the object can be a whole situation rather than a physical thing. それを…口惜しいことだと思う means “to take that [state of affairs] as something mortifying.”\n\nDiscourse function. The pronoun prevents the sentence from repeating the long passive clause. More importantly, it turns the social experience into an object Katsushirō mentally takes up. The previous clause describes what others do; それを pivots inward to what he makes of it.\n\nNuance. English often translates only “he felt humiliated,” but the Japanese retains the object structure: he regards that treatment itself as 口惜しい. His new resolve grows from an interpreted injury, not from poverty in the abstract.",
+      "language": "ja"
+    },
+    {
+      "id": "note-kuchioshii",
+      "status": "treasured",
+      "term": "口惜しいことだと",
+      "reading": "くちおしいことだと",
+      "gloss": "as something mortifying; humiliating",
+      "body": "Formation. 口惜しいことだと contains 口惜しい + こと + だ + と.\n\nThe adjective. 口惜しい is read くちおしい here, historically くちをし. Its oldest meanings include disappointing, regrettable, unsatisfactory, or painfully beneath what should have been. From frustrated expectation it developed the stronger modern feeling “mortifying, vexing, humiliating.”\n\nThe characters. 口 means mouth; 惜 means to regret, begrudge, or feel the loss of something precious. It is tempting to derive the word as “a regret expressed by the mouth,” but historical dictionaries do not establish that as the etymology. 口 is probably a conventional or phonographic part of the spelling of an older native adjective. 惜, however, accurately represents the semantic center of frustrated loss. Fidelity therefore requires distinguishing the useful written association from the uncertain origin.\n\nことだ. こと turns the evaluation into a nominal proposition: “it is a mortifying thing.” だ is the copula that asserts the judgment.\n\nと. The quotative particle marks the content of 思う: he thinks “this is mortifying.”\n\nContext. The feeling is not merely sadness. He experiences the relatives’ withdrawal as evidence that his standing has fallen below what his inherited house should command. Wounded status becomes the motive for action.",
+      "language": "ja"
+    },
+    {
+      "id": "note-shimijimi",
+      "status": "active",
+      "term": "しみじみと思い",
+      "reading": "しみじみとおもい",
+      "gloss": "felt it deeply; reflected upon it keenly",
+      "body": "Formation. しみじみと思い is しみじみ + と + 思い.\n\nしみじみ. The adverb is a reduplicated form related to 染みる・沁みる, “to soak, penetrate, seep inward.” Reduplication does not simply double quantity; it presents the process as thorough, continued, or repeatedly penetrating. A feeling understood しみじみ is one that enters beneath the surface and reaches the interior.\n\nSemantic development. Physical penetration—cold entering the body, liquid soaking material—became a metaphor for emotion and realization entering the heart. From this arose “deeply, from the heart, with quiet and sustained feeling,” and then in some contexts “upon serious reflection.”\n\nと. The particle marks manner: he thinks in a しみじみ way, with the fact sinking through him.\n\n思い. This is the continuative form of 思う. It connects the deep realization to the next intention without ending the sentence.\n\nContext. 口惜しい supplies the sharp judgment; しみじみ changes its temporal texture. The humiliation is not a flash of anger. It penetrates and settles, becoming the inward pressure from which his plan to restore the household emerges.",
+      "language": "ja"
+    },
+    {
+      "id": "note-nantokashite",
+      "status": "active",
+      "term": "なんとかして",
+      "reading": "なんとかして",
+      "gloss": "somehow; by some means",
+      "body": "Formation. なんとかして is 何とか + して.\n\n何. 何 introduces an unknown: what thing, what means, what manner.\n\nか. The particle か marks uncertainty or indefiniteness. In words such as 何か, 誰か, and どこか, an interrogative becomes an indefinite: something, someone, somewhere.\n\nと. In 何とか, the exact historical segmentation is less transparent than in 何か, but と helps frame an unspecified manner or formulation: “in what sort of way—some way or other.” The whole expression lexicalized as “somehow; by one means or another.”\n\nして. する turns that unspecified manner into effort or action. 何とかしたい means “want to do something about it”; なんとかして before another verb means “by somehow managing, by whatever means can be found.”\n\nContext. The expression contains both uncertainty and resolve. Katsushirō does not yet possess a plan, but he is no longer passive. The means is blank; the intention to find one is firm.",
+      "language": "ja"
+    },
+    {
+      "id": "note-kaun",
+      "status": "treasured",
+      "term": "家運を",
+      "reading": "かうんを",
+      "gloss": "the fortunes of the house",
+      "body": "Formation. 家運 is 家 + 運.\n\n家. Here 家 is the continuing household: lineage, name, property, domestic group, and social standing—not merely the physical building.\n\n運. The core image of 運 is movement or carrying something along a course. From physical movement comes the course events take beyond complete human control: fortune, destiny, the rise and fall allotted to a person or institution.\n\nCombined meaning. 家運 is the course or fortune of a house across time. Because a household can prosper, decline, transmit property, lose standing, and recover, it has an 運—a trajectory. The compound therefore turns the family into something almost organism-like, with its own movement through history.\n\nParticle. を marks 家運 as the object of 挽回する. Katsushirō wants not merely to earn money for himself but to reverse the downward course of the inherited household.\n\nContext. This word reveals the scale of his wounded pride. The goal is restoration of a lineage’s condition, not simply relief from immediate hunger.",
+      "language": "ja"
+    },
+    {
+      "id": "note-bankai-mono",
+      "status": "active",
+      "term": "挽回したいものと",
+      "reading": "ばんかいしたいものと",
+      "gloss": "wishing to recover it",
+      "body": "Formation. 挽回したいものと is 挽回 + する + たい + もの + と.\n\n挽回. 挽 means to pull, draw, or haul backward. 回 means to turn, circle, or return. Their combination creates a clear dynamic image: pull a situation around and back from decline toward its former condition. Historically the compound was used for recovering what had been lost or reversing an unfavorable course. It is therefore especially apt with 家運: the fortune of the house has moved downward and must be drawn back.\n\nしたい. する verbalizes the noun 挽回. たい attaches to the continuative stem し and expresses the subject’s desire: “want to restore.” Modern たい continues an older adjectival desiderative pattern, so it describes the desired action as a felt state of the subject.\n\nもの. In 〜たいものだ / 〜たいものと, もの does more than name a physical thing. It gives the wish weight as a contemplated objective: “what I would like is to…,” “if only I could….”\n\nと. The quotative particle marks the content carried into 思案をめぐらす.\n\nContext. The phrase lies between emotion and plan. He has converted humiliation into a formulated desideratum—restore the household—but has not yet discovered the means.",
+      "language": "ja"
+    },
+    {
+      "id": "note-arekore",
+      "status": "active",
+      "term": "あれこれ",
+      "reading": "あれこれ",
+      "gloss": "this and that; in various ways",
+      "body": "Formation. あれこれ joins the demonstratives あれ and これ.\n\nあれ. あれ points to something removed from both speaker and hearer: “that over there,” or a matter mentally placed at a distance.\n\nこれ. これ points to what is near the speaker or presently held before the mind: “this.”\n\nCombined meaning. By pairing the far and the near, Japanese covers a range of separate possibilities: that possibility, this possibility, and the others between them. The order あれこれ has lexicalized as “this and that; various things; one possibility after another.” It resembles 彼此 in literary Sino-Japanese and the English pair “this and that,” but its force comes from native deictic opposition.\n\nGrammatical role. Here あれこれ modifies 思案をめぐらした adverbially. It does not say he thought about two named objects. It depicts thought moving among multiple possible measures.\n\nContext. なんとかして expresses determination without a method; あれこれ shows the mind beginning to populate that empty space with alternatives.",
+      "language": "ja"
+    },
+    {
+      "id": "note-shian",
+      "status": "active",
+      "term": "思案を",
+      "reading": "しあんを",
+      "gloss": "deliberation; thought",
+      "body": "Formation. 思案 is 思 + 案.\n\n思. 思 means to think, consider, remember, or hold something in the heart-mind. The character joins the semantic field of 心, heart/mind, with a phonetic upper element; in East Asian usage thought is not sharply separated from feeling.\n\n案. 案 originally denotes a low table, tray, or desk—something on which an object, text, or case is laid out. From “what is placed on the table for examination” it developed the meanings proposal, plan, draft, case, or considered device.\n\nCombined meaning. 思案 is thought directed toward what has been mentally laid out for examination. It is not mere passing cognition. The compound suggests deliberation over a case, often with the practical aim of finding a plan or expedient.\n\nParticle. を marks 思案 as the thing metaphorically moved around by めぐらす.\n\nContext. The translation could have used 考えた, but 思案 has a more deliberate, somewhat literary quality. Katsushirō’s mind is represented as a council chamber in which possible measures are laid out and examined.",
+      "language": "ja"
+    },
+    {
+      "id": "note-megurashita",
+      "status": "active",
+      "term": "めぐらした",
+      "reading": "めぐらした",
+      "gloss": "turned over; considered from every side",
+      "body": "Formation. めぐらした is めぐる + the transitive/causative formation めぐらす + た.\n\nめぐる. The native verb means to go around, circulate, make a circuit, or pass successively through points. Its spatial image is movement around a center rather than movement straight toward one endpoint.\n\nめぐらす. The -す form makes something perform that circuit: to send around, surround, turn about, or set in circulation. Japanese extends this physical pattern to the mind in expressions such as 思いをめぐらす, 考えをめぐらす, and 思案をめぐらす.\n\nMetaphorical emergence. To “circulate deliberation” is to approach a problem from side after side, returning to it from different directions. The spatial circuit becomes intellectual examination. This is why めぐらす is deeper than simply “have a thought.”\n\nた. The past ending completes the mental action within the narrated sequence.\n\nContext. あれこれ supplies plurality; めぐらした supplies motion. His thought does not remain fixed on the injury. It travels around the problem, searching the circumference for an opening—and the next page will supply one in the figure of the merchant from Kyoto.",
+      "language": "ja"
+    }
+  ]
+}

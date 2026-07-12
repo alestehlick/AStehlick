@@ -8,7 +8,7 @@
       "term": "下総の国",
       "reading": "しもうさのくに",
       "gloss": "Shimōsa Province",
-      "body": "An old province covering much of present-day Chiba and part of Ibaraki. 下 means “lower,” while 総 belongs to the inherited provincial name Fusa; 下総 is therefore a fixed place-name rather than a freely composed phrase meaning “lower total.” 国 adds “province” or “country.”",
+      "body": "Formation. 下総の国 consists of 下総, the historical provincial name, followed by の国, “the province/country of ….” 国 is the ordinary word for a territorially organized land. The difficult part is 下総.\n\nHistorical structure. The region was anciently associated with the name ふさ, written 総. When the larger Fusa territory was divided, two provincial names were formed: 上つ総 and 下つ総, literally “upper Fusa” and “lower Fusa.” The old linking particle つ, which joined one noun to another much as modern の does, belonged inside those names. 下つ総 therefore meant “the lower division of Fusa.” Through sound contraction, しもつふさ developed into forms such as しもふさ and finally しもうさ. The modern reading preserves the history of the compound even though its internal boundaries are no longer audible.\n\nThe characters. 下 means “below; lower.” 総, in ordinary Chinese-derived vocabulary, means “to gather together; the whole,” but here it writes the inherited name Fusa and should not be interpreted as “lower total.” Its function is historical and onomastic. In this passage, 下総の国 does more than locate the action: it gives the tale the weight of an old province whose name already carries layers of linguistic erosion.",
       "language": "ja"
     },
     {
@@ -17,7 +17,7 @@
       "term": "葛飾郡",
       "reading": "かつしかのこおり",
       "gloss": "Katsushika District",
-      "body": "葛飾 is an inherited place-name. 葛 means “kudzu vine” and 飾 means “to adorn,” but those two meanings do not transparently produce the geographical name. 郡 means an administrative district; the translation retains the older reading こおり rather than modern ぐん.",
+      "body": "Formation. 葛飾郡 is 葛飾, the place-name Katsushika, plus 郡, an administrative district. 郡 is read こおり here, an old native administrative reading; modern prose more often uses the Sino-Japanese reading ぐん.\n\nThe written characters. 葛 means “kudzu vine.” 飾 means “to adorn, decorate, arrange.” Taken literally, 葛飾 might appear to mean “adorned with kudzu,” and that explanation has indeed attracted later folk-etymologies. It is not, however, the most secure account of the name’s formation.\n\nOlder topographical analysis. A historically plausible explanation treats かつしか as an older native place-name whose sounds were later represented by 葛飾. In that analysis, かつ refers to a raised bank, cliff, or upland, while しか refers to low ground or a sandbar. The name would therefore describe the meeting of upland and low alluvial land characteristic of the old district. This explanation matters because the district extended far beyond the modern Katsushika Ward: it included parts of present-day Tokyo, Chiba, Saitama, and Ibaraki.\n\nThus the compound has two levels. The kanji contribute visible associations—vine and ornament—but the older semantic body of the place-name is probably geographical: high ground beside low wet land. In the sentence, 葛飾郡 narrows the province to a specific historical landscape.",
       "language": "ja"
     },
     {
@@ -26,7 +26,7 @@
       "term": "真間の里",
       "reading": "ままのさと",
       "gloss": "the village of Mamma",
-      "body": "真間 is the old place-name Mamma, in present-day Ichikawa, and was already a poetic place in the Man’yōshū. 真 means “true” and 間 “interval,” but the name is not understood by adding those glosses. 里 is a village or rural settlement.",
+      "body": "Formation. 真間の里 consists of 真間, the place-name Mamma, followed by の里, “the settlement/village of Mamma.” 里 originally denotes an inhabited rural unit: not merely scattered houses, but a settled human place within the landscape.\n\nThe place-name. The native word まま is old and topographical. In place-names it can denote a steep bank, eroded cliff, or abrupt slope where higher ground breaks toward low ground. The Mamma area lies below the high ground around ancient Shimōsa’s provincial center, so this physical sense fits the terrain. The place was already famous in early poetry through the legend of the maiden of Mamma.\n\nThe characters. 真 means “true, genuine, fully real.” 間 means “space, interval, opening.” Here they mainly secure the sound まま; “true interval” is not the historical meaning of the name. Yet the written form acquired its own literary dignity and allows the old sound to remain visually stable.\n\nIn context. 里 is more intimate than a neutral modern administrative label. The movement 下総の国 → 葛飾郡 → 真間の里 descends from province, to district, to inhabited locality, bringing the narrative steadily closer to one household.",
       "language": "ja"
     },
     {
@@ -35,7 +35,7 @@
       "term": "勝四郎",
       "reading": "かつしろう",
       "gloss": "Katsushirō",
-      "body": "A masculine personal name. 勝 contributes the idea of victory or excellence; 四郎 is a traditional male name element, literally “fourth son.” Together they form a personal name, not a description of the character.",
+      "body": "Formation. 勝四郎 is a masculine personal name composed of 勝 and 四郎.\n\n勝. As a lexical word, 勝 means “victory, superiority, excelling.” In personal names it often functions as an auspicious or virtue-bearing element: the name gives the child a character associated with success, strength, or prevailing.\n\n四郎. 郎 originally means a young man, son, or male attendant. In Japanese male names it became a productive name-forming element. 四郎 literally designates a “fourth son,” though by the period of the tale it could function as a conventional name ending without reliably reporting actual birth order.\n\nCombined force. 勝四郎 is therefore not a sentence-like description “the victorious fourth son.” It is a conventional name built from an auspicious lexical element and a male name suffix. The irony is structural rather than etymological: a man whose name contains 勝, “to prevail,” is introduced immediately before the story recounts his failure to preserve the prosperity inherited from his family.",
       "language": "ja"
     },
     {
@@ -44,7 +44,7 @@
       "term": "男",
       "reading": "おとこ",
       "gloss": "man",
-      "body": "In 勝四郎という男, 男 is the general noun “man.” The whole expression means “a man called Katsushirō.”",
+      "body": "Word and character. 男 is read おとこ, a native Japanese word written with the Chinese character 男. The character is traditionally analyzed as 田 “field” plus 力 “strength, labor,” presenting the adult male through agricultural labor. That graphic analysis belongs to the history of the character; it is not the etymology of the spoken Japanese word おとこ, which existed independently of the writing system.\n\nGrammatical role. In 勝四郎という男, the clause 勝四郎という modifies 男. Literally, it is “a man who is said/called Katsushirō.” Japanese often forms names and labels through XというY: “a Y called X.” 男 is the head noun that tells us what kind of being Katsushirō is before the narrative gives him any social role.\n\nNarrative force. The expression is deliberately plain. A named individual enters not as a hero, farmer, merchant, or husband, but only as “a man.” The richer determinations come afterward, through lineage, property, temperament, and failure.",
       "language": "ja"
     },
     {
@@ -53,7 +53,7 @@
       "term": "あった",
       "reading": "あった",
       "gloss": "there was; there lived",
-      "body": "The past form of ある, “to exist” or “to be.” In the opening of a story, 男があった is naturally understood as “there was a man” or “there lived a man,” not as possession.",
+      "body": "Morphology. あった is the past form of ある, “to exist, be present.” Its structure is あり + た. The consonant sequence underwent the regular sound change that produces the doubled consonant: ar-ta → atta.\n\nThe past marker. Modern た is historically connected with the classical auxiliary たり, itself formed from the conjunctive て plus あり, “being in the state produced by ….” Over time this construction contracted and became the ordinary marker of completed or past situations. Thus even the small ending た carries an old resultative history.\n\nMeaning here. ある has several uses: existence, possession, occurrence, and states. With an animate subject, modern conversation normally prefers いる. Older literary prose, however, can use ある in an existential introduction: 男があった, “there was a man.” It does not mean that someone possessed a man.\n\nNarrative function. The past does not merely date the existence. It opens the conventional distance of storytelling: in that place, there once existed such a man. The modern translation preserves a slightly old-fashioned tone by choosing あった rather than the more conversational いた.",
       "language": "ja"
     },
     {
@@ -62,7 +62,7 @@
       "term": "祖父の代",
       "reading": "そふのだい",
       "gloss": "since his grandfather’s generation",
-      "body": "祖 means an ancestor or forebear and 父 means father; together 祖父 is “grandfather.” 代 means a generation or period. Thus 祖父の代 is “the grandfather’s generation,” the point from which the family’s residence is measured.",
+      "body": "Formation. 祖父の代 is 祖父 “grandfather” + の + 代 “generation, reign, period represented by a person.”\n\n祖父. 祖 means an ancestor or founder standing earlier in a line of descent. 父 means father. The compound narrows the broad ancestral sense of 祖 by joining it to 父: one’s father’s father, or grandfather. In older usage 祖父 can sometimes range more broadly toward a male forebear, but here the translation clearly chooses the ordinary generational meaning.\n\n代. The core idea of 代 is substitution or succession: one person or stage stands in the place formerly occupied by another. From “taking another’s place” comes “a generation,” the span in which one member of a lineage occupies the household’s position. This same semantic movement appears in expressions such as 父の代, “my father’s generation,” and 江戸時代, “the Edo period.”\n\nConstruction. の connects the possessor or representative to the period: 祖父の代, “the period represented by the grandfather.” With から, the phrase establishes a temporal starting point: the family’s rootedness extends from that generation to Katsushirō’s present.",
       "language": "ja"
     },
     {
@@ -71,7 +71,7 @@
       "term": "久しく",
       "reading": "ひさしく",
       "gloss": "for a long time",
-      "body": "The adverbial form of 久しい, “long-standing” or “of long duration.” It tells us that the family’s rootedness in the village was not recent.",
+      "body": "Morphology. 久しく is the adverbial form of the adjective 久しい, “long in duration; long-standing.” The older adjective is 久し. Classical -し adjectives form an adverbial or connective form in -く; that old morphology remains visible in modern 久しく.\n\nThe character. 久 represents duration prolonged through time. Its lexical family includes 久しい, 久しぶり, 永久, and 持久. The Japanese reading ひさしい is native, while the character supplies the shared written idea of extension through time.\n\nForce of -く. 久しい describes something as long-standing. 久しく makes that quality modify the verb すみ: “to have lived for a long time.” It does not merely mean that the family once lived there long ago; it says their residence itself continued through a substantial span.\n\nContext. Together with 祖父の代から, 久しく thickens the inheritance. The household did not recently acquire local standing. Its prosperity had duration, memory, and social roots—precisely what Katsushirō will fail to sustain.",
       "language": "ja"
     },
     {
@@ -80,7 +80,7 @@
       "term": "すみ",
       "reading": "すみ",
       "gloss": "living; having lived",
-      "body": "The continuative form of 住む, “to live” or “to dwell.” It joins the family’s long residence to the possessions and prosperity that follow.",
+      "body": "Visible form. The translation writes すみ in kana. The lexical form is 住む, “to reside, dwell,” and the form used here is 住み, its continuative or connective form.\n\nMorphology. 住む belongs to the consonant-stem verbs. Replacing the final -u with -i produces the continuative base 住み. This form can link one action or state to what follows without closing the sentence: この里に住み、田畑も… — “living in this village, and also possessing fields….” Modern prose could use 住んで, but 住み gives the sentence a more written, compact rhythm.\n\nSemantic development. The native verb すむ means to establish one’s continuing place of life. The character 住 contains the person radical 亻 and 主 as its phonetic element; in established usage it writes the idea of a person remaining or dwelling in a place. Residence here is not a momentary location but a durable relation between family and land.\n\nWhy kana? Writing すみ rather than 住み is an orthographic choice, not a different word. Kana keeps the line visually lighter. The note restores the dictionary connection: すみ is the form of 住む required before the following clause.",
       "language": "ja"
     },
     {
@@ -89,7 +89,7 @@
       "term": "田畑",
       "reading": "たはた",
       "gloss": "fields; farmland",
-      "body": "田 is a wet field, especially a rice paddy; 畑 is a dry or upland field. Together 田畑 gathers the principal kinds of cultivated land into one expression: the family’s farmland as a whole.",
+      "body": "Formation. 田畑 joins two complementary kinds of cultivated land.\n\n田. 田 denotes a bounded agricultural field and in Japanese most strongly evokes a wet rice paddy. The square divisions of the character resemble partitioned plots. Rice cultivation, irrigation, and settled landholding gather around this word.\n\n畑. 畑 denotes a dry field used for crops other than irrigated rice. It is a Japanese-created character. The combination 火 + 田 evokes land made by burning vegetation—an origin connected with slash-and-burn cultivation. An older Japanese character for dry field is 畠, “white/dry field,” found much earlier in the written record; 畑 became dominant later.\n\nCombined meaning. 田畑 does not merely repeat “field” twice. It covers the agricultural estate by pairing wet and dry cultivation. The compound works like an inclusive binomial: paddies and upland fields, hence farmland as a whole.\n\nContext. The family possesses 田畑 in quantity. This is not abstract wealth but productive ground. Katsushirō’s dislike of farming is therefore a refusal of the very form in which his inherited prosperity exists.",
       "language": "ja"
     },
     {
@@ -98,7 +98,7 @@
       "term": "たくさん",
       "reading": "たくさん",
       "gloss": "many; a great deal",
-      "body": "An ordinary modern word for abundance. Here it modifies the amount of land the family possessed: 田畑もたくさん.",
+      "body": "Visible form. The translation writes たくさん in kana. It is commonly written 沢山 and functions here adverbially: 田畑もたくさんもって, “possessing many fields.”\n\nThe characters. 沢 originally denotes marshy or water-rich ground; from moisture and beneficent water it developed associations of abundance, richness, and ample supply. 山 means mountain. As a Japanese compound, 沢山 presents quantity as something abundant and piled high, though the exact historical route is not completely settled.\n\nHistorical caution. There is also an old Japanese expression さは, “many, abundant,” and an early-modern form さわやま written 沢山 or 多山. Dictionaries disagree on whether さわやま helped generate たくさん or was itself a vernacular reading created from the written compound. The secure point is that たくさん is the Sino-Japanese reading of 沢山 and was established with the sense “a large quantity.” Fidelity requires preserving this uncertainty rather than inventing a single neat origin.\n\nSemantic extension. From “many/a large amount,” たくさん also developed “enough; no more is wanted,” as in もうたくさんだ. Only the quantitative sense is active here.",
       "language": "ja"
     },
     {
@@ -107,7 +107,7 @@
       "term": "もって",
       "reading": "もって",
       "gloss": "having; owning",
-      "body": "The て-form of 持つ, “to hold” or “to possess.” Here it connects possession to the next clause: they had many fields and lived prosperously.",
+      "body": "Morphology. もって is the て-form of 持つ, “to hold, carry, possess.” The underlying sequence 持ち + て underwent 促音便, the sound change in which ち before て becomes a doubled consonant: mochi-te → motte.\n\nSemantic development. Physical holding is the center of 持つ: keeping something in one’s hand or under one’s control. From control comes possession: 土地を持つ, “to own land”; 財産を持つ, “to possess property.” The verb therefore bridges bodily holding and socially recognized ownership.\n\nThe connective て. The form links possession to the following state: 田畑もたくさんもって家も豊かに暮らしていた. The family “had many fields and lived prosperously.” The fields are not a separate fact; their possession supplies the material basis of the prosperous life.\n\nNuance. The particle も after 田畑 adds “also/even”: among the signs of established prosperity, they possessed plenty of farmland as well.",
       "language": "ja"
     },
     {
@@ -116,7 +116,7 @@
       "term": "家",
       "reading": "いえ",
       "gloss": "household; family estate",
-      "body": "Here 家 is broader than the physical building. It means the household and its material condition—the family as an established domestic unit.",
+      "body": "Semantic layers. 家 can mean a physical house, the people living in it, a continuing family line, or the economic and social unit transmitted through generations. These senses are historically connected rather than accidental homonyms: the building shelters the group; the group persists as a lineage; the lineage holds name, property, obligations, and standing.\n\nReading. Here 家 is read いえ, the native Japanese word. In compounds it often has the Sino-Japanese readings か or け, as in 家運 and 武家.\n\nMeaning in this sentence. 家も豊かに暮らしていた is not best read as “the building lived richly.” 家 is the household as an organized continuity. The family estate, domestic group, and inherited position were flourishing.\n\nImportance for the tale. This broader sense makes the later phrase 家運を挽回する possible. The same 家 can prosper, decline, and be restored because it is a temporal institution, not merely walls and roof. The story’s haunted house will eventually expose how violently those layers—building, family, memory, and continuity—can separate from one another.",
       "language": "ja"
     },
     {
@@ -125,7 +125,7 @@
       "term": "豊か",
       "reading": "ゆたか",
       "gloss": "prosperous; abundant",
-      "body": "豊か describes abundance, amplitude, or material ease. 家も豊かに暮らしていた means that the household lived in prosperity.",
+      "body": "Word shape. 豊か is a na-adjective meaning ample, abundant, spacious, or prosperous. In 豊かに暮らす, に converts the adjectival state into an adverbial manner: “to live in an abundant/prosperous condition.”\n\nThe character. 豊 is historically associated with fullness and rich offerings; its written form came to represent abundance, luxuriance, and plentifulness. The native reading ゆたか already carried the sense of amplitude—something not cramped, meager, or deficient—and was matched with this character.\n\nSemantic movement. Physical fullness easily becomes economic prosperity. A river may be 豊か in water, land 豊か in yield, expression 豊か in richness, and a household 豊か in resources. The word therefore does not mean ostentatious luxury. Its center is sufficiency with breadth and reserve.\n\nContext. The sentence first gives the objective basis—many fields—and then names the resulting mode of life—豊かに. The prosperity is stable enough to feel spacious, which sharpens the waste implied by the following が, “but.”",
       "language": "ja"
     },
     {
@@ -134,7 +134,7 @@
       "term": "暮らしていた",
       "reading": "くらしていた",
       "gloss": "had been living",
-      "body": "暮らす means “to live” or “to pass one’s days.” 暮らしていた combines its て-form with the past progressive/state form いた, presenting the family’s prosperity as an established condition extending through time.",
+      "body": "Formation. 暮らしていた is 暮らす + て + いる + た.\n\n暮らす. The verb belongs to the same family as 暮れる, “the day grows dark; a period comes to its close.” Its older concrete sense was to cause or allow time to reach its close: 日を暮らす, “to spend the day until evening.” From “spend a day” it widened to “spend one’s days,” and therefore “live; conduct one’s life.” This history remains perceptible: 暮らす views life as time being passed in a certain manner.\n\nして. 暮らす forms its て-form as 暮らして. The ending connects the lexical event to the auxiliary いる.\n\nいた. いる adds an ongoing or continuing state; た places that state in the past. 暮らしていた therefore means not one completed act of living but an established past condition: they had been living prosperously.\n\nContext. Combined with 久しく, the form creates duration on two scales: the family had long resided in the village, and during that inherited continuity it maintained a prosperous way of life.",
       "language": "ja"
     },
     {
@@ -143,7 +143,7 @@
       "term": "生れつき",
       "reading": "うまれつき",
       "gloss": "by nature; from birth",
-      "body": "Something present from birth rather than acquired later. The source writes 生れつき; contemporary orthography more often writes 生まれつき.",
+      "body": "Formation. 生れつき is built from 生れ, “birth/being born,” and つき, the noun or bound element derived from 付く, “to attach, accompany, belong with.” Modern spelling usually writes 生まれつき; the translation’s 生れつき is a traditional okurigana choice and represents the same word.\n\n生れ. This is the nominalized/continuative form of 生れる・生まれる, “to be born.” It points not simply to the event of delivery but to the starting condition in which a person enters life.\n\nつき. In formations such as 顔つき, 体つき, and 生まれつき, つき concerns the way something is attached to, furnished with, or manifested in a bearer. With body nouns it often means “appearance/configuration”; with 生まれ it means what comes attached from birth.\n\nEmergent meaning. 生れつき therefore pictures a disposition as something that arrived already joined to the person: not later acquired by training or circumstance, but accompanying him from the beginning. From that concrete relational idea—“birth-attached”—comes the adverbial meaning “by nature; innately.”\n\nContext. The phrase partially excuses and partially condemns Katsushirō. His carelessness is represented as constitutional, yet the narrative immediately shows that this constitution has consequences for inherited land and family fortune.",
       "language": "ja"
     },
     {
@@ -152,7 +152,7 @@
       "term": "無頓着",
       "reading": "むとんじゃく",
       "gloss": "unconcerned; heedless",
-      "body": "無 means “without.” 頓着 is the established word for concern, heed, or attention; its meaning is not usefully recovered by mechanically adding 頓 and 着. At the larger level, however, 無 + 頓着 is transparent: “without concern,” hence unconcerned or heedless.",
+      "body": "Formation. 無頓着 is 無 + 頓着. 無 is the privative element “without; lacking.” The historical difficulty lies in 頓着.\n\nThe written characters. 頓 ordinarily means “to stop suddenly, settle, bow the head,” and 着 means “to attach, arrive, settle onto.” If one reads only the visible spelling, 頓着 can suggest attention stopping and settling on an object. That association helps the modern written form feel plausible, but it is not the true beginning of the word.\n\nHistorical development. 頓着 is historically connected with 貪着, a Buddhist term read とんじゃく. 貪 means greedy craving or grasping; 着 means attachment or fixation. 貪着 therefore meant clinging avidly to things—being mentally caught and attached. The word then broadened from religious “attachment” to ordinary “fixing one’s mind on something, caring about it, being concerned.” During that development 頓着 became an alternative spelling, preserving the sound while replacing the difficult and morally charged 貪.\n\nEffect of 無. Once 頓着 meant “concern, heed, mental attachment,” 無頓着 meant absence of such fastening: one’s attention does not attach itself to the matter. Hence “unconcerned, heedless, indifferent.”\n\nContext. This is stronger than merely relaxed. Katsushirō fails to let practical things fasten on his mind. The following のんき softens the portrait, but 無頓着 identifies the dangerous core: an incapacity or refusal to attend.",
       "language": "ja"
     },
     {
@@ -161,7 +161,7 @@
       "term": "のんき",
       "reading": "のんき",
       "gloss": "carefree; easygoing",
-      "body": "A relaxed freedom from worry. In another setting it can be pleasant, but here it shades into carelessness: Katsushirō’s ease prevents him from attending to the work that sustains the household.",
+      "body": "Historical form. のんき is often written 呑気 or 暢気, but those spellings are secondary. The historically important form is 暖気. のん is a medieval/early-modern Chinese-style pronunciation associated with 暖, “warm.” 気 means breath, vital atmosphere, mood, or mental disposition.\n\nOriginal semantic movement. 暖気 first evokes warmed air or a loosened, comfortable condition. From bodily warmth and ease comes psychological relaxation: freedom from pressing anxiety, then an unhurried or easygoing temperament. Early usage could refer to taking one’s ease or refreshing one’s spirits; later it became a stable description of a person who does not worry much.\n\nLater spellings. 暢 means “to extend freely; be unobstructed,” so 暢気 gives an excellent semantic picture of an unconstricted spirit. 呑 means “swallow” and contributes little to the word’s origin; it is mainly an ateji chosen for sound. The existence of these spellings shows how writers tried to give visible form to an already established pronunciation.\n\nContext. のんき is gentler than 無頓着. A のんき person is relaxed and unhurried; a 無頓着 person gives insufficient heed. By coordinating both, the translation shows how an attractive lightness becomes destructive when attached to livelihood and responsibility.",
       "language": "ja"
     },
     {
@@ -170,7 +170,7 @@
       "term": "性質",
       "reading": "せいしつ",
       "gloss": "nature; disposition",
-      "body": "性 is one’s nature or character; 質 is the underlying substance or quality of a thing. Together 性質 is the quality constituting a person’s character—his disposition.",
+      "body": "Formation. 性質 is 性 + 質.\n\n性. 性 denotes the nature with which a being is constituted—its inborn tendencies or characteristic way of being. In the Chinese philosophical tradition, 性 became a central word for human nature. The character combines the heart/mind radical 忄 with 生 as phonetic and semantic support: the nature that lives or arises within the heart.\n\n質. 質 denotes underlying substance, constitution, material character, or what something is made of beneath surface display. It can contrast with ornament or mere appearance. From physical substance it extends to quality and temperament.\n\nCombined meaning. 性 identifies inherent disposition; 質 emphasizes stable constitution. 性質 therefore means the characteristic constitution through which a person or thing behaves as it does. The two elements reinforce one another, but they are not empty synonyms: 性 points toward innate nature, 質 toward the underlying stuff or quality in which that nature is embodied.\n\nContext. 生れつき already marks origin from birth. 性質 then names the enduring configuration produced by that origin. The phrase 生れつき無頓着でのんきな性質 forms a layered diagnosis: origin, lack of concern, ease, and stable disposition.",
       "language": "ja"
     },
     {
@@ -179,7 +179,7 @@
       "term": "農業",
       "reading": "のうぎょう",
       "gloss": "agriculture; farming",
-      "body": "農 means agriculture or cultivation; 業 means work, occupation, or sustained activity. Together 農業 is agriculture as an occupation: farming.",
+      "body": "Formation. 農業 is 農 + 業.\n\n農. 農 refers to cultivation of the soil and the people or practices associated with it. Its semantic field includes tilling, planting, harvesting, and the organized dependence of a household upon land.\n\n業. 業 means work pursued as a sustained undertaking, occupation, craft, or line of activity. It is not merely a single action. The word can name a profession, an enterprise, or the accumulated consequences of action in Buddhist vocabulary. In 農業, the occupational sense is active.\n\nCombined meaning. 農業 is therefore “the sustained work/occupation of cultivation.” 農 supplies the domain; 業 presents it as an organized livelihood. This is broader than one task such as planting rice.\n\nContext. Katsushirō has inherited 田畑, but the fields produce prosperity only through 農業—the continuous work corresponding to them. His error is not dislike of one unpleasant chore; he rejects the occupational form necessary to keep the household’s land alive.",
       "language": "ja"
     },
     {
@@ -188,7 +188,7 @@
       "term": "煩わしい",
       "reading": "わずらわしい",
       "gloss": "troublesome; burdensome",
-      "body": "Something that demands irritating effort, attention, or complication. Katsushirō does not merely find farming difficult; he experiences its necessary demands as an encumbrance.",
+      "body": "Word family. 煩わしい belongs to the old family わづらふ / わずらう, “to suffer, be troubled, worry, take pains,” and わづらはす / わずらわす, “to trouble or burden someone.” The adjective was historically わづらはし, later わずらわしい.\n\nFormation. It is useful to hear a causative relation inside the family: something 煩わしい is something that makes the mind or body enter a condition of 煩い—trouble, entanglement, or burdensome concern. The ending is not merely the modern independent adjective しい attached mechanically to 煩う; the form belongs to an old adjective-building pattern already established in classical Japanese.\n\nThe character. 煩 combines the semantic field of heat/fire with head, and in Chinese usage came to express agitation, vexation, and mental heat. It therefore fits the Japanese word’s sense of being troubled or burdened.\n\nMeaning here. 農業を煩わしいものだと regards farming as something involving tiresome complication, attention, and labor. “Difficult” would be too neutral. The word contains aversion to the demands that keep returning and entangling the subject.",
       "language": "ja"
     },
     {
@@ -197,7 +197,7 @@
       "term": "いやがった",
       "reading": "いやがった",
       "gloss": "disliked; showed aversion to",
-      "body": "いや means unpleasant or unwelcome. The suffix がる expresses showing or feeling that state, and the past form がった presents his settled aversion: he treated farming as something he did not want to do.",
+      "body": "Formation. いやがった is いや + がる + た.\n\nいや. 嫌・いや names what is disagreeable, unwelcome, or repellent. It can function as a noun-like evaluative word, a na-adjective, or an exclamation of refusal.\n\nがる. The suffix がる attaches to words of feeling or evaluation and forms a verb meaning “to show signs of feeling X; behave as though X; treat something as X.” Japanese ordinarily avoids asserting another person’s inner sensation without evidence. がる shifts the description toward observable attitude or behavior. Thus いやだ is “it is disagreeable / I dislike it,” while いやがる is “to show aversion, shrink from it, treat it as unwelcome.”\n\nた. The past ending places that manifested aversion in the narrated past.\n\nContext. 勝四郎 did not merely form an abstract judgment that agriculture was burdensome. He behaved toward it as something repellent. The verb turns disposition into conduct, which is why the following poverty appears as a consequence rather than a detached misfortune.",
       "language": "ja"
     },
     {
@@ -206,7 +206,7 @@
       "term": "ついに",
       "reading": "ついに",
       "gloss": "finally; in the end",
-      "body": "Marks the endpoint reached after a process. It gathers the earlier causes—carelessness and aversion to work—into their eventual result.",
+      "body": "Formation. ついに is historically and commonly written 終に. It consists of 終, “end, conclusion,” used with the particle に to form an adverbial phrase: “at the end.”\n\nSound and history. The older form is つひに in historical kana orthography. As /hi/ weakened between vowels, the modern pronunciation became ついに. The source translation writes the word in kana, but the semantic structure remains that of reaching an endpoint.\n\nMeaning. ついに presents an outcome as the terminus of a preceding process. It can mean “finally” in a welcome sense, but it often has the darker force “in the end, after things had run their course.” It does not by itself mean suddenly.\n\nContext. The household’s poverty is not an isolated event. Long-standing prosperity, inherited fields, careless disposition, and aversion to work form a chain whose endpoint is marked by ついに. The adverb gives the decline an air of completion and inevitability.",
       "language": "ja"
     },
     {
@@ -215,7 +215,7 @@
       "term": "貧乏になってしまった",
       "reading": "びんぼうになってしまった",
       "gloss": "ended up becoming poor",
-      "body": "貧 means poverty or impoverishment and 乏 means lack or scarcity; together 貧乏 is poverty, and as a な-adjective it means “poor.” なる gives “to become,” while てしまった presents the change as completed and, here, regrettable: he ended up poor.",
+      "body": "Formation. 貧乏になってしまった contains four layers: 貧乏 + に + なる + てしまう + た.\n\n貧乏. 貧 means poverty, insufficiency, or lack of resources. 乏 means scarcity: what is needed is short or absent. Joined together, the characters intensify a single condition from two directions—resources are poor, and supply is lacking. The compound names not a momentary shortage but an impoverished state.\n\nに + なる. に marks the state entered; なる means “to become.” 貧乏になる therefore describes a change from prosperity into poverty.\n\nてしまう. しまう originally means to put something away, finish it, or bring it to closure. After a verb in the て-form, it became grammaticalized as an auxiliary of complete realization: the event is carried through to its endpoint. Because completed outcomes are often irreversible or regrettable, the construction frequently carries disappointment, damage, or helpless recognition.\n\nた. The final past marker closes the whole development.\n\nContext. 貧乏になった would simply report the change. 貧乏になってしまった says that the decline ran all the way to its unwanted completion: the inherited household ended up poor. The translator thereby makes explicit the ruin compressed in the original なりにけり.",
       "language": "ja"
     }
   ]

@@ -1,0 +1,54 @@
+{
+  "formatVersion": 1,
+  "pageId": "002",
+  "layer": 2,
+  "language": "mixed",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "annotated",
+          "text": "そうこうしているうちに",
+          "reading": "そうこうしているうちに",
+          "language": "ja",
+          "noteIds": ["note-sokoshite"]
+        },
+        {
+          "type": "text",
+          "text": "、"
+        },
+        {
+          "type": "annotated",
+          "text": "親戚の多くからも",
+          "reading": "しんせきのおおくからも",
+          "language": "ja",
+          "noteIds": ["note-shinseki-ooku"]
+        },
+        {
+          "type": "annotated",
+          "text": "疎遠に扱われるようになった",
+          "reading": "そえんにあつかわれるようになった",
+          "language": "ja",
+          "noteIds": ["note-soen-atsukawareru"]
+        },
+        {
+          "type": "text",
+          "text": "が、"
+        },
+        {
+          "type": "text",
+          "text": "Katsushirō felt the humiliation deeply. Wanting somehow to restore the fortunes of his house, he turned the matter over in every direction."
+        }
+      ],
+      "audioSegments": [
+        {
+          "id": "relatives-withdraw",
+          "text": "そうこうしているうちに、しんせきのおおくからも、そえんにあつかわれるようになったが",
+          "start": 0,
+          "end": 4
+        }
+      ]
+    }
+  ]
+}

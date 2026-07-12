@@ -31,17 +31,17 @@ npm run check:links
 
 ## Content model
 
-Runtime loading begins with `public/content/library.json`. Every book, page, layer, notes file, and commentary file is reached through an explicit manifest path. The app never discovers content by inspecting folders.
+Runtime loading begins with `public/content/library.json`. Every book, page, layer, and notes file is reached through an explicit manifest path. The app never discovers content by inspecting folders.
 
 To add another page to `ugetsu`:
 
 1. Create `public/content/books/ugetsu/pages/NNN/page.json`.
 2. Define that page’s own layer sequence in `page.json`, then add the authored layer files under its `layers/` directory. Each layer may introduce **at most three new Japanese vocabulary or grammar items**; content validation enforces this limit.
-3. Add `notes.json` and `commentary.md` beside the page file.
+3. Add `notes.json` beside the page file. Notes are the principal scholarly apparatus: they may be expansive and should explain morphology, word formation, semantic development, and the force of the expression in context.
 4. Add the page to `public/content/books/ugetsu/manifest.json`, or run `npm run build:manifest -- ugetsu`.
 5. Run `npm run validate:content` and `npm test`.
 
-All referenced annotation IDs must exist in the page's `notes.json`. Schemas live in `schemas/`, and the validation script also checks duplicate IDs, file links, page/book consistency, unsupported blocks, and unsafe commentary HTML.
+All referenced annotation IDs must exist in the page's `notes.json`. Schemas live in `schemas/`, and the validation script also checks duplicate IDs, file links, page/book consistency, and unsupported blocks.
 
 ## Navigation and progress
 

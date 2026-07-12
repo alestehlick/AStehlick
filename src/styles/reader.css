@@ -157,7 +157,7 @@
 
 .reader-workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 20rem;
+  grid-template-columns: minmax(0, 1fr) minmax(26rem, 31rem);
   gap: var(--space-5);
   align-items: start;
   padding: var(--space-5) 0;
@@ -204,39 +204,6 @@
   color: var(--color-plum);
   font-size: 0.875rem;
   text-align: center;
-}
-
-.commentary {
-  margin-top: var(--space-3);
-  border-top: 1px solid var(--color-line-quiet);
-  border-bottom: 1px solid var(--color-line-quiet);
-}
-
-.commentary summary {
-  padding: var(--space-3) 0;
-  color: var(--color-paper-muted);
-  cursor: pointer;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.commentary-body {
-  max-width: 42rem;
-  padding: 0 0 var(--space-4);
-  color: var(--color-paper-muted);
-  font-family: var(--font-reading);
-  font-size: calc(1rem * var(--reader-text-scale, 1));
-  line-height: 1.75;
-}
-
-.commentary-body > * + * {
-  margin-top: var(--space-3);
-}
-
-.commentary-body h3 {
-  color: var(--color-paper);
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .notes-panel {
@@ -389,7 +356,11 @@
   margin-top: var(--space-3);
   color: var(--color-paper-muted);
   font-family: var(--font-reading);
-  line-height: 1.7;
+  line-height: 1.78;
+}
+
+.note-body > * + * {
+  margin-top: var(--space-3);
 }
 
 .reader-controls {

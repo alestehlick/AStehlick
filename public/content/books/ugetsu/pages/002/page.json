@@ -1,0 +1,37 @@
+{
+  "formatVersion": 1,
+  "id": "002",
+  "bookId": "ugetsu",
+  "title": "The House amid the Reeds · II",
+  "titleJa": "浅茅が宿　現代語訳・其の二",
+  "sequence": 2,
+  "layers": [
+    {
+      "number": 1,
+      "label": "Estrangement",
+      "description": "The whole movement in English: exclusion, wounded pride, and the first resolve to recover."
+    },
+    {
+      "number": 2,
+      "label": "The relatives withdraw",
+      "description": "Three units reveal how poverty alters Katsushirō’s place among his kin."
+    },
+    {
+      "number": 3,
+      "label": "The wound is felt",
+      "description": "Katsushirō receives their distance as a deep and personal humiliation."
+    },
+    {
+      "number": 4,
+      "label": "The house must rise",
+      "description": "His wounded feeling becomes a wish to restore the fortunes of the household."
+    },
+    {
+      "number": 5,
+      "label": "Deliberation",
+      "description": "The complete modern-Japanese sentence closes upon sustained inward calculation."
+    }
+  ],
+  "layersPath": "layers",
+  "notesPath": "notes.json"
+}

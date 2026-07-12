@@ -53,6 +53,5 @@
     }
   ],
   "layersPath": "layers",
-  "notesPath": "notes.json",
-  "commentaryPath": "commentary.md"
+  "notesPath": "notes.json"
 }
