@@ -60,6 +60,9 @@ export function Reader({
 }: ReaderProps) {
   const [bundle, setBundle] = useState<ReaderBundle | null>(null);
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
+  const [returningNoteId, setReturningNoteId] = useState<string | null>(null);
+  const noteTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const returnHighlightTimerRef = useRef<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [availableAudio, setAvailableAudio] = useState<Set<string>>(new Set());
   const [activeAudioKey, setActiveAudioKey] = useState<string | null>(null);
@@ -103,6 +106,8 @@ export function Reader({
     let active = true;
     setBundle(null);
     setSelectedNoteId(null);
+    setReturningNoteId(null);
+    noteTriggerRef.current = null;
     loader
       .loadReaderBundle(bookId, pageId, layerNumber)
       .then((loaded) => {
@@ -130,6 +135,50 @@ export function Reader({
     };
   }, [bookId, layerNumber, onInvalid, onProgress, pageId, progressStore]);
 
+  const openNote = useCallback((noteId: string, trigger: HTMLButtonElement) => {
+    if (returnHighlightTimerRef.current !== null) {
+      window.clearTimeout(returnHighlightTimerRef.current);
+      returnHighlightTimerRef.current = null;
+    }
+    setReturningNoteId(null);
+    noteTriggerRef.current = trigger;
+    setSelectedNoteId(noteId);
+  }, []);
+
+  const closeNote = useCallback(() => {
+    if (!selectedNoteId) return;
+    const closingNoteId = selectedNoteId;
+    const trigger = noteTriggerRef.current;
+    setSelectedNoteId(null);
+    setReturningNoteId(closingNoteId);
+    window.requestAnimationFrame(() => trigger?.focus());
+    if (returnHighlightTimerRef.current !== null) {
+      window.clearTimeout(returnHighlightTimerRef.current);
+    }
+    returnHighlightTimerRef.current = window.setTimeout(() => {
+      setReturningNoteId(null);
+      returnHighlightTimerRef.current = null;
+    }, 1100);
+  }, [selectedNoteId]);
+
+  useEffect(() => {
+    if (!selectedNoteId) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [selectedNoteId]);
+
+  useEffect(
+    () => () => {
+      if (returnHighlightTimerRef.current !== null) {
+        window.clearTimeout(returnHighlightTimerRef.current);
+      }
+    },
+    [],
+  );
+
   const goToLayer = useCallback(
     (layer: number) => navigateTo(readerHash(bookId, pageId, layer)),
     [bookId, pageId],
@@ -153,7 +202,7 @@ export function Reader({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && selectedNoteId) {
         event.preventDefault();
-        setSelectedNoteId(null);
+        closeNote();
         return;
       }
       if (isNativeControl(event.target)) return;
@@ -182,6 +231,7 @@ export function Reader({
     previousLayer,
     previousPage,
     selectedNoteId,
+    closeNote,
   ]);
 
   const pagePosition = useMemo(() => {
@@ -331,13 +381,15 @@ export function Reader({
             availableAudio={availableAudio}
             activeAudioKey={activeAudioKey}
             onPlayAudio={playAudio}
-            onOpenNote={setSelectedNoteId}
+            selectedNoteId={selectedNoteId}
+            returningNoteId={returningNoteId}
+            onOpenNote={openNote}
           />
         </div>
         <NotesPanel
           notes={bundle.notes.notes}
           selectedNoteId={selectedNoteId}
-          onClose={() => setSelectedNoteId(null)}
+          onClose={closeNote}
           narration={
             selectedNote && selectedAudioKey
               ? {

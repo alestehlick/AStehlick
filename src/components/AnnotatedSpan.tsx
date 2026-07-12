@@ -2,7 +2,9 @@ import type { AnnotatedInline } from "../content/types";
 
 interface AnnotatedSpanProps {
   inline: AnnotatedInline;
-  onOpenNote: (noteId: string) => void;
+  isActive?: boolean;
+  isReturning?: boolean;
+  onOpenNote: (noteId: string, trigger: HTMLButtonElement) => void;
 }
 
 function renderAnnotationText(inline: AnnotatedInline) {
@@ -19,9 +21,7 @@ function renderAnnotationText(inline: AnnotatedInline) {
     <>
       {before}
       <ruby className="phonographic-ruby">
-        <span className="phonographic-veil">
-          <span className="phonographic-glyphs">{cue.surface}</span>
-        </span>
+        <span className="phonographic-glyphs">{cue.surface}</span>
         <rt>{cue.reading}</rt>
       </ruby>
       {after}
@@ -29,7 +29,12 @@ function renderAnnotationText(inline: AnnotatedInline) {
   );
 }
 
-export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
+export function AnnotatedSpan({
+  inline,
+  isActive = false,
+  isReturning = false,
+  onOpenNote,
+}: AnnotatedSpanProps) {
   const label = inline.phonographic
     ? `${inline.text}, phonographic spelling. Read ${inline.phonographic.reading}. Open note.`
     : inline.reading
@@ -38,13 +43,14 @@ export function AnnotatedSpan({ inline, onOpenNote }: AnnotatedSpanProps) {
 
   return (
     <button
-      className={`annotation${inline.phonographic ? " is-phonographic" : ""}${inline.emphasis ? ` is-${inline.emphasis}` : ""}`}
+      className={`annotation${inline.phonographic ? " is-phonographic" : ""}${inline.emphasis ? ` is-${inline.emphasis}` : ""}${isActive ? " is-note-active" : ""}${isReturning ? " is-note-returning" : ""}`}
       type="button"
       lang={inline.language === "ja" ? "ja" : undefined}
       aria-label={label}
+      aria-haspopup="dialog"
       onClick={(event) => {
         event.stopPropagation();
-        onOpenNote(inline.noteIds[0]);
+        onOpenNote(inline.noteIds[0], event.currentTarget);
       }}
     >
       {renderAnnotationText(inline)}

@@ -51,39 +51,33 @@
   opacity: 0.96;
 }
 
-.phonographic-veil {
-  display: inline;
-  padding: 0.01em 0.16em 0.04em;
-  border-radius: 0.2em;
-  background: linear-gradient(
-    90deg,
-    rgba(232, 216, 139, 0.04) 0%,
-    rgba(232, 216, 139, 0.34) 18%,
-    rgba(232, 216, 139, 0.29) 70%,
-    rgba(232, 216, 139, 0.05) 100%
-  );
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
 .phonographic-glyphs {
-  opacity: 0.5;
-}
-
-.annotation.is-phonographic:hover .phonographic-veil,
-.annotation.is-phonographic:focus-visible .phonographic-veil {
-  background: linear-gradient(
-    90deg,
-    rgba(232, 216, 139, 0.08) 0%,
-    rgba(232, 216, 139, 0.42) 18%,
-    rgba(232, 216, 139, 0.36) 70%,
-    rgba(232, 216, 139, 0.08) 100%
-  );
+  color: rgba(232, 216, 139, 0.34);
+  transition: color 180ms ease;
 }
 
 .annotation.is-phonographic:hover .phonographic-glyphs,
 .annotation.is-phonographic:focus-visible .phonographic-glyphs {
-  opacity: 0.62;
+  color: rgba(241, 228, 158, 0.58);
+}
+
+.annotation.is-note-active {
+  border-bottom-color: var(--color-focus);
+}
+
+.annotation.is-note-returning {
+  animation: note-return-glow 1.05s ease-out both;
+}
+
+@keyframes note-return-glow {
+  0% {
+    color: var(--color-focus);
+    text-shadow: 0 0 0.7rem rgba(217, 230, 155, 0.38);
+  }
+  100% {
+    color: inherit;
+    text-shadow: none;
+  }
 }
 
 .annotation.is-italic {

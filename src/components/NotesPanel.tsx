@@ -1,3 +1,9 @@
+import {
+  useEffect,
+  useId,
+  useRef,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from "react";
 import type { NoteRecord } from "../content/types";
 import { isDictionaryKanji, shirakawaEntryUrl } from "../utilities/shirakawa";
 
@@ -23,29 +29,67 @@ export function NotesPanel({
   onToggleNarration,
 }: NotesPanelProps) {
   const note = notes.find((entry) => entry.id === selectedNoteId) ?? null;
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const dialogRef = useRef<HTMLElement | null>(null);
+  const titleId = useId();
+
+  useEffect(() => {
+    if (!note) return;
+    closeButtonRef.current?.focus();
+  }, [note]);
+
+  if (!note) return null;
+
+  const keepFocusInside = (event: ReactKeyboardEvent<HTMLElement>) => {
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(
+      dialogRef.current?.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])',
+      ) ?? [],
+    );
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
 
   return (
-    <aside
-      className={`notes-panel${note ? " is-open" : ""}`}
-      aria-label="Reading notes"
-      aria-hidden={!note}
+    <div
+      className="notes-overlay"
+      onMouseDown={(event) => {
+        if (event.currentTarget === event.target) onClose();
+      }}
     >
-      <header className="notes-header">
-        <p>Notes</p>
-        <button
-          className="icon-button notes-close"
-          type="button"
-          onClick={onClose}
-          title="Close notes"
-          aria-label="Close notes"
-        >
-          ×
-        </button>
-      </header>
-      {note ? (
+      <aside
+        className="notes-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        ref={dialogRef}
+        onKeyDown={keepFocusInside}
+      >
+        <header className="notes-header">
+          <p>Notes</p>
+          <button
+            className="icon-button notes-close"
+            type="button"
+            onClick={onClose}
+            title="Close notes"
+            aria-label="Close notes"
+            ref={closeButtonRef}
+          >
+            ×
+          </button>
+        </header>
         <div className="note-content" key={note.id}>
           <p className={`note-status status-${note.status}`}>{note.status}</p>
-          <h2 lang={note.language === "ja" ? "ja" : undefined}>
+          <h2 id={titleId} lang={note.language === "ja" ? "ja" : undefined}>
             {Array.from(note.term).map((character, index) =>
               isDictionaryKanji(character) ? (
                 <a
@@ -107,9 +151,7 @@ export function NotesPanel({
               ))}
           </div>
         </div>
-      ) : (
-        <p className="notes-empty">No note selected.</p>
-      )}
-    </aside>
+      </aside>
+    </div>
   );
 }

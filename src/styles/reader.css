@@ -156,14 +156,12 @@
 }
 
 .reader-workspace {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(26rem, 31rem);
-  gap: var(--space-5);
-  align-items: start;
+  display: block;
   padding: var(--space-5) 0;
 }
 
 .reading-column {
+  width: 100%;
   min-width: 0;
 }
 
@@ -206,12 +204,28 @@
   text-align: center;
 }
 
-.notes-panel {
-  position: sticky;
-  top: var(--space-3);
-  min-height: 18rem;
-  border-left: 1px solid var(--color-line);
-  background: var(--color-surface-quiet);
+.notes-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  padding: clamp(1rem, 4vw, 3rem);
+  place-items: center;
+  background: rgba(8, 9, 7, 0.54);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.notes-dialog {
+  display: grid;
+  width: min(52rem, 100%);
+  max-height: min(84vh, 56rem);
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid rgba(185, 200, 108, 0.3);
+  border-radius: var(--radius-small);
+  background: rgba(18, 20, 15, 0.985);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.62);
 }
 
 .notes-header {
@@ -226,19 +240,12 @@
   text-transform: uppercase;
 }
 
-.note-content,
-.notes-empty {
-  padding: var(--space-4);
-}
-
 .note-content {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1.5rem, 4vw, 3rem);
   font-size: calc(1rem * var(--reader-text-scale, 1));
-}
-
-.notes-empty {
-  color: var(--color-paper-muted);
-  font-family: var(--font-reading);
-  font-style: italic;
+  scrollbar-width: thin;
 }
 
 .note-status {

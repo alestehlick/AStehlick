@@ -2,7 +2,8 @@
 .icon-button,
 .quiet-button,
 .command-button,
-.notes-panel,
+.notes-overlay,
+.notes-dialog,
 .layer-sequence button {
   transition:
     color 160ms ease,

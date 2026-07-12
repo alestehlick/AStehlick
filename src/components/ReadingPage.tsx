@@ -15,18 +15,28 @@ interface ReadingPageProps {
   availableAudio: Set<string>;
   activeAudioKey: string | null;
   onPlayAudio: (key: string, url: string) => void;
-  onOpenNote: (noteId: string) => void;
+  selectedNoteId: string | null;
+  returningNoteId: string | null;
+  onOpenNote: (noteId: string, trigger: HTMLButtonElement) => void;
 }
 
 function renderInline(
   inline: ContentInline,
   index: number,
-  onOpenNote: (noteId: string) => void,
+  selectedNoteId: string | null,
+  returningNoteId: string | null,
+  onOpenNote: (noteId: string, trigger: HTMLButtonElement) => void,
 ): ReactNode {
   if (inline.type === "lineBreak") return <br key={index} />;
   if (inline.type === "annotated") {
     return (
-      <AnnotatedSpan key={index} inline={inline} onOpenNote={onOpenNote} />
+      <AnnotatedSpan
+        key={index}
+        inline={inline}
+        isActive={inline.noteIds.includes(selectedNoteId ?? "")}
+        isReturning={inline.noteIds.includes(returningNoteId ?? "")}
+        onOpenNote={onOpenNote}
+      />
     );
   }
   if (inline.emphasis === "italic") return <em key={index}>{inline.text}</em>;
@@ -52,6 +62,8 @@ export function ReadingPage({
   availableAudio,
   activeAudioKey,
   onPlayAudio,
+  selectedNoteId,
+  returningNoteId,
   onOpenNote,
 }: ReadingPageProps) {
   const renderParagraph = (
@@ -69,7 +81,15 @@ export function ReadingPage({
     while (index < content.length) {
       const segment = byStart.get(index);
       if (!segment) {
-        rendered.push(renderInline(content[index], index, onOpenNote));
+        rendered.push(
+          renderInline(
+            content[index],
+            index,
+            selectedNoteId,
+            returningNoteId,
+            onOpenNote,
+          ),
+        );
         index += 1;
         continue;
       }
@@ -81,7 +101,13 @@ export function ReadingPage({
           {content
             .slice(segment.start, segment.end + 1)
             .map((inline, offset) =>
-              renderInline(inline, segment.start + offset, onOpenNote),
+              renderInline(
+                inline,
+                segment.start + offset,
+                selectedNoteId,
+                returningNoteId,
+                onOpenNote,
+              ),
             )}
         </span>,
         <button
@@ -124,7 +150,13 @@ export function ReadingPage({
           block.type === "paragraph"
             ? renderParagraph(block.content, block.audioSegments)
             : block.content.map((inline, inlineIndex) =>
-                renderInline(inline, inlineIndex, onOpenNote),
+                renderInline(
+                  inline,
+                  inlineIndex,
+                  selectedNoteId,
+                  returningNoteId,
+                  onOpenNote,
+                ),
               );
         if (block.type === "heading") {
           const Heading = `h${block.level}` as ElementType;
