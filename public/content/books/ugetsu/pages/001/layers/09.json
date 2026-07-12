@@ -19,14 +19,22 @@
           "text": "葛飾郡",
           "reading": "かつしかのこおり",
           "language": "ja",
-          "noteIds": ["note-katsushika"]
+          "noteIds": ["note-katsushika"],
+          "phonographic": {
+            "surface": "葛飾",
+            "reading": "かつしか"
+          }
         },
         {
           "type": "annotated",
           "text": "真間の里",
           "reading": "ままのさと",
           "language": "ja",
-          "noteIds": ["note-mama"]
+          "noteIds": ["note-mama"],
+          "phonographic": {
+            "surface": "真間",
+            "reading": "まま"
+          }
         },
         {
           "type": "text",

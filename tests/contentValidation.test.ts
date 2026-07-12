@@ -130,4 +130,42 @@ describe("content validation", () => {
       ),
     ).toBe(true);
   });
+  it("rejects a phonographic cue whose surface is not in the annotation", () => {
+    const temporaryRoot = mkdtempSync(resolve(tmpdir(), "moonlight-reader-"));
+    temporaryDirectories.push(temporaryRoot);
+    const contentRoot = resolve(temporaryRoot, "content");
+    cpSync(resolve(process.cwd(), "public", "content"), contentRoot, {
+      recursive: true,
+    });
+
+    const layerPath = resolve(
+      contentRoot,
+      "books",
+      "ugetsu",
+      "pages",
+      "001",
+      "layers",
+      "02.json",
+    );
+    const layer = JSON.parse(readFileSync(layerPath, "utf8")) as {
+      blocks: Array<{
+        content?: Array<{
+          text?: string;
+          phonographic?: { surface: string; reading: string };
+        }>;
+      }>;
+    };
+    const annotated = layer.blocks
+      .flatMap((block) => block.content ?? [])
+      .find((item) => item.phonographic);
+    annotated!.phonographic!.surface = "不存在";
+    writeFileSync(layerPath, `${JSON.stringify(layer, null, 2)}\n`, "utf8");
+
+    const result = validateContent(contentRoot);
+    expect(
+      result.errors.some((error) =>
+        error.includes("is not contained in annotated text"),
+      ),
+    ).toBe(true);
+  });
 });

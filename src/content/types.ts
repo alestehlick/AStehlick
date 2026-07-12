@@ -15,6 +15,10 @@ export interface AnnotatedInline {
   noteIds: string[];
   emphasis?: "italic" | "strong";
   audio?: string;
+  phonographic?: {
+    surface: string;
+    reading: string;
+  };
 }
 
 export interface LineBreakInline {

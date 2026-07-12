@@ -86,6 +86,50 @@ function findDuplicates(values: string[]): string[] {
   ];
 }
 
+function phonographicCueErrors(layer: JsonObject, layerPath: string): string[] {
+  const errors: string[] = [];
+  const markedSurfaces = new Set<string>();
+
+  for (const block of requireArray(layer.blocks, "blocks")) {
+    if (!Array.isArray(block.content)) continue;
+    for (const inline of block.content as JsonObject[]) {
+      if (inline.type !== "annotated" || !inline.phonographic) continue;
+      const cue = inline.phonographic as JsonObject;
+      const surface = requireString(cue.surface, "phonographic.surface");
+      const reading = requireString(cue.reading, "phonographic.reading");
+      const text = requireString(inline.text, "annotated.text");
+      if (markedSurfaces.has(surface)) {
+        errors.push(
+          `${layerPath}: phonographic surface ${surface} is marked more than once; only its first occurrence should carry the visual cue.`,
+        );
+      }
+      markedSurfaces.add(surface);
+      if (!/[\p{Script=Han}]/u.test(surface)) {
+        errors.push(
+          `${layerPath}: phonographic surface ${surface} must contain kanji.`,
+        );
+      }
+      if (!text.includes(surface)) {
+        errors.push(
+          `${layerPath}: phonographic surface ${surface} is not contained in annotated text ${text}.`,
+        );
+      }
+      if (inline.language !== "ja") {
+        errors.push(
+          `${layerPath}: phonographic cue ${surface} must be attached to Japanese content.`,
+        );
+      }
+      if (!/[\p{Script=Hiragana}\p{Script=Katakana}]/u.test(reading)) {
+        errors.push(
+          `${layerPath}: phonographic reading ${reading} must contain Japanese kana.`,
+        );
+      }
+    }
+  }
+
+  return errors;
+}
+
 function annotatedNoteIds(layer: JsonObject): string[] {
   const ids: string[] = [];
   for (const block of requireArray(layer.blocks, "blocks")) {
@@ -305,6 +349,7 @@ export function validateContent(
               errors.push(`${layerPath}: missing referenced note ${noteId}.`);
             seenNoteIds.add(noteId);
           }
+          errors.push(...phonographicCueErrors(layer, layerPath));
           errors.push(...audioSegmentErrors(layer, layerPath));
         }
       }

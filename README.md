@@ -37,7 +37,8 @@ To add another page to `ugetsu`:
 
 1. Create `public/content/books/ugetsu/pages/NNN/page.json`.
 2. Define that page’s own layer sequence in `page.json`, then add the authored layer files under its `layers/` directory. Each layer may introduce **at most three new Japanese vocabulary or grammar items**; content validation enforces this limit.
-3. Add `notes.json` beside the page file. Notes are the principal scholarly apparatus: they may be expansive and should explain morphology, word formation, semantic development, and the force of the expression in context.
+3. Add `notes.json` beside the page file. Notes are the principal scholarly apparatus: they may be expansive and should explain morphology, word formation, semantic development, and the force of the expression in context. Lexical analysis stops at the kanji level: explain what each kanji contributes to a word and how the combined meaning emerges, but do not analyze radicals, graphic construction, pictorial origins, or independent character etymology. The linked Shirakawa Dictionary entries supply that deeper character-level inquiry.
+   For a confidently phonographic kanji spelling, add `phonographic: { "surface": "…", "reading": "…" }` only to its first occurrence in the displayed page layer. The reader places furigana above that surface and veils the kanji with a fading translucent yellow, signaling that the characters are supplying sound rather than a compound meaning. Do not use this marker merely because a name has an irregular reading. Proper names with meaningful kanji, mixed semantic-phonetic spellings, 熟字訓, and uncertain cases receive ordinary annotation instead.
 4. Add the page to `public/content/books/ugetsu/manifest.json`, or run `npm run build:manifest -- ugetsu`.
 5. Run `npm run validate:content` and `npm test`.
 
